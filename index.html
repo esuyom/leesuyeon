@@ -1,12 +1,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>이수연 포트폴리오_2024ver</title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/index.js?st=<?=rand()?>"></script>
 </head>
 <body>
-    <header>dd</header>
-    <main>content</main>
-    <footer>footer</footer>
+    <div id="wrap" class="main">
+        <!-- pointer -->
+        <div id="cursor" class="cursor">
+            <div class="ring">
+                <div></div>
+            </div>
+            <div class="ring">
+                <div></div>		
+            </div>
+        </div>
+
+        <!-- main -->
+        <section id="main">
+            <div class="wall wall1">
+                <p class="txt1">PORT</p>
+                <p class="txt2 profile">
+                    <span class="txt">Profile</span>
+                    <span class="bg"></span>
+                </p>
+                <span class="arrow"></span>
+            </div>
+            <div class="wall wall2">
+                <p class="txt1">FOLIO</p>
+                <p class="txt2 work">
+                    <span class="txt">Work</span>
+                    <span class="bg"></span>
+                </p>
+                <span class="arrow"></span>
+            </div>
+            <div class="wall wall3"></div>
+        </section>
+
+        <!-- profile -->
+        <section id="profile" class="side active">
+            <div class="wrap">
+                <button class="close"></button>
+                <div class="content">
+                    ㅇㅇㅇ
+                </div>
+            </div>
+        </section>
+
+        <!-- work -->
+        <section id="work" class="side">
+            <div class="wrap">
+                <button class="close"></button>
+                <div class="content">
+                    ㅇㅇㅇ
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
+
