@@ -6,13 +6,13 @@ $(document).ready(function(){
             `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
         );
     });
-    $("#wrap.main #main .wall1 .txt2 .txt").hover(function(){
+    $("#wrap.main #main .wall1 .txt2").hover(function(){
         $("#cursor").addClass("type1");
     }, function(){
         $("#cursor").removeClass("type1");
     });	
 
-    $("#wrap.main #main .wall2 .txt2 .txt").hover(function(){
+    $("#wrap.main #main .wall2 .txt2").hover(function(){
         $("#cursor").addClass("type2");
     }, function(){
         $("#cursor").removeClass("type2");
