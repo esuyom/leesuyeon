@@ -7,9 +7,9 @@ $(document).ready(function(){
         );
     });
     $("#wrap.main #main .wall1 .txt2").hover(function(){
-        $("#cursor").addClass("type1");
+        $("#cursor").addClass("type2");
     }, function(){
-        $("#cursor").removeClass("type1");
+        $("#cursor").removeClass("type21");
     });	
 
     $("#wrap.main #main .wall2 .txt2").hover(function(){
@@ -20,15 +20,33 @@ $(document).ready(function(){
 
     // profile
     $("#wrap.main #main .wall1 .profile").click(function(){
-        $("#profile").addClass("active");
+        $("#work").addClass("active");
     });
 
     // work
     $("#wrap.main #main .wall2 .work").click(function(){
-        $("#work").addClass("active");
+        $("#profile").addClass("active");
     });
+
+    $("#work .content .item").click(function(){
+        $(".webSwiper").addClass("wide");
+        $(this).addClass("active");
+        swiper.destroy();
+    });
+
+
 
     $("section.side .close").click(function(){
         $("section.side").removeClass("active");
+    });
+
+    // 스와이퍼
+    var swiper = new Swiper(".webSwiper", {
+        direction: 'vertical',
+        slidesPerView: 7,
+        centeredSlides: false,
+        spaceBetween: 10,
+        grabCursor: true,
+        mousewheel: true,
     });
 });
