@@ -1,5 +1,10 @@
 $(document).ready(function(){
-    // 마우스 커서
+    // 이미지로드
+    $('#work').imagesLoaded().done( function( instance ) {
+        console.log('DONE  - all images have been successfully loaded');
+      });
+
+      // 마우스 커서
     $(window).mousemove(function (e) {
         $(".ring").css(
             "transform",

@@ -60,7 +60,7 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #wrap.main #main .wall2 .work {right: 40px;bottom: 0%;}
 
 /* side */
-section.side{background: #f3f3f3; position:absolute;width:100%;height:100%;z-index: 3;top: 0;}
+section.side{background: #f3f3f3; position:absolute;width:100%;height:100%;z-index: 3;top: 0; will-change: transform;}
 section.side .wrap{position: relative;height:100%;margin:0 auto;overflow: hidden;}
 section.side .close{z-index: 2; width: 70px;height: 70px;background: url(../images/close.png);background-repeat: no-repeat;background-size: contain;padding: 5px; position:absolute;}
 section.side .content{}
@@ -72,17 +72,17 @@ section.side .main-title{font-family: Kanit, sans-serif;font-size: 140px;positio
 #profile.active{right: 0%;}
 
 /* work */
-#work{left: -100%;transition: all 1s;}
+#work{left: -100%;transition: all 1s; }
 #work .close{right: 40px; top:40px;}
 #work .main-title{position:absolute;right: 12%;top: 20%;}
 /* #work .main-title::after{content:"";width: 32px;height: 36px;position:absolute;display:block;background-color: #31a78f;border-radius: 14px;left: 65.2%;top: 49%;} */
 #work.active{left:0%;}
 #work .content{width:100%; height:100%;}
-#work .content .item{position: relative;display: flex;align-items: center;box-shadow: 2px 2px 6px #d0d0d0; cursor: pointer; background-color: #fff; }
-#work .content .item .bg{height: 100%;overflow: hidden;width: 40%;}
+#work .content .item{position: relative;display: flex;align-items: center;box-shadow: 2px 2px 6px #d0d0d0; cursor: pointer; background-color: #fff; will-change: transition; will-change: transform;}
+#work .content .item .bg{height: 100%;overflow: hidden;width: 40%; will-change: transition;}
 #work .content .item .bg img{width: 100%;height: auto;}
 #work .content .item .txt{width: 59%;padding: 20px;box-sizing: border-box;}
-#work .content .item .txt .title{font-size: 20px;font-weight: 500;}
+#work .content .item .txt .title{font-size: 20px;font-weight: 500; will-change: transition;}
 #work .content .item .txt .sub{display:none;}
 #work .content .item .txt .link{display:none;}
 #work .content .item .line{width: 8px;height: 100%;position: absolute;top: 0;right: 0;}
@@ -90,27 +90,19 @@ section.side .main-title{font-family: Kanit, sans-serif;font-size: 140px;positio
 #work .content .item .line.game{background: #334e4c;}
 #work .content .webSwiper.wide{ width: 100%; z-index: 3; transition:all 1s;}
 #work .content .webSwiper.wide .item{display:none;  }
-#work .content .webSwiper .item.active{display:flex; height: 100% !important; transition:all 1s;}
-#work .content .webSwiper .item.active .bg{ width:57%; overflow-y: scroll;  transition:all 1s;}
+#work .content .webSwiper .item.active{display:flex;  transition:all 1s; height: 100% !important;}
+#work .content .webSwiper .item.active .bg{max-width:700px; overflow-y: scroll; text-align:center; transition:all 1s; }
 #work .content .webSwiper .item.active .bg img{}
-#work .content .webSwiper .item.active .txt{width:43%;padding: 40px;box-sizing: border-box;height: 100%;margin-left: 0;transition:all 1s;display: flex;flex-direction: column;justify-content: center;align-items: flex-start;}
+#work .content .webSwiper .item.active .txt{padding: 40px;box-sizing: border-box;height: 100%;margin-left: 0;transition:all 1s;display: flex;flex-direction: column;justify-content: center;align-items: flex-start;}
 #work .content .webSwiper .item.active .txt .title{text-align: center;font-size: 33px;font-weight: 600;margin-bottom: 60px;  transition:all 1s;}
 #work .content .webSwiper .item.active .txt .sub{display:block;}
 
-.webSwiper{height: 100%;position: absolute !important;top: 0;width: 42%;left: 0; } 
+.webSwiper{height: 100%;position: absolute !important;top: 0;width: 42%;left: 0; will-change: transform;} 
 .swiper-slide img{
   width:100%;
 }
 
 
-@keyframes width { 
-  0% { width: 0%; }
-  100% { width: 100%; }
-}
-@-webkit-keyframes width { 
-  0% { width: 0%; }
-  100% { width: 100%; }
-}
 @-webkit-keyframes slide-left { 
   0% { transform: translateX(0px); }
   50% { transform: translateX(50px); }
