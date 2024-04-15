@@ -1,57 +1,82 @@
 $(document).ready(function(){
-    // 이미지로드
+    // 이미지 로딩
     $('#work').imagesLoaded().done( function( instance ) {
-        console.log('DONE  - all images have been successfully loaded');
-      });
+        console.log('이미지 로딩 완료');
+    });
 
-      // 마우스 커서
+    // 마우스 커서
     $(window).mousemove(function (e) {
         $(".ring").css(
             "transform",
             `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
         );
     });
-    $("#wrap.main #main .wall1 .txt2").hover(function(){
-        $("#cursor").addClass("type2");
+    
+    $("#wrap.main #main .wall .txt2").hover(function(){
+        $("#cursor").addClass("type1");
     }, function(){
-        $("#cursor").removeClass("type21");
+        $("#cursor").removeClass("type1");
     });	
 
-    $("#wrap.main #main .wall2 .txt2").hover(function(){
-        $("#cursor").addClass("type2");
-    }, function(){
-        $("#cursor").removeClass("type2");
-    });	
-
-    // profile
+    // Profile
     $("#wrap.main #main .wall1 .profile").click(function(){
-        $("#work").addClass("active");
-    });
-
-    // work
-    $("#wrap.main #main .wall2 .work").click(function(){
         $("#profile").addClass("active");
     });
 
-    $("#work .content .item").click(function(){
-        $(".webSwiper").addClass("wide");
-        $(this).addClass("active");
-        swiper.destroy();
+    // Work
+    var hoverInterval;
+
+    $("#wrap.main #main .wall2 .work").click(function(){
+        $("#work").addClass("active");
+        $("#cursor").addClass("type2");
     });
 
+    $("#work .content .item").click(function(){
+        $("#work .content .item").removeClass("active");
+        $("#work .content .item .txt p").hide();
+        $("#work .content .item .bg").animate({ scrollTop: 0 }, 1000);
+        mySwiper.mousewheel.disable();
+        $(this).addClass("active");
+        checkInterval();
+        setTimeout(() => {
+            $(this).find(".txt p").fadeIn();
+        }, 400);
+    });
 
+    function checkInterval(){
+        hoverInterval = setInterval(() => {
+            $("#work .content .item.active .bg").hover(function(){
+                mySwiper.mousewheel.disable();
+            }, function(){
+                mySwiper.mousewheel.enable();
+            });	
+        }, 50);
+        
+    }
 
     $("section.side .close").click(function(){
         $("section.side").removeClass("active");
+        $("#cursor").removeClass("type2");
+        mySwiper.slideTo(0);
+        $("#work .content .item").removeClass("active");
+        clearInterval(hoverInterval);
     });
 
-    // 스와이퍼
-    var swiper = new Swiper(".webSwiper", {
-        direction: 'vertical',
-        slidesPerView: 7,
-        centeredSlides: false,
-        spaceBetween: 10,
+    //Swiper
+    var mySwiper = new Swiper('.webSwiper', {
+        slidesPerView:'auto',
+        direction:"horizontal",
+        centeredSlides: true,
+        spaceBetween: 40,
         grabCursor: true,
         mousewheel: true,
+        speed: 1000,
+        on: {
+            click(event) { //클릭시 가운데 위치로
+                mySwiper.slideTo(this.clickedIndex);	
+            },
+        },
     });
+    
+
 });
