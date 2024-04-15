@@ -32,15 +32,17 @@ $(document).ready(function(){
     });
 
     $("#work .content .item").click(function(){
-        $("#work .content .item").removeClass("active");
-        $("#work .content .item .txt p").hide();
-        $("#work .content .item .bg").animate({ scrollTop: 0 }, 1000);
-        mySwiper.mousewheel.disable();
-        $(this).addClass("active");
-        checkInterval();
-        setTimeout(() => {
-            $(this).find(".txt p").fadeIn();
-        }, 400);
+        if(!$(this).hasClass("active")){
+            $("#work .content .item").removeClass("active");
+            $("#work .content .item .txt").hide();
+            $("#work .content .item .bg").animate({ scrollTop: 0 }, 1000);
+            mySwiper.mousewheel.disable();
+            $(this).addClass("active");
+            checkInterval();
+            setTimeout(() => {
+                $(this).find(".txt").fadeIn();
+            }, 500);
+        }
     });
 
     function checkInterval(){

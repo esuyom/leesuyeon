@@ -33,8 +33,8 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #cursor div:nth-child(1) { transition: transform 0.2s ease-out 0s; }
 #cursor div:nth-child(2) { transition: transform 0.1s ease-out 0s; }
 #cursor div:nth-child(2) div { background: rgb(255, 255, 255); border-radius: 50%; width: 4px; height: 4px; }
-#cursor.type1 div div {box-shadow: rgb(227 141 0 / 80%) 0px 0px 50px 7px;}
-#cursor.type2 div div {box-shadow: rgb(227 141 0 / 80%) 0px 0px 50px 7px;}
+#cursor.type1 div div { box-shadow: rgb(255, 170, 3) 0px 0px 50px 7px; }
+#cursor.type2 div div { box-shadow: rgb(255, 170, 3) 0px 0px 50px 7px; }
 
 #wrap.main { }
 #wrap.main #main { width: 100%; height: 100%; position: relative; }
@@ -42,7 +42,7 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #wrap.main #main .wall1 { width: 50%; height: 108%; background: linear-gradient(103deg, rgb(208, 208, 208), rgb(239, 239, 239), rgb(255, 255, 255)); transform: skewY(160deg); top: -30%; left: 0px; z-index: 2; }
 #wrap.main #main .wall2 { width: 50%; height: 108%; right: 0px; background: linear-gradient(11deg, rgb(219, 219, 219), rgb(239, 239, 239), rgb(255, 255, 255)); transform: skewY(200deg); top: -30%; z-index: 2; }
 #wrap.main #main .wall3 { z-index: 1; width: 100%; height: 100%; background: linear-gradient(343deg, rgb(208, 207, 207), rgb(250, 250, 250), rgb(255, 255, 255)); }
-#wrap.main #main .txt1 { letter-spacing: 1px; position: absolute; top: 0px; z-index: 3; font-size:60px; font-family: Kanit, sans-serif; font-weight: 700; }
+#wrap.main #main .txt1 { letter-spacing: 1px; position: absolute; top: 0px; z-index: 3; font-size: 60px; font-family: Kanit, sans-serif; font-weight: 700; }
 #wrap.main #main .wall1 .txt1 { right: 3px; top: auto; bottom: -1.5%; }
 #wrap.main #main .wall2 .txt1 { left: 4px; top: auto; bottom: -1.5%; }
 #wrap.main #main .wall .arrow { width: 32px; height: 32px; display: block; position: absolute; z-index: 3; bottom: 0.8%; left: 0px; background-size: contain; background-repeat: no-repeat; filter: opacity(0.5) drop-shadow(rgb(55, 55, 55) 0px 0px 0px); }
@@ -61,7 +61,7 @@ section.side { background: rgb(243, 243, 243); position: absolute; width: 100%; 
 section.side .wrap { position: relative; height: 100%; margin: 0px auto; overflow: hidden; }
 section.side .close { z-index: 2; width: 70px; height: 70px; background: url("../images/close.png") 0% 0% / contain no-repeat; padding: 5px; position: absolute; }
 section.side .content { }
-section.side .main-title {font-family: Kanit, sans-serif;font-size: 290px;position: relative;width: fit-content;letter-spacing: 6px;color: #d4d4d4;}
+section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; position: relative; width: fit-content; letter-spacing: 6px; color: rgb(212, 212, 212); }
 
 #profile { left: -100%; transition: all 1s ease 0s; }
 #profile .close { right: 40px; top: 40px; }
@@ -73,18 +73,21 @@ section.side .main-title {font-family: Kanit, sans-serif;font-size: 290px;positi
 #work .main-title { position: absolute; right: -3%; top: -3%; }
 #work.active { right: 0%; }
 #work .content { width: 100%; height: 100%; display: flex; align-items: center; }
-#work .webSwiper {height: 300px;padding-top: 200px;padding-bottom: 275px;}
-#work .webSwiper .item {position: relative;box-shadow: rgb(205 205 205) 0px 0px 35px;width:500px;transition: all 1s;cursor: pointer;padding-bottom: 60px;background-color: #Fff;}
-#work .webSwiper .item .bg { overflow: hidden; height: 300px; transition: all 1s;}
+#work .webSwiper {height: 300px;padding-top: 210px;padding-bottom: 290px;}
+#work .webSwiper .item { position: relative; box-shadow: rgb(205, 205, 205) 0px 0px 35px; width: 500px; transition: all 1s ease 0s; cursor: pointer; padding-bottom: 60px; background-color: rgb(255, 255, 255); }
+#work .webSwiper .item .bg { overflow: hidden; height: 300px; transition: all 1s ease 0s; }
 #work .webSwiper .item .bg img { width: 100%; }
-#work .webSwiper .item .info {width: 100%;background: rgb(255, 255, 255);display: flex;height: 60px;padding: 10px;box-sizing: border-box;font-weight: 600;justify-content: space-between;font-size: 19px;align-items: center;}
+#work .webSwiper .item .info { width: 100%; background: rgb(255, 255, 255); display: flex; height: 60px; padding: 0px 15px; box-sizing: border-box; font-weight: 600; justify-content: space-between; font-size: 20px; align-items: center; }
 #work .webSwiper .item .info .title { }
-#work .webSwiper .item .txt {display: none;border-top: 1px solid #d4d4d4;padding: 10px;box-sizing: border-box;width:0px; height: 0px;font-size: 18px;transition: all 1s;}
-#work .webSwiper .item .txt p{display:none;}
-#work .webSwiper .item.active{width:700px;padding-bottom: 210px;box-shadow: rgb(87 87 87) 0px 0px 35px;}
-#work .webSwiper .item.active .txt{display:block;width: 100%;height: 160px; transition: all 1s;}
-#work .webSwiper .item.active .bg{overflow-y: scroll; -webkit-overflow-scrolling: touch;}
-#work .webSwiper .item.active .bg img{}
+#work .webSwiper .item .txt { display: none; border-top: 1px solid rgb(212, 212, 212); padding: 15px; box-sizing: border-box; width: 0px; height: 0px; font-size: 18px; transition: all 1s ease 0s; }
+#work .webSwiper .item .txt p { margin-bottom: 5px; }
+#work .webSwiper .item .txt .link { margin-top: 10px; font-size: 18px; font-weight: 600; display: block; padding: 3px 10px; margin-left: -3px; position: relative; width: fit-content; }
+#work .webSwiper .item .txt .link + .link { margin-top: 0px; }
+#work .webSwiper .item .txt .link::after { position: absolute; right: -3px; top: 13px; content: ""; width: 7px; height: 7px; border-top: 2px solid rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); transform: rotate(45deg); }
+#work .webSwiper .item.active { width: 700px; padding-bottom: 230px; box-shadow: rgb(87, 87, 87) 0px 0px 35px; }
+#work .webSwiper .item.active .txt { display: block; width: 100%; height: 170px; transition: all 1s ease 0s; }
+#work .webSwiper .item.active .bg { overflow-y: scroll; }
+#work .webSwiper .item.active .bg img { }
 
 
 @-webkit-keyframes slide-left { 
@@ -107,3 +110,7 @@ section.side .main-title {font-family: Kanit, sans-serif;font-size: 290px;positi
   50% { transform: translateX(-50px); }
   100% { transform: translateX(0px); }
 }
+* { scrollbar-width: auto; scrollbar-color: rgb(255, 170, 3) rgb(255, 255, 255); }
+::-webkit-scrollbar { width: 16px; }
+::-webkit-scrollbar-track { background: rgb(255, 255, 255); }
+::-webkit-scrollbar-thumb { background-color: rgb(255, 170, 3); border-radius: 10px; border: 3px solid rgb(255, 255, 255); }
