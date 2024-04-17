@@ -73,6 +73,9 @@ $(document).ready(function(){
         grabCursor: true,
         mousewheel: true,
         speed: 1000,
+        keyboard: {
+            enabled: true,
+        },
         on: {
             click(event) { //클릭시 가운데 위치로
                 mySwiper.slideTo(this.clickedIndex);	

@@ -21,8 +21,8 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 .relative { position: relative; }
 .blind { font: 0px / 0 a; height: 0px; overflow: hidden; position: absolute; width: 0px; }
 .obj { position: absolute; z-index: 2; }
-.pc { display: block; }
-.mobile { display: none; }
+.pc { display: block !important; }
+.mo { display: none !important; }
 
 #wrap { position: relative; width: 100%; height: 100%; overflow: hidden; }
 
@@ -74,18 +74,19 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work.active { right: 0%; }
 #work .content { width: 100%; height: 100%; display: flex; align-items: center; }
 #work .webSwiper {height: 300px;padding-top: 210px;padding-bottom: 290px;}
-#work .webSwiper .item { position: relative; box-shadow: rgb(205, 205, 205) 0px 0px 35px; width: 500px; transition: all 1s ease 0s; cursor: pointer; padding-bottom: 60px; background-color: rgb(255, 255, 255); }
+#work .webSwiper .item {position: relative; background-color:#Fff; box-shadow: rgb(205, 205, 205) 0px 0px 35px;width: 500px;transition: all 1s ease 0s;cursor: pointer;padding-bottom: 60px;/* background-color: rgb(255, 255, 255); */}
 #work .webSwiper .item .bg { overflow: hidden; height: 300px; transition: all 1s ease 0s; }
 #work .webSwiper .item .bg img { width: 100%; }
 #work .webSwiper .item .info { width: 100%; background: rgb(255, 255, 255); display: flex; height: 60px; padding: 0px 15px; box-sizing: border-box; font-weight: 600; justify-content: space-between; font-size: 20px; align-items: center; }
 #work .webSwiper .item .info .title { }
-#work .webSwiper .item .txt { display: none; border-top: 1px solid rgb(212, 212, 212); padding: 15px; box-sizing: border-box; width: 0px; height: 0px; font-size: 18px; transition: all 1s ease 0s; }
+#work .webSwiper .item .txt {position: relative;display: none;border-top: 1px solid rgb(212, 212, 212);padding: 15px;box-sizing: border-box;width: 0px;height: 0px;font-size: 18px;transition: all 1s ease 0s;background-color: rgb(255, 255, 255);}
 #work .webSwiper .item .txt p { margin-bottom: 5px; }
-#work .webSwiper .item .txt .link { margin-top: 10px; font-size: 18px; font-weight: 600; display: block; padding: 3px 10px; margin-left: -3px; position: relative; width: fit-content; }
-#work .webSwiper .item .txt .link + .link { margin-top: 0px; }
+#work .webSwiper .item .txt .link {position:absolute;font-size: 18px;font-weight: 600;display: block;padding: 3px 10px;width: fit-content;right: 22px;top: 12px;}
+#work .webSwiper .item .txt .link + .link {margin-top: 30px;}
+#work .webSwiper .item .txt .link + .link + .link{margin-top:60px;}
 #work .webSwiper .item .txt .link::after { position: absolute; right: -3px; top: 13px; content: ""; width: 7px; height: 7px; border-top: 2px solid rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); transform: rotate(45deg); }
-#work .webSwiper .item.active { width: 700px; padding-bottom: 230px; box-shadow: rgb(87, 87, 87) 0px 0px 35px; }
-#work .webSwiper .item.active .txt { display: block; width: 100%; height: 170px; transition: all 1s ease 0s; }
+#work .webSwiper .item.active {width: 700px;padding-bottom: 200px;box-shadow: rgb(87, 87, 87) 0px 0px 35px;}
+#work .webSwiper .item.active .txt {display: block;width: 100%;height: auto;transition: all 1s ease 0s;}
 #work .webSwiper .item.active .bg { overflow-y: scroll; }
 #work .webSwiper .item.active .bg img { }
 
@@ -114,3 +115,9 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 ::-webkit-scrollbar { width: 16px; }
 ::-webkit-scrollbar-track { background: rgb(255, 255, 255); }
 ::-webkit-scrollbar-thumb { background-color: rgb(255, 170, 3); border-radius: 10px; border: 3px solid rgb(255, 255, 255); }
+
+
+@media (max-width: 1024px){
+  .pc{display: none !important;}
+  .mo{display: block !important;}
+}
