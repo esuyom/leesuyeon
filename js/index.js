@@ -18,9 +18,14 @@ $(document).ready(function(){
         $("#cursor").removeClass("type1");
     });	
 
+    
+    
+
     // Profile
     $("#wrap.main #main .wall1 .profile").click(function(){
         $("#profile").addClass("active");
+        $("#cursor").addClass("type2");
+        gsap.fromTo("#profile .main-title", {x: -150}, {duration: 1.3, x: 150});
     });
 
     // Work
@@ -29,6 +34,7 @@ $(document).ready(function(){
     $("#wrap.main #main .wall2 .work").click(function(){
         $("#work").addClass("active");
         $("#cursor").addClass("type2");
+        gsap.fromTo("#work .main-title", {x: 150}, {duration: 1.3, x: -150});
     });
 
     $("#work .content .item").click(function(){

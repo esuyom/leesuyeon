@@ -9,7 +9,9 @@
     <meta property="og:image" content="">
     <meta property="og:description" content="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link href="css/style.css?st=<?=rand()?>" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
@@ -34,7 +36,6 @@
                 <p class="txt1">PORT</p>
                 <p class="txt2 profile">
                     <span class="txt">Profile</span>
-                    <span class="bg"></span>
                 </p>
                 <span class="arrow"></span>
             </div>
@@ -42,9 +43,9 @@
                 <p class="txt1">FOLIO</p>
                 <p class="txt2 work">
                     <span class="txt">Work</span>
-                    <span class="bg"></span>
                 </p>
                 <span class="arrow"></span>
+                <div>안녕하세요. 제 포트폴리오 사이트에 방문해주셔서 감사합니다.</div>
             </div>
             <div class="wall wall3"></div>
         </section>
@@ -52,10 +53,19 @@
         <!-- profile -->
         <section id="profile" class="side">
             <button class="close"></button>
-            <div class="content">
-                <div class="wrap">
-                    <div class="main-title" data-aos="fade-left">
-                        PROFILE
+            <div class="wrap">
+                <div class="main-title" data-aos="fade-left" >
+                    PROFILE
+                </div>
+                <div class="content">
+                    <div class="pic">
+                        <img src="images/me2.png">
+                    </div>
+                    <div class="txt">
+
+                    </div>
+                    <div class="career">
+
                     </div>
                 </div>
             </div>
@@ -65,7 +75,7 @@
         <section id="work" class="side">
             <button class="close"></button>
             <div class="wrap">
-                <div class="main-title" data-aos="fade-left">
+                <div class="main-title" data-aos="fade-left" data-aos-duration="1500">
                     MY WORK
                 </div>
                 <div class="content">
@@ -80,10 +90,10 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 두개의 사이트를 리뉴얼 및 연간 유지보수 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 2년 7개월</p>
-                                    <a class="link" href="https://dbinsure.co.kr/driver" target="_blank">작업물 보러가기 - 사이트1</a>
-                                    <a class="link" href="https://dbinsure.co.kr/new/driver" target="_blank">작업물 보러가기 - 사이트2</a>
+                                    <p class="txt1"><span>·</span> 두개의 사이트를 리뉴얼 및 연간 유지보수 했습니다. 인풋창 내 금칙어 지정 및 홈페이지의 다양한 애니메이션 효과들을 구현했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 2년 7개월</p>
+                                    <a class="link" href="https://dbinsure.co.kr/driver" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기 - 사이트1</a>
+                                    <a class="link" href="https://dbinsure.co.kr/new/driver" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기 - 사이트2</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -95,9 +105,9 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 사이트 내 적립 및 당첨 게임 전체를 개발했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 게임 당 약 1주</p>
-                                    <a class="link" href="https://www.jjansun.com/" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 게임방 컨셉으로 제작한 사이트 입니다. Javasciprt로 개발하였으며, gsap등 다양한 라이브러리를 사용했습니다. 사이트 내 모든 적립 및 당첨 게임을 개발하였습니다. </p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 게임 당 약 1주</p>
+                                    <a class="link" href="https://www.jjansun.com/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -109,9 +119,9 @@
                                     <div class="cate">Web</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 반응형 홈페이지로 회전판 기능 등 일부 페이지 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 2일</p>
-                                    <a class="link" href="https://www.chaochai.co.kr/" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 반응형 홈페이지로 회전판 기능 개발 등 일부 페이지 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2일</p>
+                                    <a class="link" href="https://www.chaochai.co.kr/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -123,157 +133,9 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 반응형 홈페이지로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link" href="http://www.dearchiis.co.kr/" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023thermos.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">써모스 프로모션</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 간단한 테스트 등 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 4일</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2310thermos" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2310thermos/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023sudden.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">서든어택 캐리의민족 프로모션</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 3일</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2308sudden/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2308sudden/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023kia.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">기아 Change the Colors 프로모션</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 다양한 스크롤 효과를 사용하여 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2304kia/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2304kia/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023db2.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">DB생명 34주년 생일파티 </div>
-                                    <div class="cate">Game</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2304db/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2304db/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023voice.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">금융감독원 보이스피싱 사이버 체험관 ver2</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 다양한 체험거리가 있는 사이트로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 2주</p>
-                                    <a class="link" href="https://voicephishing-keeper.co.kr/" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023voice2.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">금융감독원 보이스피싱 예방 프로모션</div>
-                                    <div class="cate">Game</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2306voice/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2306voice/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023chefood.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">Chefood 버슐랭 프로모션</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 2일</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2304chefood/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2304chefood/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2023bakga.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">원앤원 랜딩페이지_박가부대</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 반응형 사이트로 풀페이지를 이용하여 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link" href="http://sylee.dothome.co.kr/2023bakga" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2022halo.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">헤일로탑 디지털 팝업스토어</div>
-                                    <div class="cate">GAME</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 다양한 체험거리가 있는 사이트로 퀴즈게임 및 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 2주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2208halotop/index.html" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2208halotop/mobile.html" target="_blank">작업물 보러가기</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide item">
-                                <div class="bg">
-                                    <img src="images/2022pokemon.png" alt="이미지">
-                                </div>
-                                <div class="info">
-                                    <div class="title">대국민 포켓몬고 챌린지</div>
-                                    <div class="cate">WEB</div>
-                                </div>
-                                <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 3일</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2209pokemon/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2209pokemon/mobile.html" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 반응형 홈페이지로 슬라이드, 스크롤 애니메이션 등을 포함 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link" href="http://www.dearchiis.co.kr/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -285,11 +147,144 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 신한은행 임직원을 상대로 한 3종의 게임을 제작했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 게임 당 1주</p>
-                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2022shinhansol/game1/" target="_blank">작업물 보러가기 - 게임1</a>
-                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2022shinhansol/game2/" target="_blank">작업물 보러가기 - 게임2</a>
-                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2022shinhansol/game3/" target="_blank">작업물 보러가기 - 게임3</a>
+                                    <p class="txt1"><span>·</span> 신한은행 임직원을 상대로 한 3종의 게임을 제작했습니다. 모바일 최적화 게임으로 Javasciprt로 개발하였으며 적절한 사운드를 통해 흥미를 더 유발시킵니다. </p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 게임 당 1주</p>
+                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2022shinhansol/game1/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기 - 게임1</a>
+                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2022shinhansol/game2/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기 - 게임2</a>
+                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2022shinhansol/game3/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기 - 게임3</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023thermos.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">써모스 프로모션</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 간단한 테스트를 포함, 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 4일</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2310thermos" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2310thermos/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023sudden.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">서든어택 캐리의민족 프로모션</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 스크롤 애니메이션을 포함, 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 3일</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2308sudden/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2308sudden/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023kia.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">기아 Change the Colors 프로모션</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 스크롤 애니메이션을 포함, 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2304kia/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2304kia/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023voice.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">금융감독원 보이스피싱 사이버 체험관 ver2</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 다양한 체험거리가 있는 사이트로 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2주</p>
+                                    <a class="link" href="https://voicephishing-keeper.co.kr/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023voice2.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">금융감독원 보이스피싱 예방 프로모션</div>
+                                    <div class="cate">Game</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2306voice/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2306voice/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023chefood.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">Chefood 버슐랭 프로모션</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2일</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2304chefood/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2304chefood/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2023bakga.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">원앤원 랜딩페이지_박가부대</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 반응형 사이트로 풀페이지를 이용하여 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link" href="http://sylee.dothome.co.kr/2023bakga" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2022halo.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">헤일로탑 디지털 팝업스토어</div>
+                                    <div class="cate">GAME</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 다양한 체험거리가 있는 사이트로 퀴즈게임 및 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2208halotop/index.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2208halotop/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide item">
+                                <div class="bg">
+                                    <img src="images/2022pokemon.png" alt="이미지">
+                                </div>
+                                <div class="info">
+                                    <div class="title">대국민 포켓몬고 챌린지</div>
+                                    <div class="cate">WEB</div>
+                                </div>
+                                <div class="txt">
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 3일</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2209pokemon/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2209pokemon/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -301,9 +296,9 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 다양한 체험거리가 있는 사이트로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 2주</p>
-                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2210financial" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 다양한 체험거리가 있는 사이트로 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2주</p>
+                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2210financial" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -315,9 +310,9 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 장애/비장애를 구분하지 않는다는 취지의 사이트로<br />장애인을 고려한 UI/UX가 포함되어 있습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 2주</p>
-                                    <a class="link" href="http://sylee.dothome.co.kr/2022kovaca/" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 장애/비장애를 구분하지 않는다는 취지의 사이트로<br />장애인을 고려한 UI/UX가 포함되어 있습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2주</p>
+                                    <a class="link" href="http://sylee.dothome.co.kr/2022kovaca/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -329,10 +324,10 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 새해 맞이 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2112db/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2112db/mobile.html" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 새해 맞이 프로모션 사이트로 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2112db/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2112db/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -344,9 +339,9 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 장애인 인식을 목적으로 한 틀린그림찾기 게임을 개발 했습니다. </p>
-                                    <p class="txt2">- 작업기간 : 약 2일</p>
-                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2108hbcil/" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 장애인 인식을 목적으로 한 틀린그림찾기 게임을 개발 했습니다. </p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 2일</p>
+                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2108hbcil/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -358,9 +353,9 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 농구게임을 개발 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2111oreodunk/" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 농구게임을 개발 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link" href="https://dbins2.speedgabia.com/thl/work/2111oreodunk/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -372,10 +367,10 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2107ktshop/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2107ktshop/mobile.html" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2107ktshop/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2107ktshop/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -387,9 +382,10 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 슬라이드 기능 포함 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 3일</p>
-                                    <a class="link" href="#" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 슬라이드 기능 포함 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 3일</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2106ritzdate/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2106ritzdate/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -401,10 +397,10 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 퍼즐게임 및 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2110KCCI/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2110KCCI/mobile" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 퍼즐게임 및 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2110KCCI/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2110KCCI/mobile" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -416,10 +412,10 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 액자 꾸미기 등, 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2107db/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2107db//mobile.html" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 액자 꾸미기 등, 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2107db/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2107db//mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -431,10 +427,10 @@
                                     <div class="cate">WEB</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 액자 꾸미기 등, 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2111db/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2111db/mobile.html" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 액자 꾸미기 등, 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2111db/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2111db/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                             <div class="swiper-slide item">
@@ -446,10 +442,10 @@
                                     <div class="cate">Game</div>
                                 </div>
                                 <div class="txt">
-                                    <p class="txt1">- 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
-                                    <p class="txt2">- 작업기간 : 약 1주</p>
-                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2104hykid/" target="_blank">작업물 보러가기</a>
-                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2104hykid/mobile.html" target="_blank">작업물 보러가기</a>
+                                    <p class="txt1"><span>·</span> 프로모션 사이트로 게임 및 전체 퍼블리싱 했습니다.</p>
+                                    <p class="txt2"><span>·</span> 작업기간 : 약 1주</p>
+                                    <a class="link pc" href="https://dbins2.speedgabia.com/thl/work/2104hykid/" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
+                                    <a class="link mo" href="https://dbins2.speedgabia.com/thl/work/2104hykid/mobile.html" target="_blank"><i class="fa-solid fa-link"></i>작업물 보러가기</a>
                                 </div>
                             </div>
                         </div>
