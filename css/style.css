@@ -64,22 +64,38 @@ section.side { background: rgb(243, 243, 243); position: absolute; width: 100%; 
 section.side .wrap { position: relative; height: 100%; margin: 0px auto; overflow: hidden; }
 section.side .close { z-index: 2; width: 70px; height: 70px; background: url("../images/close.png") 0% 0% / contain no-repeat; padding: 5px; position: absolute; }
 section.side .content { }
-section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; position: relative; width: fit-content; letter-spacing: 6px; color: rgb(212, 212, 212); }
+section.side .main-title {font-family: Kanit, sans-serif;font-size: 290px;position: relative;width: fit-content;letter-spacing: 6px;color: rgb(222 222 222);}
 
 /* 프로필 */
 #profile { left: -100%; transition: all 1s ease 0s; }
+#profile.active { left: 0%; }
 #profile .close { right: 40px; top: 40px; }
 #profile .main-title { position: absolute; left: -185px; top: -3%; }
-#profile.active { left: 0%; }
-#profile .pic{width:320px;position: absolute;top: 30%;left: 15%;}
-#profile .pic img{filter: drop-shadow(10px 6px 6px #c3c3c3); width:100%;}
+#profile .content{position: absolute; height: 100%; width: 1200px;left: 13%;}
+#profile .info {position: absolute;top: 29%;left: 0;}
+#profile .info .pic {width: 220px;}
+#profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 10px 6px 6px); width: 100%; }
+#profile .txt1 {font-size: 40px;font-weight: 500;position: absolute;display: inline-block;top: 29%;left: 26%;}
+#profile .txt1 strong {}
+#profile .txt1 i { color: rgb(255 165 0); font-size: 35px; position: absolute; left: -40px; }
+#profile .txt1 i:last-child { right: -32px; left: auto; }
+#profile .txt2{position: absolute;display: inline-block;top: 44%;left: 26%;}
+#profile .txt2 ul {margin-top: auto;}
+#profile .txt2 ul li {margin-bottom: 3px;position: relative;padding-left: 18px;display: flex;align-items: center; font-size:18px;}
+#profile .txt2 ul li span{color: rgb(255 165 0);font-size: 30px;position: absolute;left: 0;}
+#profile .infoSwiper{position: absolute;width: 800px;top: 57%;left: 26%;height: 250px;}
+#profile .infoSwiper .txt { font-size: 18px; }
+#profile .infoSwiper .swiper-button-next,#profile .infoSwiper .swiper-button-prev{bottom: 40px; top: auto;right: 20px;}
+#profile .infoSwiper .swiper-button-next::after, #profile .infoSwiper .swiper-button-prev::after{display:none;}
+#profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i{font-size:40px; color:rgb(255 165 0);}
+#profile .infoSwiper .swiper-button-next.swiper-button-disabled, #profile .infoSwiper .swiper-button-prev.swiper-button-disabled{opacity: 0;}
 
 /* 작업물 */
 #work { right: -100%; transition: all 1s ease 0s; }
+#work.active { right: 0%; }
 #work .close { left: 40px; top: 40px; }
 #work .prev { position: absolute; width: 50px; height: 50px; background: red; right: 0px; top: 0px; z-index: 5; }
 #work .main-title { position: absolute; right: -200px; top: -3%; }
-#work.active { right: 0%; }
 #work .content { width: 100%; height: 100%; display: flex; align-items: center; }
 #work .webSwiper {height: 300px;padding-top: 210px;padding-bottom: 290px;}
 #work .webSwiper .item {position: relative; background-color:#Fff; box-shadow: rgb(205, 205, 205) 0px 0px 35px;width: 500px;transition: all 1s ease 0s;cursor: pointer;padding-bottom: 60px;/* background-color: rgb(255, 255, 255); */}
@@ -88,7 +104,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work .webSwiper .item .info { width: 100%; background: rgb(255, 255, 255); display: flex; height: 60px; padding: 0px 15px; box-sizing: border-box; font-weight: 600; justify-content: space-between; font-size: 20px; align-items: center; }
 #work .webSwiper .item .info .title { }
 #work .webSwiper .item .txt {position: relative;display: none;border-top: 1px solid rgb(212, 212, 212);padding: 15px;box-sizing: border-box;width: 0px;height: 0px;font-size: 18px;transition: all 1s ease 0s;background-color: rgb(255, 255, 255);}
-#work .webSwiper .item .txt p {margin-bottom: 7px;width: 61%;padding-left: 12px;position: relative;}
+#work .webSwiper .item .txt p {margin-bottom: 7px;width: 62%;padding-left: 12px;position: relative; line-height: 1.5;}
 #work .webSwiper .item .txt span{display:inline-block;position: absolute;left: 0;}
 #work .webSwiper .item .txt .link {position:absolute;font-size: 18px;font-weight: 500;display: block;padding: 3px 10px;width: fit-content;right: 22px;top: 12px;}
 #work .webSwiper .item .txt .link i{margin-right: 4px;font-size: 14px;vertical-align: 1px;}

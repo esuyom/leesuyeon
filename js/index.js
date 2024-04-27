@@ -25,7 +25,16 @@ $(document).ready(function(){
     $("#wrap.main #main .wall1 .profile").click(function(){
         $("#profile").addClass("active");
         $("#cursor").addClass("type2");
-        gsap.fromTo("#profile .main-title", {x: -150}, {duration: 1.3, x: 150});
+        gsap.fromTo("#profile .main-title", {x: -150}, {duration: 1.5, x: 150});
+    });
+
+    var swiper = new Swiper(".infoSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        grabCursor: false,
+        allowTouchMove: false,
     });
 
     // Work
@@ -34,7 +43,7 @@ $(document).ready(function(){
     $("#wrap.main #main .wall2 .work").click(function(){
         $("#work").addClass("active");
         $("#cursor").addClass("type2");
-        gsap.fromTo("#work .main-title", {x: 150}, {duration: 1.3, x: -150});
+        gsap.fromTo("#work .main-title", {x: 150}, {duration: 1.5, x: -150});
     });
 
     $("#work .content .item").click(function(){
