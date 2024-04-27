@@ -72,23 +72,27 @@ section.side .main-title {font-family: Kanit, sans-serif;font-size: 290px;positi
 #profile .close { right: 40px; top: 40px; }
 #profile .main-title { position: absolute; left: -185px; top: -3%; }
 #profile .content{position: absolute; height: 100%; width: 1200px;left: 13%;}
-#profile .info {position: absolute;top: 29%;left: 0;}
+#profile .info {position: absolute;top: 28%;left: 0;}
 #profile .info .pic {width: 220px;}
+#profile .info ul{margin-top: 16px;}
+#profile .info ul li {margin-bottom: 3px;position: relative;padding-left: 18px;display: flex;align-items: center;font-size: 18px;}
+#profile .info ul li span{color: rgb(255 165 0);font-size: 30px;position: absolute;left: 0;}
 #profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 10px 6px 6px); width: 100%; }
 #profile .txt1 {font-size: 40px;font-weight: 500;position: absolute;display: inline-block;top: 29%;left: 26%;}
 #profile .txt1 strong {}
-#profile .txt1 i { color: rgb(255 165 0); font-size: 35px; position: absolute; left: -40px; }
-#profile .txt1 i:last-child { right: -32px; left: auto; }
-#profile .txt2{position: absolute;display: inline-block;top: 44%;left: 26%;}
-#profile .txt2 ul {margin-top: auto;}
-#profile .txt2 ul li {margin-bottom: 3px;position: relative;padding-left: 18px;display: flex;align-items: center; font-size:18px;}
-#profile .txt2 ul li span{color: rgb(255 165 0);font-size: 30px;position: absolute;left: 0;}
-#profile .infoSwiper{position: absolute;width: 800px;top: 57%;left: 26%;height: 250px;}
+#profile .txt1 i {color: rgb(11 189 139);font-size: 36px;position: absolute;left: -42px;}
+#profile .txt1 i:last-child {right: -36px;left: auto;}
+#profile .infoSwiper{position: absolute;width: 830px;top: 54%;left: 26%;height: 210px;}
 #profile .infoSwiper .txt { font-size: 18px; }
-#profile .infoSwiper .swiper-button-next,#profile .infoSwiper .swiper-button-prev{bottom: 40px; top: auto;right: 20px;}
+#profile .infoSwiper .swiper-button-next,#profile .infoSwiper .swiper-button-prev{bottom: 0;top: auto;right: 20px;left: auto; }
 #profile .infoSwiper .swiper-button-next::after, #profile .infoSwiper .swiper-button-prev::after{display:none;}
 #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i{font-size:40px; color:rgb(255 165 0);}
 #profile .infoSwiper .swiper-button-next.swiper-button-disabled, #profile .infoSwiper .swiper-button-prev.swiper-button-disabled{opacity: 0;}
+#profile .career{ background-image: url(../images/arrow3.png);  background-repeat: no-repeat; background-size: contain;  padding-left: 25px;}
+#profile .career ul{margin-top: 10px;}
+#profile .career ul li{font-size: 18px;margin-bottom: 17px;}
+#profile .career ul li span{ display: block; margin-bottom: 3px; font-size:16px; color:rgb(148 148 148);}
+
 
 /* 작업물 */
 #work { right: -100%; transition: all 1s ease 0s; }
