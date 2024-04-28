@@ -35,6 +35,7 @@ $(document).ready(function(){
         },
         grabCursor: false,
         allowTouchMove: false,
+        speed: 1000,
     });
 
     // Work
@@ -52,6 +53,7 @@ $(document).ready(function(){
             $("#work .content .item .txt").hide();
             $("#work .content .item .bg").animate({ scrollTop: 0 }, 1000);
             mySwiper.mousewheel.disable();
+            var state = $(".webSwiper .swiper-wrapper").css("transform");
             $(this).addClass("active");
             checkInterval();
             setTimeout(() => {
@@ -71,6 +73,11 @@ $(document).ready(function(){
         
     }
 
+    function moveX(){
+        var thisX = $(".webSwiper .swiper-wrapper")
+        thisX.animate({left:-100+'px'});
+    }
+
     $("section.side .close").click(function(){
         $("section.side").removeClass("active");
         $("#cursor").removeClass("type2");
@@ -84,7 +91,7 @@ $(document).ready(function(){
         slidesPerView:'auto',
         direction:"horizontal",
         centeredSlides: true,
-        spaceBetween: 40,
+        slideToClickedSlide:true,
         grabCursor: true,
         mousewheel: true,
         speed: 1000,
@@ -92,11 +99,12 @@ $(document).ready(function(){
             enabled: true,
         },
         on: {
-            click(event) { //클릭시 가운데 위치로
-                mySwiper.slideTo(this.clickedIndex);	
+            slideChange : function() {
+                moveX();
             },
         },
     });
+    
     
 
 });
