@@ -94,17 +94,18 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .mail { cursor:pointer; position: absolute; z-index: 5; right: 5%; top: calc(50% - 35px); } 
 #profile .mail-icon { cursor: pointer; width: 70px; height: 70px; border-radius: 50%; background: rgb(11 189 139); display: flex; justify-content: center; align-items: center; box-shadow: 0px 0px 10px rgb(199 199 199); position: relative; z-index: 3; } 
 #profile .mail-icon i { font-size: 32px; color:#fff; } 
-#profile .mail .form {position:Absolute;width: 320px;background: #Fff;padding: 20px;top: calc(50% - 181px);opacity: 0;right:35%;box-shadow: 4px 4px 23px #cbcbcb;height: 374px;box-sizing: border-box;} 
+#profile .mail .form {position:Absolute;width: 320px;background: #Fff;padding: 20px;top: calc(50% - 211px);opacity: 0;right:35%;box-shadow: 4px 4px 23px #cbcbcb;height: 437px;box-sizing: border-box;} 
 #profile .mail .form form{height:100%;}
 #profile .mail .form form input[type="text"] {display: block;margin-bottom: 10px;border-radius: 9px;width: 100%;height: 42px;border: 1px solid #cccccc;padding: 0 10px;font-size: 14px;} 
 #profile .mail .form form textarea { width:100%; border: 1px solid #cccccc; padding: 10px;border-radius: 10px;  resize: none; font-size: 14px; } 
 #profile .mail .form form input[type="button"] { cursor:pointer; display: block;border-radius: 10px;  height: 45px; margin-top: 10px; width: 100%; background-color: rgb(86 86 86);  color: #Fff; font-size: 17px; font-weight: 500; } 
 #profile .mail .form .success{display:none;height: 100%;}
-#profile .mail .form .success .txt {font-weight: 600;font-size: 21px;text-align: center; padding-top: 50px;} 
+#profile .mail .form .success .txt {font-weight: 600;font-size: 21px;text-align: center; padding-top: 85px;} 
 #profile .mail .form .success .txt i {display: block;font-size: 40px;padding: 25px 0;color: rgb(11 189 139);} 
 #profile .mail .form .success .close {width: 100%;background-color: rgb(86 86 86);color: #fff;font-size: 17px;border-radius: 10px;height: 45px;font-weight: 500;margin-top: 40px;} 
-#profile .mail .form.active{}
 #profile .mail .form.active form input[type="button"].submit{background-color:rgb(11 189 139);}
+#profile .mail .form .txt{ margin-bottom: 15px;}
+#profile .mail .form .txt i{margin-left:3px;}
 
 /* 작업물 */ 
 #work { right: -100%; transition: all 1s ease 0s; } 
