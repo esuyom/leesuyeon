@@ -18,9 +18,6 @@ $(document).ready(function(){
         $("#cursor").removeClass("type1");
     });	
 
-    
-    
-
     // Profile
     $("#wrap.main #main .wall1 .profile").click(function(){
         $("#profile").addClass("active");
@@ -28,14 +25,24 @@ $(document).ready(function(){
         gsap.fromTo("#profile .main-title", {x: -150}, {duration: 1.5, x: 150});
     });
 
-    var swiper = new Swiper(".infoSwiper", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        grabCursor: false,
-        allowTouchMove: false,
-        speed: 1000,
+    $("#profile .mail-icon").click(function(){
+        if(!$("#profile .mail .form").hasClass("active")){
+            $("#profile .mail .form").addClass("active");
+            gsap.fromTo("#profile .mail .form", {x: 0, opacity:0}, {duration: 0.6, x: -70, opacity:1});
+        }else{
+            $("#profile .mail .form").removeClass("active");
+            gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+        }
+    });
+
+    $("#profile .mail .form .success .close").click(function(){
+        $("#profile .mail .form").removeClass("active");
+        $('input[name=submit]').removeClass("submit");
+        gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+        setTimeout(() => {
+            $("#profile .mail .form form").show();
+            $("#profile .mail .form .success").hide();
+        }, 600);
     });
 
     // Work
@@ -78,7 +85,7 @@ $(document).ready(function(){
         thisX.animate({left:-100+'px'});
     }
 
-    $("section.side .close").click(function(){
+    $("section.side>.close").click(function(){
         $("section.side").removeClass("active");
         $("#cursor").removeClass("type2");
         mySwiper.slideTo(0);
@@ -86,7 +93,20 @@ $(document).ready(function(){
         clearInterval(hoverInterval);
     });
 
-    //Swiper
+
+    
+    //infoSwiper
+    var swiper = new Swiper(".infoSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        grabCursor: false,
+        allowTouchMove: false,
+        speed: 1000,
+    });
+
+    //webSwiper
     var mySwiper = new Swiper('.webSwiper', {
         slidesPerView:'auto',
         direction:"horizontal",
@@ -105,6 +125,4 @@ $(document).ready(function(){
         },
     });
     
-    
-
 });
