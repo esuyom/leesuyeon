@@ -5,13 +5,21 @@ $(document).ready(function(){
     });
 
     // 마우스 커서
-    $(window).mousemove(function (e) {
-        $(".ring").css(
-            "transform",
-            `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
-        );
+    var w = $(window).outerWidth();  
+    if (w > 1024) {
+        $(window).mousemove(function (e) {
+            $(".ring").css(
+                "transform",
+                `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
+            );
+        });
+    }
+    $(window).on('resize', function(){
+        if (w > 1024) {
+            location.reload();
+        }
     });
-    
+
     $("#wrap.main #main .wall .txt2").hover(function(){
         $("#cursor").addClass("type1");
     }, function(){
@@ -28,17 +36,30 @@ $(document).ready(function(){
     $("#profile .mail-icon").click(function(){
         if(!$("#profile .mail .form").hasClass("active")){
             $("#profile .mail .form").addClass("active");
-            gsap.fromTo("#profile .mail .form", {x: 0, opacity:0}, {duration: 0.6, x: -70, opacity:1});
+            if (w > 1024) {
+                gsap.fromTo("#profile .mail .form", {x: 0, opacity:0}, {duration: 0.6, x: -70, opacity:1});
+            }else{
+                gsap.fromTo("#profile .mail .form", {y: 0, opacity:0}, {duration: 0.6, y: -30, opacity:1});
+            }
         }else{
             $("#profile .mail .form").removeClass("active");
-            gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+            if (w > 1024) {
+                gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+            }else{
+                gsap.fromTo("#profile .mail .form", {y: -30, opacity:1}, {duration: 0.6, y: 0, opacity:0});
+            }
         }
     });
 
     $("#profile .mail .form .success .close").click(function(){
         $("#profile .mail .form").removeClass("active");
         $('input[name=submit]').removeClass("submit");
-        gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+        if (w > 1024) {
+            gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+        }else{
+            gsap.fromTo("#profile .mail .form", {y: -30, opacity:1}, {duration: 0.6, y: 0, opacity:0});
+        }
+        
         setTimeout(() => {
             $("#profile .mail .form form").show();
             $("#profile .mail .form .success").hide();
