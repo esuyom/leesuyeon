@@ -32,7 +32,7 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #wrap { position: relative; width: 100%; height: 100%; overflow: hidden; } 
 
 /* 커서 */
-#cursor { position: fixed; top: 0px; left: 0px; width: 40px; height: 40px; z-index: 10; pointer-events: none; } 
+#cursor { display:block; position: fixed; top: 0px; left: 0px; width: 40px; height: 40px; z-index: 10; pointer-events: none; } 
 #cursor div { position: absolute; display: grid; place-items: center; } 
 #cursor div div { border: 1px solid rgb(255, 255, 255); border-radius: 50%; animation: 2.1s linear 0s infinite normal none running pulse; box-shadow: rgba(134, 134, 134, 0.7) 0px 0px 50px 7px; } 
 #cursor div:nth-child(1), #cursor div:nth-child(2) { width: 100%; height: 100%; } 
@@ -230,10 +230,18 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .mail .form .success .txt{font-size:17px;}
     #profile .mail .form .success .close{height:40px; font-size:15px; border-radius: 5px;}
 
+    #work>.close{left:15px; top:15px;}
+    #work .main-title{  top: 5%; right: -170px;}
+    #work .webSwiper{height:220px;}
+    #work .webSwiper .item .bg{height: 220px;}
+    #work .webSwiper .item{width:300px;padding-bottom: 45px;margin:0 10px;}
+    #work .webSwiper .item.active{width:500px !important;}
+    #work .webSwiper .info{font-size: 16px;padding: 0 10px;height: 45px;}
+    #work .webSwiper .info .title{}
 }
 
 @media (max-width: 760px){
     #wrap.main #main .wall .arrow { width: 20px; height: 20px; } 
 
-    #profile{height:100%; padding-bottom:0;}
+    #profile{height:100%; padding-bottom:35px;}
 }

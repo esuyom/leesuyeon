@@ -14,11 +14,11 @@ $(document).ready(function(){
             );
         });
     }
-    $(window).on('resize', function(){
-        if (w > 1024) {
-            location.reload();
-        }
-    });
+    // $(window).on('resize', function(){
+    //     if (w > 1024) {
+    //         window.location.reload();
+    //     }
+    // });
 
     $("#wrap.main #main .wall .txt2").hover(function(){
         $("#cursor").addClass("type1");
@@ -129,9 +129,7 @@ $(document).ready(function(){
 
     //webSwiper
     var mySwiper = new Swiper('.webSwiper', {
-        slidesPerView:'auto',
         direction:"horizontal",
-        centeredSlides: true,
         slideToClickedSlide:true,
         grabCursor: true,
         mousewheel: true,
@@ -144,6 +142,16 @@ $(document).ready(function(){
                 moveX();
             },
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+            768: {
+                slidesPerView:'auto',
+                centeredSlides: true,
+            }
+        }
     });
     
 });
