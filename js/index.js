@@ -36,16 +36,16 @@ $(document).ready(function(){
         if(!$("#profile .mail .form").hasClass("active")){
             $("#profile .mail .form").addClass("active");
             if (w > 1024) {
-                gsap.fromTo("#profile .mail .form", {x: 0, opacity:0}, {duration: 0.6, x: -70, opacity:1});
+                gsap.fromTo("#profile .mail .form", {x: 0, opacity:0, display:'none'}, {duration: 0.6, x: -70, opacity:1, display:'block'});
             }else{
-                gsap.fromTo("#profile .mail .form", {y: 0, opacity:0}, {duration: 0.6, y: -30, opacity:1});
+                gsap.fromTo("#profile .mail .form", {y: 0, opacity:0, display:'none'}, {duration: 0.6, y: -30, opacity:1, display:'block'});
             }
         }else{
             $("#profile .mail .form").removeClass("active");
             if (w > 1024) {
-                gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+                gsap.fromTo("#profile .mail .form", {x: -70, opacity:1, display:'block'}, {duration: 0.6, x: 0, opacity:0,  display:'none'});
             }else{
-                gsap.fromTo("#profile .mail .form", {y: -30, opacity:1}, {duration: 0.6, y: 0, opacity:0});
+                gsap.fromTo("#profile .mail .form", {y: -30, opacity:1, display:'block'}, {duration: 0.6, y: 0, opacity:0,  display:'none'});
             }
         }
     });
