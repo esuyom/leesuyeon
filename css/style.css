@@ -81,7 +81,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .info .pic { width: 220px; } 
 #profile .info ul { margin-top: 16px; } 
 #profile .info ul li { margin-bottom: 3px; position: relative; padding-left: 18px; display: flex; align-items: center; font-size: 18px; } 
-#profile .info ul li span { color: rgb(1 19 95); font-size: 30px; position: absolute; left: 0; } 
+#profile .info ul li span { color: rgb(83 83 83); font-size: 30px; position: absolute; left: 0; } 
 #profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 10px 6px 6px); width: 100%; } 
 #profile .txt1 { font-size: 40px; font-weight: 500; position: absolute; display: inline-block; top: 29%; left: 26%; } 
 #profile .txt1 strong { } 
@@ -92,7 +92,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .infoSwiper .txt p{margin-bottom:25px;}
 #profile .infoSwiper .swiper-button-next,#profile .infoSwiper .swiper-button-prev { bottom: 0; top: auto; right: 20px; left: auto; } 
 #profile .infoSwiper .swiper-button-next::after, #profile .infoSwiper .swiper-button-prev::after { display:none; } 
-#profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:40px; color:rgb(1 19 95); } 
+#profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:40px; color:rgb(83 83 83); } 
 #profile .infoSwiper .swiper-button-next.swiper-button-disabled, #profile .infoSwiper .swiper-button-prev.swiper-button-disabled { opacity: 0; } 
 #profile .career { background-image: url(../images/arrow3.png); background-repeat: no-repeat; background-size: contain; padding-left: 25px; } 
 #profile .career ul { margin-top: 10px; } 
