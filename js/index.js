@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    // $(window).on('resize', function(){
+    //     window.location.reload();
+    // });
+
+    
     // 이미지 로딩
     $('#work').imagesLoaded().done( function( instance ) {
         console.log('이미지 로딩 완료');
@@ -15,9 +20,6 @@ $(document).ready(function(){
         });
     }
 
-    $(window).on('resize', function(){
-        window.location.reload();
-    });
 
     $("#wrap.main #main .wall .txt2").hover(function(){
         $("#cursor").addClass("type1");
