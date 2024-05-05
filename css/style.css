@@ -211,16 +211,16 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .txt1{font-size: 4.8vw;left: 3%;top: -21vw;}
     #profile .txt1 i{font-size: 4.5vw;left: -5vw;top: -3px;}
     #profile .txt1 i:last-child{right: -5vw;top: 23px;}
-    #profile .infoSwiper{position: static;width: 95%; height: auto;margin-top: 6vw; margin-left:0;}
+    #profile .infoSwiper{z-index:5; position: static;width: 95%; height: auto;margin-top: 6vw; margin-left:0;}
     #profile .infoSwiper .txt{font-size: 3.6vw;}
     #profile .infoSwiper .txt p{margin-bottom:10px;}
-    #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev{bottom:0; right:0;}
+    #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev{bottom:0; right:0; }
     #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i{font-size:6vw;}
     #profile .career{padding-left:22px;}
     #profile .career ul li span{font-size: 3.2vw;}
     #profile .career ul li{font-size: 3.6vw; margin-bottom: 15px;}
     #profile .mail{position:fixed;top:auto;bottom:0;width: 100%;height: 45px;right: 0;}
-    #profile .mail .form{top:auto;bottom:0;width: 100%;right: 0;height: 375px;padding: 15px;}
+    #profile .mail .form{top:auto;bottom:0;width: 100%;right: 0;height: 390px;padding: 15px;}
     #profile .mail-icon{width: 100%;height: 100%;border-radius: 0;}
     #profile .mail-icon i{font-size: 25px;}
     #profile .mail .form .txt{font-size:4vw;}
@@ -232,14 +232,30 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 
     #work>.close{left:15px; top:15px;}
     #work .main-title{  top: 5%; right: -170px;}
-    #work .webSwiper{height:220px;}
+    #work .webSwiper{height:220px; padding-top: 150px; padding-bottom: 320px;}
+    #work .webSwiper .item.long.active{padding-bottom:280px;}
     #work .webSwiper .item .bg{height: 220px;}
-    #work .webSwiper .item{width:300px;padding-bottom: 45px;margin:0 10px;}
-    #work .webSwiper .item.active{width:500px !important;}
+    #work .webSwiper .item{margin:0 10px; width:400px !important; padding-bottom:45px;}
+    #work .webSwiper .item.active{width: 400px !important;}
     #work .webSwiper .info{font-size: 16px;padding: 0 10px;height: 45px;}
     #work .webSwiper .info .title{}
+    #work .webSwiper .txt p{font-size: 15px; width:100%; padding-left:0;}
+    #work .webSwiper .txt .link{font-size:15px; position:relative; top:auto; right:auto; left:-10px;}
+    #work .webSwiper .txt .link + .link{margin-top:0;}
+    #work .webSwiper .txt .link + .link + .link{margin-top:0;}
+    #work .webSwiper .txt .link::after{top:11px; width:5px; height:5px;}
 }
 
 @media (max-width: 760px){
     #wrap.main #main .wall .arrow { width: 20px; height: 20px; } 
+
+    #work .webSwiper{height:150px; padding-top: 200px;}
+    #work .webSwiper .item{margin:0 10px; width:200px !important;}
+    #work .webSwiper .item .bg{height: 150px;}
+    #work .webSwiper .item.active{width: 200px !important;padding-bottom: 220px;  box-shadow: rgb(132 132 132) 0px 0px 20px;}
+    #work .webSwiper .item.active .txt{padding:7px;}
+    #work .webSwiper .info{font-size:13px; padding:0 7px;}
+    #work .webSwiper .txt p{font-size: 12px;}
+    #work .webSwiper .txt .link{font-size:12px;}
+    #work .webSwiper .item.long.active{padding-bottom: 280px;}
 }
