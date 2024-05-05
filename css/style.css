@@ -220,10 +220,10 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .career ul li span{font-size: 3.2vw;}
     #profile .career ul li{font-size: 3.6vw; margin-bottom: 15px;}
     #profile .mail{position:fixed;top:auto;bottom:0;width: 100%;height: 45px;right: 0;}
-    #profile .mail .form{top:auto;bottom:0;width: 100%;right: 0;height: 390px;padding: 15px;}
+    #profile .mail .form{top:auto;bottom:0;width: 100%;right: 0;height: 420px;padding: 15px;}
     #profile .mail-icon{width: 100%;height: 100%;border-radius: 0;}
     #profile .mail-icon i{font-size: 25px;}
-    #profile .mail .form .txt{font-size:4vw;}
+    #profile .mail .form .txt{font-size:20px;}
     #profile .mail .form form input[type="text"]{font-size:12px; margin-bottom:7px; padding:0 7px; border-radius: 5px;;}
     #profile .mail .form form textarea{font-size:12px; border-radius: 5px;;}
     #profile .mail .form form input[type="button"]{height:40px; font-size:15px; border-radius: 5px;}
@@ -249,7 +249,9 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 @media (max-width: 760px){
     #wrap.main #main .wall .arrow { width: 20px; height: 20px; } 
 
+    #profile .mail .form{height: 385px;}
     #profile .mail .form form input[type="text"]{height:35px;}
+    #profile .mail .form .txt{font-size:15px; }
 
     #work .webSwiper{height:150px; padding-top: 200px;}
     #work .webSwiper .item{margin:0 10px; width:220px !important;}
