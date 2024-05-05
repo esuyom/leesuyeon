@@ -95,7 +95,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:40px; color:rgb(112 112 112); } 
 #profile .infoSwiper .swiper-button-next.swiper-button-disabled, #profile .infoSwiper .swiper-button-prev.swiper-button-disabled { opacity: 0; } 
 #profile .career { background-image: url(../images/arrow3.png); background-repeat: no-repeat; background-size: contain; padding-left: 25px; } 
-#profile .career ul { margin-top: 10px; } 
+#profile .career ul { margin-top: 11px; } 
 #profile .career ul li { font-size: 18px; margin-bottom: 17px; } 
 #profile .career ul li span { display: block; margin-bottom: 3px; font-size:16px; color:rgb(148 148 148); } 
 #profile .mail { cursor:pointer; position: absolute; z-index: 5; right: 5%; top: calc(50% - 35px); } 
