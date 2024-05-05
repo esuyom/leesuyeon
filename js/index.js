@@ -54,9 +54,9 @@ $(document).ready(function(){
         $("#profile .mail .form").removeClass("active");
         $('input[name=submit]').removeClass("submit");
         if (w > 1024) {
-            gsap.fromTo("#profile .mail .form", {x: -70, opacity:1}, {duration: 0.6, x: 0, opacity:0});
+            gsap.fromTo("#profile .mail .form", {x: -70, opacity:1, display:'block'}, {duration: 0.6, x: 0, opacity:0,  display:'none'});
         }else{
-            gsap.fromTo("#profile .mail .form", {y: -30, opacity:1}, {duration: 0.6, y: 0, opacity:0});
+            gsap.fromTo("#profile .mail .form", {y: -30, opacity:1, display:'block'}, {duration: 0.6, y: 0, opacity:0,  display:'none'});
         }
         
         setTimeout(() => {
