@@ -242,6 +242,4 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 
 @media (max-width: 760px){
     #wrap.main #main .wall .arrow { width: 20px; height: 20px; } 
-
-    #profile{height:100%; padding-bottom:35px;}
 }
