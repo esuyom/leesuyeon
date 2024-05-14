@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    // $(window).on('resize', function(){
-    //     window.location.reload();
-    // });
+    $(window).on('resize', function(){
+        window.location.reload();
+    });
 
     
     // 이미지 로딩
