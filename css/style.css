@@ -256,10 +256,10 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #work .webSwiper{height:150px; padding-top: 200px;}
     #work .webSwiper .item{margin:0 10px; width:220px !important;}
     #work .webSwiper .item .bg{height: 150px;}
-    #work .webSwiper .item.active{width: 220px !important;padding-bottom: 220px;  box-shadow: rgb(132 132 132) 0px 0px 20px;}
+    #work .webSwiper .item.active{width: 220px !important;padding-bottom: 190px;  box-shadow: rgb(132 132 132) 0px 0px 20px;}
     #work .webSwiper .item.active .txt{padding:7px;}
     #work .webSwiper .info{font-size:13px; padding:0 7px;}
     #work .webSwiper .txt p{font-size: 12px;}
     #work .webSwiper .txt .link{font-size:12px;}
-    #work .webSwiper .item.long.active{padding-bottom: 280px;}
+    #work .webSwiper .item.long.active{padding-bottom: 255px;}
 }
