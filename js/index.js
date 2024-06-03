@@ -82,7 +82,6 @@ $(document).ready(function(){
             $("#work .content .item .txt").hide();
             $("#work .content .item .bg").animate({ scrollTop: 0 }, 1000);
             mySwiper.mousewheel.disable();
-            var state = $(".webSwiper .swiper-wrapper").css("transform");
             $(this).addClass("active");
             checkInterval();
             setTimeout(() => {
