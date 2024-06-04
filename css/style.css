@@ -31,7 +31,7 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 
 #wrap { position: relative; width: 100%; height: 100%; overflow: hidden; } 
 
-#fade{position:absolute; z-index: 3; width:100%; height:100%; left:0; top:0; background-color: #000000b6; animation:fadeOut 2.1s forwards;}
+#fade{position:absolute; z-index: 3; width:100%; height:100%; left:0; top:0; background-color: #000000b6; animation:fadeOut 2s forwards;}
 #lamp {width: 90px;display: inline-block;transform-origin: top center;transform:rotate(45deg);animation:lamp 3s forwards;position: absolute;z-index: 4;left: calc(50% - 45px);} 
 #lamp .bulb { fill:#fcff48; fill-opacity:0.1; animation: bulb .3s .3s 5 cubic-bezier(.26,1.17,.89,-0.74) alternate forwards; } 
 
@@ -140,52 +140,6 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work .webSwiper .item.active .txt { display: block; width: 100%; height: auto; transition: all 1s ease 0s; } 
 #work .webSwiper .item.active .bg { overflow-y: scroll; } 
 
-
-/* ani */
-@-webkit-keyframes slide-left { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(50px); } 
-    100% { transform: translateX(0px); } 
-}
-    @keyframes slide-left { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(50px); } 
-    100% { transform: translateX(0px); } 
-}
-    @-webkit-keyframes slide-right { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(-50px); } 
-    100% { transform: translateX(0px); } 
-}
-    @keyframes slide-right { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(-50px); } 
-    100% { transform: translateX(0px); } 
-}
-@keyframes bulb {
-    to {
-        fill-opacity:1;
-        fill:#FBF8CA;
-    }
-}
-
-@keyframes lamp {
-    5%{ transform:rotate(-45deg) }
-    10%{ transform:rotate(35deg) }
-    15%{ transform:rotate(-35deg) }
-    25%{ transform:rotate(15deg) }
-    40%{ transform:rotate(-15deg) }
-    65% { transform:rotate(3deg) }
-    85% { transform:rotate(-1deg) }  
-    100%{ transform:rotate(0deg) }
-}
-
-@keyframes fadeOut {
-    to {
-        display:none;
-    }
-}
-
 /* mo */
 
 @media (max-width: 1024px) { 
@@ -272,4 +226,51 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #work .webSwiper .txt p { font-size: 12px; } 
     #work .webSwiper .txt .link { font-size:12px; } 
     #work .webSwiper .item.long.active { padding-bottom: 255px; } 
+}
+
+
+
+/* ani */
+@-webkit-keyframes slide-left { 
+    0% { transform: translateX(0px); } 
+    50% { transform: translateX(50px); } 
+    100% { transform: translateX(0px); } 
+}
+    @keyframes slide-left { 
+    0% { transform: translateX(0px); } 
+    50% { transform: translateX(50px); } 
+    100% { transform: translateX(0px); } 
+}
+    @-webkit-keyframes slide-right { 
+    0% { transform: translateX(0px); } 
+    50% { transform: translateX(-50px); } 
+    100% { transform: translateX(0px); } 
+}
+    @keyframes slide-right { 
+    0% { transform: translateX(0px); } 
+    50% { transform: translateX(-50px); } 
+    100% { transform: translateX(0px); } 
+}
+@keyframes bulb {
+    to {
+        fill-opacity:1;
+        fill:#FBF8CA;
+    }
+}
+
+@keyframes lamp {
+    5%{ transform:rotate(-45deg) }
+    10%{ transform:rotate(35deg) }
+    15%{ transform:rotate(-35deg) }
+    25%{ transform:rotate(15deg) }
+    40%{ transform:rotate(-15deg) }
+    65% { transform:rotate(3deg) }
+    85% { transform:rotate(-1deg) }  
+    100%{ transform:rotate(0deg) }
+}
+
+@keyframes fadeOut {
+    0%{ opacity:1; }
+    95%{ opacity:1; }
+    100%{ opacity:0; }
 }
