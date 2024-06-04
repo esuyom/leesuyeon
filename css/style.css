@@ -188,7 +188,8 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 
 /* mo */
 
-@media (max-width: 1024px) { body { letter-spacing: -0.5px;; } 
+@media (max-width: 1024px) { 
+    body { letter-spacing: -0.5px; } 
     .pc { display: none !important; } 
     .mo { display: block !important; } 
     #cursor { display:none; } 
