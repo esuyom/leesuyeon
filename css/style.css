@@ -186,89 +186,89 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     }
 }
 
-    /* mo */
+/* mo */
 
-    @media (max-width: 1024px) { body { letter-spacing: -0.5px;; } 
-        .pc { display: none !important; } 
-        .mo { display: block !important; } 
-        #cursor { display:none; } 
+@media (max-width: 1024px) { body { letter-spacing: -0.5px;; } 
+    .pc { display: none !important; } 
+    .mo { display: block !important; } 
+    #cursor { display:none; } 
 
-        #wrap { height:auto; overflow:visible; overflow-x: hidden; } 
+    #wrap { height:auto; overflow:visible; overflow-x: hidden; } 
 
-        #wrap #main .txt1 { font-size: 7vw; } 
-        #wrap #main .wall1 .txt1 { bottom:-0.5%; } 
-        #wrap #main .wall2 .txt1 { bottom:-0.5%; } 
-        #wrap #main .wall .txt2 { font-size:5vw; padding:0 5px; } 
-        #wrap #main .wall1 .profile { left:0; } 
-        #wrap #main .wall2 .work { right:0; } 
-        #wrap #main .wall .arrow { width: 40px; height: 40px; bottom: 5.5vw; } 
-        #wrap #main .wall1 .arrow { left: 2%; } 
-        #wrap #main .wall2 .arrow { right: 2%; } 
+    #wrap #main .txt1 { font-size: 7vw; } 
+    #wrap #main .wall1 .txt1 { bottom:-0.5%; } 
+    #wrap #main .wall2 .txt1 { bottom:-0.5%; } 
+    #wrap #main .wall .txt2 { font-size:5vw; padding:0 5px; } 
+    #wrap #main .wall1 .profile { left:0; } 
+    #wrap #main .wall2 .work { right:0; } 
+    #wrap #main .wall .arrow { width: 40px; height: 40px; bottom: 5.5vw; } 
+    #wrap #main .wall1 .arrow { left: 2%; } 
+    #wrap #main .wall2 .arrow { right: 2%; } 
 
-        section.side .main-title { font-size:21vw; letter-spacing: 1px; } 
-        section.side>.close { width:35px; height:35px; } 
+    section.side .main-title { font-size:21vw; letter-spacing: 1px; } 
+    section.side>.close { width:35px; height:35px; } 
 
-        #profile { height:auto; padding-bottom:60px; } 
-        #profile>.close { right:15px; top:15px; } 
-        #profile .main-title { top: 5%; left: -160px; } 
-        #profile .content { position: relative; height: auto; width: 92%; display: flex; flex-direction: column; margin: 0 auto; margin-top: 50vw; left: 0; } 
-        #profile .info { position: static; display: flex; align-items: flex-end; } 
-        #profile .info .pic { width: 37vw; } 
-        #profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 4px 4px 6px); } 
-        #profile .info ul { margin-top: 0; margin-left: 5%; } 
-        #profile .info ul li { font-size: 3.6vw; padding-left: 10px; } 
-        #profile .info ul li span { font-size:16px; } 
-        #profile .txt1 { font-size: 4.8vw; left: 3%; top: -21vw; } 
-        #profile .txt1 i { font-size: 4.5vw; left: -5vw; top: -3px; } 
-        #profile .txt1 i:last-child { right: -5vw; top: 23px; } 
-        #profile .infoSwiper { z-index:5; position: static; width: 95%; height: auto; margin-top: 6vw; margin-left:0; } 
-        #profile .infoSwiper .txt { font-size: 3.6vw; } 
-        #profile .infoSwiper .txt p { margin-bottom:10px; } 
-        #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev { bottom:0; right:0; } 
-        #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:6vw; } 
-        #profile .career { padding-left:22px; } 
-        #profile .career ul li span { font-size: 3.2vw; } 
-        #profile .career ul li { font-size: 3.6vw; margin-bottom: 15px; } 
-        #profile .mail { position:fixed; top:auto; bottom:0; width: 100%; height: 45px; right: 0; } 
-        #profile .mail .form { top:auto; bottom:0; width: 100%; right: 0; height: 420px; padding: 15px; } 
-        #profile .mail-icon { width: 100%; height: 100%; border-radius: 0; } 
-        #profile .mail-icon i { font-size: 25px; } 
-        #profile .mail .form .txt { font-size:20px; } 
-        #profile .mail .form form input[type="text"] { font-size:12px; margin-bottom:7px; padding:0 7px; border-radius: 5px;; } 
-        #profile .mail .form form textarea { font-size:12px; border-radius: 5px;; } 
-        #profile .mail .form form input[type="button"] { height:40px; font-size:15px; border-radius: 5px; } 
-        #profile .mail .form .success .txt { font-size:17px; } 
-        #profile .mail .form .success .close { height:40px; font-size:15px; border-radius: 5px; } 
+    #profile { height:auto; padding-bottom:60px; } 
+    #profile>.close { right:15px; top:15px; } 
+    #profile .main-title { top: 5%; left: -160px; } 
+    #profile .content { position: relative; height: auto; width: 92%; display: flex; flex-direction: column; margin: 0 auto; margin-top: 50vw; left: 0; } 
+    #profile .info { position: static; display: flex; align-items: flex-end; } 
+    #profile .info .pic { width: 37vw; } 
+    #profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 4px 4px 6px); } 
+    #profile .info ul { margin-top: 0; margin-left: 5%; } 
+    #profile .info ul li { font-size: 3.6vw; padding-left: 10px; } 
+    #profile .info ul li span { font-size:16px; } 
+    #profile .txt1 { font-size: 4.8vw; left: 3%; top: -21vw; } 
+    #profile .txt1 i { font-size: 4.5vw; left: -5vw; top: -3px; } 
+    #profile .txt1 i:last-child { right: -5vw; top: 23px; } 
+    #profile .infoSwiper { z-index:5; position: static; width: 95%; height: auto; margin-top: 6vw; margin-left:0; } 
+    #profile .infoSwiper .txt { font-size: 3.6vw; } 
+    #profile .infoSwiper .txt p { margin-bottom:10px; } 
+    #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev { bottom:0; right:0; } 
+    #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:6vw; } 
+    #profile .career { padding-left:22px; } 
+    #profile .career ul li span { font-size: 3.2vw; } 
+    #profile .career ul li { font-size: 3.6vw; margin-bottom: 15px; } 
+    #profile .mail { position:fixed; top:auto; bottom:0; width: 100%; height: 45px; right: 0; } 
+    #profile .mail .form { top:auto; bottom:0; width: 100%; right: 0; height: 420px; padding: 15px; } 
+    #profile .mail-icon { width: 100%; height: 100%; border-radius: 0; } 
+    #profile .mail-icon i { font-size: 25px; } 
+    #profile .mail .form .txt { font-size:20px; } 
+    #profile .mail .form form input[type="text"] { font-size:12px; margin-bottom:7px; padding:0 7px; border-radius: 5px;; } 
+    #profile .mail .form form textarea { font-size:12px; border-radius: 5px;; } 
+    #profile .mail .form form input[type="button"] { height:40px; font-size:15px; border-radius: 5px; } 
+    #profile .mail .form .success .txt { font-size:17px; } 
+    #profile .mail .form .success .close { height:40px; font-size:15px; border-radius: 5px; } 
 
-        #work>.close { left:15px; top:15px; } 
-        #work .main-title { top: 5%; right: -170px; } 
-        #work .webSwiper { height:220px; padding-top: 150px; padding-bottom: 320px; } 
-        #work .webSwiper .item.long.active { padding-bottom:280px; } 
-        #work .webSwiper .item .bg { height: 220px; } 
-        #work .webSwiper .item { margin:0 10px; width:400px !important; padding-bottom:45px; } 
-        #work .webSwiper .item.active { width: 400px !important; } 
-        #work .webSwiper .info { font-size: 16px; padding: 0 10px; height: 45px; } 
-        #work .webSwiper .txt p { font-size: 15px; width:100%; padding-left:0; } 
-        #work .webSwiper .txt .link { font-size:15px; position:relative; top:auto; right:auto; left:-10px; } 
-        #work .webSwiper .txt .link + .link { margin-top:0; } 
-        #work .webSwiper .txt .link + .link + .link { margin-top:0; } 
-        #work .webSwiper .txt .link::after { top:11px; width:5px; height:5px; } 
-    }
+    #work>.close { left:15px; top:15px; } 
+    #work .main-title { top: 5%; right: -170px; } 
+    #work .webSwiper { height:220px; padding-top: 150px; padding-bottom: 320px; } 
+    #work .webSwiper .item.long.active { padding-bottom:280px; } 
+    #work .webSwiper .item .bg { height: 220px; } 
+    #work .webSwiper .item { margin:0 10px; width:400px !important; padding-bottom:45px; } 
+    #work .webSwiper .item.active { width: 400px !important; } 
+    #work .webSwiper .info { font-size: 16px; padding: 0 10px; height: 45px; } 
+    #work .webSwiper .txt p { font-size: 15px; width:100%; padding-left:0; } 
+    #work .webSwiper .txt .link { font-size:15px; position:relative; top:auto; right:auto; left:-10px; } 
+    #work .webSwiper .txt .link + .link { margin-top:0; } 
+    #work .webSwiper .txt .link + .link + .link { margin-top:0; } 
+    #work .webSwiper .txt .link::after { top:11px; width:5px; height:5px; } 
+}
 
-    @media (max-width: 760px){
-        #wrap #main .wall .arrow { width: 20px; height: 20px; } 
+@media (max-width: 760px){
+    #wrap #main .wall .arrow { width: 20px; height: 20px; } 
 
-        #profile .mail .form { height: 385px; } 
-        #profile .mail .form form input[type="text"] { height:35px; } 
-        #profile .mail .form .txt { font-size:15px; } 
+    #profile .mail .form { height: 385px; } 
+    #profile .mail .form form input[type="text"] { height:35px; } 
+    #profile .mail .form .txt { font-size:15px; } 
 
-        #work .webSwiper { height:150px; padding-top: 200px; } 
-        #work .webSwiper .item { margin:0 10px; width:220px !important; } 
-        #work .webSwiper .item .bg { height: 150px; } 
-        #work .webSwiper .item.active { width: 220px !important; padding-bottom: 220px; box-shadow: rgb(132 132 132) 0px 0px 20px; } 
-        #work .webSwiper .item.active .txt { padding:7px; } 
-        #work .webSwiper .info { font-size:13px; padding:0 7px; } 
-        #work .webSwiper .txt p { font-size: 12px; } 
-        #work .webSwiper .txt .link { font-size:12px; } 
-        #work .webSwiper .item.long.active { padding-bottom: 255px; } 
-    }
+    #work .webSwiper { height:150px; padding-top: 200px; } 
+    #work .webSwiper .item { margin:0 10px; width:220px !important; } 
+    #work .webSwiper .item .bg { height: 150px; } 
+    #work .webSwiper .item.active { width: 220px !important; padding-bottom: 220px; box-shadow: rgb(132 132 132) 0px 0px 20px; } 
+    #work .webSwiper .item.active .txt { padding:7px; } 
+    #work .webSwiper .info { font-size:13px; padding:0 7px; } 
+    #work .webSwiper .txt p { font-size: 12px; } 
+    #work .webSwiper .txt .link { font-size:12px; } 
+    #work .webSwiper .item.long.active { padding-bottom: 255px; } 
+}
