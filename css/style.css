@@ -164,7 +164,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     section.side .main-title { font-size:21vw; letter-spacing: 1px; } 
     section.side>.close { width:35px; height:35px; } 
 
-    #profile { height:auto; padding-bottom:60px; } 
+    #profile {height:auto; padding-bottom:60px;} 
     #profile>.close { right:15px; top:15px; } 
     #profile .main-title { top: 5%; left: -160px; } 
     #profile .content { position: relative; height: auto; width: 92%; display: flex; flex-direction: column; margin: 0 auto; margin-top: 50vw; left: 0; } 
@@ -196,61 +196,61 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .mail .form .success .txt { font-size:17px; } 
     #profile .mail .form .success .close { height:40px; font-size:15px; border-radius: 5px; } 
 
-    #work>.close { left:15px; top:15px; } 
-    #work .main-title { top: 5%; right: -170px; } 
-    #work .webSwiper { height:220px; padding-top: 150px; padding-bottom: 320px; } 
-    #work .webSwiper .item.long.active { padding-bottom:280px; } 
-    #work .webSwiper .item .bg { height: 220px; } 
-    #work .webSwiper .item { margin:0 10px; width:400px !important; padding-bottom:45px; } 
-    #work .webSwiper .item.active { width: 400px !important; } 
-    #work .webSwiper .info { font-size: 16px; padding: 0 10px; height: 45px; } 
-    #work .webSwiper .txt p { font-size: 15px; width:100%; padding-left:0; } 
-    #work .webSwiper .txt .link { font-size:15px; position:relative; top:auto; right:auto; left:-10px; } 
-    #work .webSwiper .txt .link + .link { margin-top:0; } 
-    #work .webSwiper .txt .link + .link + .link { margin-top:0; } 
-    #work .webSwiper .txt .link::after { top:11px; width:5px; height:5px; } 
+    #work>.close {left:15px; top:15px;} 
+    #work .main-title {top: 5%; right: -170px;} 
+    #work .webSwiper {height:220px; padding-top: 150px; padding-bottom: 320px;} 
+    #work .webSwiper .item.long.active {padding-bottom:280px;} 
+    #work .webSwiper .item .bg {height: 220px;} 
+    #work .webSwiper .item {margin:0 10px; width:400px !important; padding-bottom:45px;} 
+    #work .webSwiper .item.active {width: 400px !important;} 
+    #work .webSwiper .info {font-size: 16px; padding: 0 10px; height: 45px;} 
+    #work .webSwiper .txt p {font-size: 15px; width:100%; padding-left:0;} 
+    #work .webSwiper .txt .link {font-size:15px; position:relative; top:auto; right:auto; left:-10px;} 
+    #work .webSwiper .txt .link + .link {margin-top:0;} 
+    #work .webSwiper .txt .link + .link + .link {margin-top:0;} 
+    #work .webSwiper .txt .link::after {top:11px; width:5px; height:5px;} 
 }
 
 @media (max-width: 760px){
-    #wrap #main .wall .arrow { width: 20px; height: 20px; } 
+    #wrap #main .wall .arrow {width: 20px; height: 20px;} 
 
-    #profile .mail .form { height: 385px; } 
-    #profile .mail .form form input[type="text"] { height:35px; } 
-    #profile .mail .form .txt { font-size:15px; } 
+    #profile .mail .form {height: 385px;} 
+    #profile .mail .form form input[type="text"] {height:35px;} 
+    #profile .mail .form .txt {font-size:15px;} 
 
-    #work .webSwiper { height:150px; padding-top: 200px; } 
-    #work .webSwiper .item { margin:0 10px; width:220px !important; } 
-    #work .webSwiper .item .bg { height: 150px; } 
-    #work .webSwiper .item.active { width: 220px !important; padding-bottom: 220px; box-shadow: rgb(132 132 132) 0px 0px 20px; } 
-    #work .webSwiper .item.active .txt { padding:7px; } 
-    #work .webSwiper .info { font-size:13px; padding:0 7px; } 
-    #work .webSwiper .txt p { font-size: 12px; } 
-    #work .webSwiper .txt .link { font-size:12px; } 
-    #work .webSwiper .item.long.active { padding-bottom: 255px; } 
+    #work .webSwiper {height:150px; padding-top: 200px;} 
+    #work .webSwiper .item {margin:0 10px; width:220px !important;} 
+    #work .webSwiper .item .bg {height: 150px;} 
+    #work .webSwiper .item.active {width: 220px !important; padding-bottom: 220px; box-shadow: rgb(132 132 132) 0px 0px 20px;} 
+    #work .webSwiper .item.active .txt {padding:7px;} 
+    #work .webSwiper .info {font-size:13px; padding:0 7px;} 
+    #work .webSwiper .txt p {font-size: 12px;} 
+    #work .webSwiper .txt .link {font-size:12px;} 
+    #work .webSwiper .item.long.active {padding-bottom: 255px;} 
 }
 
 
 
 /* ani */
 @-webkit-keyframes slide-left { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(50px); } 
-    100% { transform: translateX(0px); } 
+    0% {transform: translateX(0px);} 
+    50% {transform: translateX(50px);} 
+    100% {transform: translateX(0px);} 
 }
     @keyframes slide-left { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(50px); } 
-    100% { transform: translateX(0px); } 
+    0% {transform: translateX(0px);} 
+    50% {transform: translateX(50px);} 
+    100% {transform: translateX(0px);} 
 }
     @-webkit-keyframes slide-right { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(-50px); } 
-    100% { transform: translateX(0px); } 
+    0% {transform: translateX(0px);} 
+    50% {transform: translateX(-50px);} 
+    100% {transform: translateX(0px);} 
 }
     @keyframes slide-right { 
-    0% { transform: translateX(0px); } 
-    50% { transform: translateX(-50px); } 
-    100% { transform: translateX(0px); } 
+    0% {transform: translateX(0px);} 
+    50% {transform: translateX(-50px);} 
+    100% {transform: translateX(0px);} 
 }
 @keyframes bulb {
     to {
@@ -260,18 +260,18 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 }
 
 @keyframes lamp {
-    5%{ transform:rotate(-45deg) }
-    10%{ transform:rotate(35deg) }
-    15%{ transform:rotate(-35deg) }
-    25%{ transform:rotate(15deg) }
-    40%{ transform:rotate(-15deg) }
-    65% { transform:rotate(3deg) }
-    85% { transform:rotate(-1deg) }  
-    100%{ transform:rotate(0deg) }
+    5%{transform:rotate(-45deg)}
+    10%{transform:rotate(35deg)}
+    15%{transform:rotate(-35deg)}
+    25%{transform:rotate(15deg)}
+    40%{transform:rotate(-15deg)}
+    65% {transform:rotate(3deg)}
+    85% {transform:rotate(-1deg)}  
+    100%{transform:rotate(0deg)}
 }
 
 @keyframes fadeOut {
-    0%{ opacity:1; }
-    95%{ opacity:1; }
-    100%{ opacity:0; }
+    0%{opacity:1;}
+    95%{opacity:1;}
+    100%{opacity:0;display:none;}
 }

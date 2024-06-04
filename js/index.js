@@ -14,12 +14,16 @@ $(document).ready(function(){
         });
     }
 
-
     $("#wrap #main .wall .txt2").hover(function(){
         $("#cursor").addClass("type1");
     }, function(){
         $("#cursor").removeClass("type1");
     });	
+
+    // fadeOut
+    setTimeout(() => {
+        $("#fade").hide();
+    }, 2500);
 
     // Profile
     $("#wrap #main .wall1 .profile").click(function(){
