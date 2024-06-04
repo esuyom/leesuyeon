@@ -31,7 +31,11 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 
 #wrap { position: relative; width: 100%; height: 100%; overflow: hidden; } 
 
-/* 커서 */
+#fade{position:absolute; z-index: 3; width:100%; height:100%; left:0; top:0; background-color: #000000b6; animation:fadeOut 2.1s forwards;}
+#lamp {width: 90px;display: inline-block;transform-origin: top center;transform:rotate(45deg);animation:lamp 3s forwards;position: absolute;z-index: 4;left: calc(50% - 45px);} 
+#lamp .bulb { fill:#fcff48; fill-opacity:0.1; animation: bulb .3s .3s 5 cubic-bezier(.26,1.17,.89,-0.74) alternate forwards; } 
+
+/* cursor */
 #cursor { display:block; position: fixed; top: 0px; left: 0px; width: 40px; height: 40px; z-index: 10; pointer-events: none; } 
 #cursor div { position: absolute; display: grid; place-items: center; } 
 #cursor div div { border: 1px solid rgb(255, 255, 255); border-radius: 50%; animation: 2.1s linear 0s infinite normal none running pulse; box-shadow: rgba(134, 134, 134, 0.7) 0px 0px 50px 7px; } 
@@ -42,19 +46,20 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #cursor.type1 div div { box-shadow: rgb(11 189 139 / 70%) 0px 0px 50px 7px; } 
 #cursor.type2 div div { box-shadow: rgb(11 189 139 / 70%) 0px 0px 50px 7px; } 
 
-/* 메인 */
+
+/* main */
 #wrap #main { width: 100%; height: 100%; position: relative; } 
 #wrap #main .wall { position: absolute; } 
 #wrap #main .wall1 { width: 50%; height: 108%; background: linear-gradient(103deg, rgb(208, 208, 208), rgb(239, 239, 239), rgb(255, 255, 255)); transform: skewY(160deg); top: -30%; left: 0px; z-index: 2; } 
 #wrap #main .wall2 { width: 50%; height: 108%; right: 0px; background: linear-gradient(11deg, rgb(219, 219, 219), rgb(239, 239, 239), rgb(255, 255, 255)); transform: skewY(200deg); top: -30%; z-index: 2; } 
 #wrap #main .wall3 { z-index: 1; width: 100%; height: 100%; background: linear-gradient(343deg, rgb(208, 207, 207), rgb(250, 250, 250), rgb(255, 255, 255)); } 
-#wrap #main .txt1 {letter-spacing: 1px;position: absolute;top: 0px;z-index: 3;font-size: 65px;font-family: Kanit, sans-serif;font-weight: 700;} 
+#wrap #main .txt1 { letter-spacing: 1px; position: absolute; top: 0px; z-index: 3; font-size: 65px; font-family: Kanit, sans-serif; font-weight: 700; } 
 #wrap #main .wall1 .txt1 { right: 3px; top: auto; bottom: -1.5%; } 
 #wrap #main .wall2 .txt1 { left: 4px; top: auto; bottom: -1.5%; } 
-#wrap #main .wall .arrow {width: 32px;height: 32px;display: block;position: absolute;z-index: 3;bottom: 1%;left: 0px;background-size: contain;background-repeat: no-repeat;filter: opacity(0.5) drop-shadow(rgb(55, 55, 55) 0px 0px 0px);} 
-#wrap #main .wall1 .arrow {background-image: url("../images/arrow2.png");left: 180px;} 
-#wrap #main .wall2 .arrow {background-image: url("../images/arrow.png");right: 152px;left: auto;} 
-#wrap #main .wall .txt2 {font-family: Kanit, sans-serif;position: absolute;font-size: 40px;padding: 0px 10px;cursor: pointer;} 
+#wrap #main .wall .arrow { width: 32px; height: 32px; display: block; position: absolute; z-index: 3; bottom: 1%; left: 0px; background-size: contain; background-repeat: no-repeat; filter: opacity(0.5) drop-shadow(rgb(55, 55, 55) 0px 0px 0px); } 
+#wrap #main .wall1 .arrow { background-image: url("../images/arrow2.png"); left: 180px; } 
+#wrap #main .wall2 .arrow { background-image: url("../images/arrow.png"); right: 152px; left: auto; } 
+#wrap #main .wall .txt2 { font-family: Kanit, sans-serif; position: absolute; font-size: 40px; padding: 0px 10px; cursor: pointer; } 
 #wrap #main .wall1 .txt2:hover + .arrow { animation: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s infinite normal none running slide-left; } 
 #wrap #main .wall2 .txt2:hover + .arrow { animation: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s infinite normal none running slide-right; } 
 #wrap #main .wall .txt2 .bg { position: absolute; display: block; height: 100%; background: rgba(159, 217, 26, 0.41); left: 0px; top: 0px; z-index: 1; } 
@@ -62,13 +67,13 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #wrap #main .wall1 .profile { left: 40px; bottom: 0%; } 
 #wrap #main .wall2 .work { right: 40px; bottom: 0%; } 
 
-/* 사이드 공통 */
-section.side { background: rgb(243, 243, 243); position: absolute; width: 100%; height: 100%; z-index: 3; top: 0px; will-change: transform; } 
+/* side */
+section.side { background: rgb(243, 243, 243); position: absolute; width: 100%; height: 100%; z-index: 5; top: 0px; will-change: transform; } 
 section.side .wrap { position: relative; height: 100%; margin: 0px auto; overflow: hidden; } 
 section.side>.close { z-index: 2; width: 70px; height: 70px; background: url("../images/close.png") 0% 0% / contain no-repeat; padding: 5px; position: absolute; } 
 section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; position: relative; width: fit-content; letter-spacing: 6px; color: rgb(222 222 222); } 
 
-/* 프로필 */
+/* profile */
 #profile { left: -100%; transition: all 1s ease 0s; } 
 #profile.active { left: 0%; } 
 #profile>.close { right: 40px; top: 40px; } 
@@ -85,7 +90,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .txt1 i:last-child { right: -36px; left: auto; } 
 #profile .infoSwiper { position: absolute; width: 830px; top: 55%; left: 26%; height: 210px; } 
 #profile .infoSwiper .txt { font-size: 18px; } 
-#profile .infoSwiper .txt p{margin-bottom:25px;}
+#profile .infoSwiper .txt p { margin-bottom:25px; } 
 #profile .infoSwiper .swiper-button-next,#profile .infoSwiper .swiper-button-prev { bottom: 0; top: auto; right: 20px; left: auto; } 
 #profile .infoSwiper .swiper-button-next::after, #profile .infoSwiper .swiper-button-prev::after { display:none; } 
 #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:40px; color:rgb(112 112 112); } 
@@ -97,7 +102,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .mail { cursor:pointer; position: absolute; z-index: 5; right: 5%; top: calc(50% - 35px); } 
 #profile .mail-icon { cursor: pointer; width: 70px; height: 70px; border-radius: 50%; background: rgb(11 189 139); display: flex; justify-content: center; align-items: center; box-shadow: 0px 0px 10px rgb(199 199 199); position: relative; z-index: 3; } 
 #profile .mail-icon i { font-size: 32px; color:#fff; } 
-#profile .mail .form {display:none;  position:Absolute; width: 320px; background: #Fff; padding: 20px; top: calc(50% - 211px); opacity: 0; right:35%; box-shadow: 4px 4px 23px #cbcbcb; height: 437px; box-sizing: border-box; } 
+#profile .mail .form { display:none; position:Absolute; width: 320px; background: #Fff; padding: 20px; top: calc(50% - 211px); opacity: 0; right:35%; box-shadow: 4px 4px 23px #cbcbcb; height: 437px; box-sizing: border-box; } 
 #profile .mail .form form { height:100%; } 
 #profile .mail .form form input[type="text"] { display: block; margin-bottom: 10px; border-radius: 9px; width: 100%; height: 42px; border: 1px solid #cccccc; padding: 0 10px; font-size: 14px; } 
 #profile .mail .form form textarea { width:100%; border: 1px solid #cccccc; padding: 10px; border-radius: 10px; resize: none; font-size: 14px; } 
@@ -110,7 +115,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile .mail .form .txt { margin-bottom: 15px; } 
 #profile .mail .form .txt i { margin-left:3px; } 
 
-/* 작업물 */ 
+/* work */ 
 #work { right: -100%; transition: all 1s ease 0s; } 
 #work.active { right: 0%; } 
 #work .close { left: 40px; top: 40px; } 
@@ -135,123 +140,135 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work .webSwiper .item.active .txt { display: block; width: 100%; height: auto; transition: all 1s ease 0s; } 
 #work .webSwiper .item.active .bg { overflow-y: scroll; } 
 
-/* 팝업 */
-/* .popup { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 900; box-sizing: border-box; text-align: center; display: none; } 
-.popup:before { content: ""; display: inline-block; height: 100%; vertical-align: middle; margin-right: -0.05em; } 
-.popup>.wrap { width: 400px; margin: 0 auto; vertical-align: middle; position: relative; z-index: 2; box-sizing: border-box; display: inline-block; text-align: left; background-color: #fff; padding: 20px; text-align: center; font-size: 20px; box-shadow: rgb(203, 203, 203) 4px 4px 23px; } 
-.popup .close { cursor: pointer; } */
 
-
-
-/* 애니메이션 */
+/* ani */
 @-webkit-keyframes slide-left { 
     0% { transform: translateX(0px); } 
     50% { transform: translateX(50px); } 
     100% { transform: translateX(0px); } 
 }
-@keyframes slide-left { 
+    @keyframes slide-left { 
     0% { transform: translateX(0px); } 
     50% { transform: translateX(50px); } 
     100% { transform: translateX(0px); } 
 }
-@-webkit-keyframes slide-right { 
+    @-webkit-keyframes slide-right { 
     0% { transform: translateX(0px); } 
     50% { transform: translateX(-50px); } 
     100% { transform: translateX(0px); } 
 }
-@keyframes slide-right { 
+    @keyframes slide-right { 
     0% { transform: translateX(0px); } 
     50% { transform: translateX(-50px); } 
     100% { transform: translateX(0px); } 
 }
-
-
-
-/* 모바일 */
-
-
-@media (max-width: 1024px){
-    body{letter-spacing: -0.5px;;}
-    .pc { display: none !important; } 
-    .mo { display: block !important; } 
-    #cursor{display:none;}
-
-    #wrap{height:auto; overflow:visible; overflow-x: hidden; }
-
-    #wrap #main .txt1 { font-size: 7vw; } 
-    #wrap #main .wall1 .txt1 { bottom:-0.5%; } 
-    #wrap #main .wall2 .txt1 { bottom:-0.5%; } 
-    #wrap #main .wall .txt2 { font-size:5vw; padding:0 5px;} 
-    #wrap #main .wall1 .profile { left:0; } 
-    #wrap #main .wall2 .work { right:0; } 
-    #wrap #main .wall .arrow { width: 40px; height: 40px; bottom: 5.5vw; } 
-    #wrap #main .wall1 .arrow { left: 2%; } 
-    #wrap #main .wall2 .arrow { right: 2%; } 
-
-    section.side .main-title{font-size:21vw; letter-spacing: 1px;}
-    section.side>.close{width:35px; height:35px;}
-
-    #profile{height:auto; padding-bottom:60px;}
-    #profile>.close{right:15px; top:15px;}
-    #profile .main-title{  top: 5%; left: -160px;}
-    #profile .content{position: relative;height: auto;width: 92%;display: flex;flex-direction: column;margin: 0 auto;margin-top: 50vw;left: 0; }
-    #profile .info{position: static;display: flex;align-items: flex-end;}
-    #profile .info .pic{width: 37vw;}
-    #profile .info .pic img{filter: drop-shadow(rgb(195, 195, 195) 4px 4px 6px);}
-    #profile .info ul{margin-top: 0;margin-left: 5%;}
-    #profile .info ul li{font-size: 3.6vw;padding-left: 10px;}
-    #profile .info ul li span{font-size:16px;}
-    #profile .txt1{font-size: 4.8vw;left: 3%;top: -21vw;}
-    #profile .txt1 i{font-size: 4.5vw;left: -5vw;top: -3px;}
-    #profile .txt1 i:last-child{right: -5vw;top: 23px;}
-    #profile .infoSwiper{z-index:5; position: static;width: 95%; height: auto;margin-top: 6vw; margin-left:0;}
-    #profile .infoSwiper .txt{font-size: 3.6vw;}
-    #profile .infoSwiper .txt p{margin-bottom:10px;}
-    #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev{bottom:0; right:0; }
-    #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i{font-size:6vw;}
-    #profile .career{padding-left:22px;}
-    #profile .career ul li span{font-size: 3.2vw;}
-    #profile .career ul li{font-size: 3.6vw; margin-bottom: 15px;}
-    #profile .mail{position:fixed;top:auto;bottom:0;width: 100%;height: 45px;right: 0;}
-    #profile .mail .form{top:auto;bottom:0;width: 100%;right: 0;height: 420px;padding: 15px;}
-    #profile .mail-icon{width: 100%;height: 100%;border-radius: 0;}
-    #profile .mail-icon i{font-size: 25px;}
-    #profile .mail .form .txt{font-size:20px;}
-    #profile .mail .form form input[type="text"]{font-size:12px; margin-bottom:7px; padding:0 7px; border-radius: 5px;;}
-    #profile .mail .form form textarea{font-size:12px; border-radius: 5px;;}
-    #profile .mail .form form input[type="button"]{height:40px; font-size:15px; border-radius: 5px;}
-    #profile .mail .form .success .txt{font-size:17px;}
-    #profile .mail .form .success .close{height:40px; font-size:15px; border-radius: 5px;}
-
-    #work>.close{left:15px; top:15px;}
-    #work .main-title{  top: 5%; right: -170px;}
-    #work .webSwiper{height:220px; padding-top: 150px; padding-bottom: 320px;}
-    #work .webSwiper .item.long.active{padding-bottom:280px;}
-    #work .webSwiper .item .bg{height: 220px;}
-    #work .webSwiper .item{margin:0 10px; width:400px !important; padding-bottom:45px;}
-    #work .webSwiper .item.active{width: 400px !important;}
-    #work .webSwiper .info{font-size: 16px;padding: 0 10px;height: 45px;}
-    #work .webSwiper .txt p{font-size: 15px; width:100%; padding-left:0;}
-    #work .webSwiper .txt .link{font-size:15px; position:relative; top:auto; right:auto; left:-10px;}
-    #work .webSwiper .txt .link + .link{margin-top:0;}
-    #work .webSwiper .txt .link + .link + .link{margin-top:0;}
-    #work .webSwiper .txt .link::after{top:11px; width:5px; height:5px;}
+@keyframes bulb {
+    to {
+        fill-opacity:1;
+        fill:#FBF8CA;
+    }
 }
 
-@media (max-width: 760px){
-    #wrap #main .wall .arrow { width: 20px; height: 20px; } 
-
-    #profile .mail .form{height: 385px;}
-    #profile .mail .form form input[type="text"]{height:35px;}
-    #profile .mail .form .txt{font-size:15px; }
-
-    #work .webSwiper{height:150px; padding-top: 200px;}
-    #work .webSwiper .item{margin:0 10px; width:220px !important;}
-    #work .webSwiper .item .bg{height: 150px;}
-    #work .webSwiper .item.active{width: 220px !important;padding-bottom: 220px;  box-shadow: rgb(132 132 132) 0px 0px 20px;}
-    #work .webSwiper .item.active .txt{padding:7px;}
-    #work .webSwiper .info{font-size:13px; padding:0 7px;}
-    #work .webSwiper .txt p{font-size: 12px;}
-    #work .webSwiper .txt .link{font-size:12px;}
-    #work .webSwiper .item.long.active{padding-bottom: 255px;}
+@keyframes lamp {
+    5%{ transform:rotate(-45deg) }
+    10%{ transform:rotate(35deg) }
+    15%{ transform:rotate(-35deg) }
+    25%{ transform:rotate(15deg) }
+    40%{ transform:rotate(-15deg) }
+    65% { transform:rotate(3deg) }
+    85% { transform:rotate(-1deg) }  
+    100%{ transform:rotate(0deg) }
 }
+
+@keyframes fadeOut {
+    to {
+        display:none;
+    }
+}
+
+    /* mo */
+
+    @media (max-width: 1024px) { body { letter-spacing: -0.5px;; } 
+        .pc { display: none !important; } 
+        .mo { display: block !important; } 
+        #cursor { display:none; } 
+
+        #wrap { height:auto; overflow:visible; overflow-x: hidden; } 
+
+        #wrap #main .txt1 { font-size: 7vw; } 
+        #wrap #main .wall1 .txt1 { bottom:-0.5%; } 
+        #wrap #main .wall2 .txt1 { bottom:-0.5%; } 
+        #wrap #main .wall .txt2 { font-size:5vw; padding:0 5px; } 
+        #wrap #main .wall1 .profile { left:0; } 
+        #wrap #main .wall2 .work { right:0; } 
+        #wrap #main .wall .arrow { width: 40px; height: 40px; bottom: 5.5vw; } 
+        #wrap #main .wall1 .arrow { left: 2%; } 
+        #wrap #main .wall2 .arrow { right: 2%; } 
+
+        section.side .main-title { font-size:21vw; letter-spacing: 1px; } 
+        section.side>.close { width:35px; height:35px; } 
+
+        #profile { height:auto; padding-bottom:60px; } 
+        #profile>.close { right:15px; top:15px; } 
+        #profile .main-title { top: 5%; left: -160px; } 
+        #profile .content { position: relative; height: auto; width: 92%; display: flex; flex-direction: column; margin: 0 auto; margin-top: 50vw; left: 0; } 
+        #profile .info { position: static; display: flex; align-items: flex-end; } 
+        #profile .info .pic { width: 37vw; } 
+        #profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 4px 4px 6px); } 
+        #profile .info ul { margin-top: 0; margin-left: 5%; } 
+        #profile .info ul li { font-size: 3.6vw; padding-left: 10px; } 
+        #profile .info ul li span { font-size:16px; } 
+        #profile .txt1 { font-size: 4.8vw; left: 3%; top: -21vw; } 
+        #profile .txt1 i { font-size: 4.5vw; left: -5vw; top: -3px; } 
+        #profile .txt1 i:last-child { right: -5vw; top: 23px; } 
+        #profile .infoSwiper { z-index:5; position: static; width: 95%; height: auto; margin-top: 6vw; margin-left:0; } 
+        #profile .infoSwiper .txt { font-size: 3.6vw; } 
+        #profile .infoSwiper .txt p { margin-bottom:10px; } 
+        #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev { bottom:0; right:0; } 
+        #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:6vw; } 
+        #profile .career { padding-left:22px; } 
+        #profile .career ul li span { font-size: 3.2vw; } 
+        #profile .career ul li { font-size: 3.6vw; margin-bottom: 15px; } 
+        #profile .mail { position:fixed; top:auto; bottom:0; width: 100%; height: 45px; right: 0; } 
+        #profile .mail .form { top:auto; bottom:0; width: 100%; right: 0; height: 420px; padding: 15px; } 
+        #profile .mail-icon { width: 100%; height: 100%; border-radius: 0; } 
+        #profile .mail-icon i { font-size: 25px; } 
+        #profile .mail .form .txt { font-size:20px; } 
+        #profile .mail .form form input[type="text"] { font-size:12px; margin-bottom:7px; padding:0 7px; border-radius: 5px;; } 
+        #profile .mail .form form textarea { font-size:12px; border-radius: 5px;; } 
+        #profile .mail .form form input[type="button"] { height:40px; font-size:15px; border-radius: 5px; } 
+        #profile .mail .form .success .txt { font-size:17px; } 
+        #profile .mail .form .success .close { height:40px; font-size:15px; border-radius: 5px; } 
+
+        #work>.close { left:15px; top:15px; } 
+        #work .main-title { top: 5%; right: -170px; } 
+        #work .webSwiper { height:220px; padding-top: 150px; padding-bottom: 320px; } 
+        #work .webSwiper .item.long.active { padding-bottom:280px; } 
+        #work .webSwiper .item .bg { height: 220px; } 
+        #work .webSwiper .item { margin:0 10px; width:400px !important; padding-bottom:45px; } 
+        #work .webSwiper .item.active { width: 400px !important; } 
+        #work .webSwiper .info { font-size: 16px; padding: 0 10px; height: 45px; } 
+        #work .webSwiper .txt p { font-size: 15px; width:100%; padding-left:0; } 
+        #work .webSwiper .txt .link { font-size:15px; position:relative; top:auto; right:auto; left:-10px; } 
+        #work .webSwiper .txt .link + .link { margin-top:0; } 
+        #work .webSwiper .txt .link + .link + .link { margin-top:0; } 
+        #work .webSwiper .txt .link::after { top:11px; width:5px; height:5px; } 
+    }
+
+    @media (max-width: 760px){
+        #wrap #main .wall .arrow { width: 20px; height: 20px; } 
+
+        #profile .mail .form { height: 385px; } 
+        #profile .mail .form form input[type="text"] { height:35px; } 
+        #profile .mail .form .txt { font-size:15px; } 
+
+        #work .webSwiper { height:150px; padding-top: 200px; } 
+        #work .webSwiper .item { margin:0 10px; width:220px !important; } 
+        #work .webSwiper .item .bg { height: 150px; } 
+        #work .webSwiper .item.active { width: 220px !important; padding-bottom: 220px; box-shadow: rgb(132 132 132) 0px 0px 20px; } 
+        #work .webSwiper .item.active .txt { padding:7px; } 
+        #work .webSwiper .info { font-size:13px; padding:0 7px; } 
+        #work .webSwiper .txt p { font-size: 12px; } 
+        #work .webSwiper .txt .link { font-size:12px; } 
+        #work .webSwiper .item.long.active { padding-bottom: 255px; } 
+    }

@@ -1,13 +1,7 @@
 $(document).ready(function(){
-    $(window).on('resize', function(){
-        window.location.reload();
-    });
-
-    
-    // 이미지 로딩
-    $('#work').imagesLoaded().done( function( instance ) {
-        console.log('이미지 로딩 완료');
-    });
+    // $(window).on('resize', function(){
+    //     window.location.reload();
+    // });
 
     // 마우스 커서
     var w = $(window).outerWidth();  
