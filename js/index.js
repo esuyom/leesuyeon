@@ -1,8 +1,4 @@
 $(document).ready(function(){
-    // $(window).on('resize', function(){
-    //     window.location.reload();
-    // });
-
     // 마우스 커서
     var w = $(window).outerWidth();  
     if (w > 1024) {
