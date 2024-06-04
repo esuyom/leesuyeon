@@ -46,7 +46,6 @@ img::selection { background-color: transparent; color: rgb(0, 0, 0); }
 #cursor.type1 div div { box-shadow: rgb(11 189 139 / 70%) 0px 0px 50px 7px; } 
 #cursor.type2 div div { box-shadow: rgb(11 189 139 / 70%) 0px 0px 50px 7px; } 
 
-
 /* main */
 #wrap #main { width: 100%; height: 100%; position: relative; } 
 #wrap #main .wall { position: absolute; } 
@@ -145,11 +144,13 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 @media (max-width: 1024px) { 
     body { letter-spacing: -0.5px; } 
     .pc { display: none !important; } 
-    .mo { display: block !important; } 
-    #cursor { display:none; } 
+    .mo { display: block !important; }
 
     #wrap { height:auto; overflow:visible; overflow-x: hidden; } 
 
+    #cursor { display:none; }
+    #lamp{width:60px; left:calc(50% - 30px)}
+    
     #wrap #main .txt1 { font-size: 7vw; } 
     #wrap #main .wall1 .txt1 { bottom:-0.5%; } 
     #wrap #main .wall2 .txt1 { bottom:-0.5%; } 
