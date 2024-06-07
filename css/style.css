@@ -134,7 +134,8 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work .webSwiper .box .link { font-size: 18px; font-weight: 500; display: block; padding: 3px 10px; width: fit-content; cursor: pointer; } 
 #work .webSwiper .box .link i { margin-right: 4px; font-size: 14px; vertical-align: 1px; } 
 #work .webSwiper .box .link::after { position: absolute; right: -3px; top: 13px; content: ""; width: 7px; height: 7px; border-top: 2px solid rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); transform: rotate(45deg); } 
-#work .webSwiper .item.active { width: 700px !important; padding-bottom: 250px; box-shadow: rgb(87, 87, 87) 0px 0px 35px; } 
+#work .webSwiper .item.active { width: 700px !important; padding-bottom: 200px; box-shadow: rgb(87, 87, 87) 0px 0px 35px; } 
+#work .webSwiper .item.long.active{padding-bottom: 250px;}
 #work .webSwiper .item.active .box { display: block; width: 100%; height: auto; } 
 #work .webSwiper .item.active .bg { overflow-y: scroll; } 
 
@@ -203,8 +204,10 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #work .webSwiper .item {margin:0 10px; width:400px !important; padding-bottom:45px;} 
     #work .webSwiper .item.active {width: 400px !important;} 
     #work .webSwiper .info {font-size: 16px; padding: 0 10px; height: 45px;} 
-    #work .webSwiper .box p {font-size: 15px; width:100%; padding-left:0;} 
-    #work .webSwiper .box .link {font-size:15px; position:relative; top:auto; right:auto; left:-10px;} 
+    #work .webSwiper .box{padding:7px}
+    #work .webSwiper .box p {font-size: 13px; width:100%; padding-left:0;} 
+    #work .webSwiper .box .links{ position:relative; top:auto; right:auto; left:-10px;}
+    #work .webSwiper .box .link {font-size:14px;} 
     #work .webSwiper .box .link + .link {margin-top:0;} 
     #work .webSwiper .box .link + .link + .link {margin-top:0;} 
     #work .webSwiper .box .link::after {top:11px; width:5px; height:5px;} 
