@@ -221,7 +221,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .mail .form form input[type="text"] {height:35px;} 
     #profile .mail .form .txt {font-size:15px;} 
 
-    #work .webSwiper {height:150px; padding-top: 180px;} 
+    #work .webSwiper {height:150px; padding-top: 195px;} 
     #work .webSwiper .item {margin:0 10px; width:220px !important;} 
     #work .webSwiper .item .bg {height: 150px;} 
     #work .webSwiper .item.active {width: 220px !important; padding-bottom: 205px; box-shadow: rgb(132 132 132) 0px 0px 20px;} 
