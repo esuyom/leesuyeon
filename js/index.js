@@ -1,6 +1,10 @@
 $(document).ready(function(){
-    // 마우스 커서
     var w = $(window).outerWidth();  
+
+    $(window).on('resize', function(){
+        location.reload();
+    });
+    // 마우스 커서
     if (w > 1024) {
         $(window).mousemove(function (e) {
             $(".ring").css(
