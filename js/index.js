@@ -83,6 +83,7 @@ $(document).ready(function(){
             }, 500);
         }
     });
+    
 
     function checkInterval(){
         hoverInterval = setInterval(() => {
