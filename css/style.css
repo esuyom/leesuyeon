@@ -177,10 +177,10 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .txt1 { font-size: 4.8vw; left: 3%; top: -21vw; } 
     #profile .txt1 i { font-size: 4.5vw; left: -5vw; top: -3px; } 
     #profile .txt1 i:last-child { right: -5vw; top: 23px; } 
-    #profile .infoSwiper { z-index:5; position: static; width: 95%; height: auto; margin-top: 6vw; margin-left:0; } 
+    #profile .infoSwiper { z-index:5; position: static; width: 100%; height: auto; margin-top: 6vw; margin-left:0; } 
     #profile .infoSwiper .txt { font-size: 3.6vw; } 
     #profile .infoSwiper .txt p { margin-bottom:10px; } 
-    #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev { bottom:0; right:0; } 
+    #profile .infoSwiper .swiper-button-next, #profile .infoSwiper .swiper-button-prev { bottom:-12px; right:0; } 
     #profile .infoSwiper .swiper-button-next i, #profile .infoSwiper .swiper-button-prev i { font-size:6vw; } 
     #profile .career { padding-left:22px; } 
     #profile .career ul li span { font-size: 3.2vw; } 
