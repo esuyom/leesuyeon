@@ -127,16 +127,15 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work .webSwiper .bg { overflow: hidden; width:100%; height: 300px; transition: all 1s ease 0s; } 
 #work .webSwiper .bg img { width: 100%; } 
 #work .webSwiper .info { width: 100%; background: rgb(255, 255, 255); display: flex; height: 60px; padding: 0px 15px; box-sizing: border-box; font-weight: 600; justify-content: space-between; font-size: 20px; align-items: center; } 
-#work .webSwiper .txt { position: relative; display: none; border-top: 1px solid rgb(212, 212, 212); padding: 15px; box-sizing: border-box; width: 0px; height: 0px; font-size: 18px; transition: all 1s ease 0s; background-color: rgb(255, 255, 255); } 
-#work .webSwiper .txt p { margin-bottom: 7px; width: 62%; padding-left: 12px; position: relative; line-height: 1.5; } 
-#work .webSwiper .txt span { display:inline-block; position: absolute; left: 0; } 
-#work .webSwiper .txt .link { position:absolute; font-size: 18px; font-weight: 500; display: block; padding: 3px 10px; width: fit-content; right: 22px; top: 12px; cursor: pointer; } 
-#work .webSwiper .txt .link i { margin-right: 4px; font-size: 14px; vertical-align: 1px; } 
-#work .webSwiper .txt .link + .link { margin-top: 30px; } 
-#work .webSwiper .txt .link + .link + .link { margin-top:60px; } 
-#work .webSwiper .txt .link::after { position: absolute; right: -3px; top: 13px; content: ""; width: 7px; height: 7px; border-top: 2px solid rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); transform: rotate(45deg); } 
+#work .webSwiper .box { position: relative; display: none; border-top: 1px solid rgb(212, 212, 212); padding: 15px; box-sizing: border-box; width: 0px; height: 0px; font-size: 18px; transition: all 1s ease 0s; background-color: rgb(255, 255, 255); } 
+#work .webSwiper .box p { margin-bottom: 7px; width: 62%; padding-left: 12px; position: relative; line-height: 1.5; } 
+#work .webSwiper .box span { display:inline-block; position: absolute; left: 0; } 
+#work .webSwiper .box .links{position:absolute;right: 22px; top: 12px; }
+#work .webSwiper .box .link { font-size: 18px; font-weight: 500; display: block; padding: 3px 10px; width: fit-content; cursor: pointer; } 
+#work .webSwiper .box .link i { margin-right: 4px; font-size: 14px; vertical-align: 1px; } 
+#work .webSwiper .box .link::after { position: absolute; right: -3px; top: 13px; content: ""; width: 7px; height: 7px; border-top: 2px solid rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); transform: rotate(45deg); } 
 #work .webSwiper .item.active { width: 700px !important; padding-bottom: 250px; box-shadow: rgb(87, 87, 87) 0px 0px 35px; } 
-#work .webSwiper .item.active .txt { display: block; width: 100%; height: auto; transition: all 1s ease 0s; } 
+#work .webSwiper .item.active .box { display: block; width: 100%; height: auto; transition: all 1s ease 0s; } 
 #work .webSwiper .item.active .bg { overflow-y: scroll; } 
 
 /* mo */
@@ -204,11 +203,11 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #work .webSwiper .item {margin:0 10px; width:400px !important; padding-bottom:45px;} 
     #work .webSwiper .item.active {width: 400px !important;} 
     #work .webSwiper .info {font-size: 16px; padding: 0 10px; height: 45px;} 
-    #work .webSwiper .txt p {font-size: 15px; width:100%; padding-left:0;} 
-    #work .webSwiper .txt .link {font-size:15px; position:relative; top:auto; right:auto; left:-10px;} 
-    #work .webSwiper .txt .link + .link {margin-top:0;} 
-    #work .webSwiper .txt .link + .link + .link {margin-top:0;} 
-    #work .webSwiper .txt .link::after {top:11px; width:5px; height:5px;} 
+    #work .webSwiper .box p {font-size: 15px; width:100%; padding-left:0;} 
+    #work .webSwiper .box .link {font-size:15px; position:relative; top:auto; right:auto; left:-10px;} 
+    #work .webSwiper .box .link + .link {margin-top:0;} 
+    #work .webSwiper .box .link + .link + .link {margin-top:0;} 
+    #work .webSwiper .box .link::after {top:11px; width:5px; height:5px;} 
 }
 
 @media (max-width: 760px){

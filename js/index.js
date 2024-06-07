@@ -73,13 +73,13 @@ $(document).ready(function(){
     $("#work .content .item").click(function(){
         if(!$(this).hasClass("active")){
             $("#work .content .item").removeClass("active");
-            $("#work .content .item .txt").hide();
+            $("#work .content .item .box").hide();
             $("#work .content .item .bg").animate({ scrollTop: 0 }, 1000);
             mySwiper.mousewheel.disable();
             $(this).addClass("active");
             checkInterval();
             setTimeout(() => {
-                $(this).find(".txt").fadeIn();
+                $(this).find(".box").fadeIn();
             }, 500);
         }
     });
