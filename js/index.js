@@ -80,7 +80,7 @@ $(document).ready(function(){
             checkInterval();
             setTimeout(() => {
                 $(this).find(".box").fadeIn();
-            }, 500);
+            }, 350);
         }
     });
     
