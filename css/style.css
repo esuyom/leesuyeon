@@ -130,7 +130,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #work .webSwiper .txt { position: relative; display: none; border-top: 1px solid rgb(212, 212, 212); padding: 15px; box-sizing: border-box; width: 0px; height: 0px; font-size: 18px; transition: all 1s ease 0s; background-color: rgb(255, 255, 255); } 
 #work .webSwiper .txt p { margin-bottom: 7px; width: 62%; padding-left: 12px; position: relative; line-height: 1.5; } 
 #work .webSwiper .txt span { display:inline-block; position: absolute; left: 0; } 
-#work .webSwiper .txt .link { position:absolute; font-size: 18px; font-weight: 500; display: block; padding: 3px 10px; width: fit-content; right: 22px; top: 12px; } 
+#work .webSwiper .txt .link { position:absolute; font-size: 18px; font-weight: 500; display: block; padding: 3px 10px; width: fit-content; right: 22px; top: 12px; cursor: pointer; } 
 #work .webSwiper .txt .link i { margin-right: 4px; font-size: 14px; vertical-align: 1px; } 
 #work .webSwiper .txt .link + .link { margin-top: 30px; } 
 #work .webSwiper .txt .link + .link + .link { margin-top:60px; } 
