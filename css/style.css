@@ -78,9 +78,9 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
 #profile>.close { right: 40px; top: 40px; } 
 #profile .main-title { position: absolute; left: -185px; top: -3%; } 
 #profile .content { position: absolute; height: 100%; width: 1200px; left: 11%; } 
-#profile .info {position: absolute;top: 30%;left: 0;} 
+#profile .info {position: absolute;top: 29%;left: 0;} 
 #profile .info .pic {width: 200px;} 
-#profile .info ul {margin-top: 20px;} 
+#profile .info ul {margin-top: 25px;} 
 #profile .info ul li {margin-bottom: 5px;position: relative;padding-left: 18px;display: flex;align-items: center;font-size: 18px;} 
 #profile .info ul li span { color: rgb(112 112 112); font-size: 30px; position: absolute; left: 0; } 
 #profile .info .pic img { filter: drop-shadow(rgb(195, 195, 195) 10px 6px 6px); width: 100%; } 
