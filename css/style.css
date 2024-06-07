@@ -220,7 +220,7 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #profile .mail .form form input[type="text"] {height:35px;} 
     #profile .mail .form .txt {font-size:15px;} 
 
-    #work .webSwiper {height:150px; padding-top: 200px;} 
+    #work .webSwiper {height:150px; padding-top: 180px;} 
     #work .webSwiper .item {margin:0 10px; width:220px !important;} 
     #work .webSwiper .item .bg {height: 150px;} 
     #work .webSwiper .item.active {width: 220px !important; padding-bottom: 220px; box-shadow: rgb(132 132 132) 0px 0px 20px;} 
@@ -228,7 +228,8 @@ section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; pos
     #work .webSwiper .info {font-size:13px; padding:0 7px;} 
     #work .webSwiper .txt p {font-size: 12px;} 
     #work .webSwiper .txt .link {font-size:12px;} 
-    #work .webSwiper .item.long.active {padding-bottom: 255px;} 
+    #work .webSwiper .item.long.active {padding-bottom: 250px;} 
+    #work .webSwiper .item.long.active:nth-child(3) {padding-bottom: 295px;} 
 }
 
 
