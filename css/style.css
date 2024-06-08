@@ -71,6 +71,7 @@ section.side { background: rgb(243, 243, 243); position: absolute; width: 100%; 
 section.side .wrap { position: relative; height: 100%; margin: 0px auto; overflow: hidden; } 
 section.side>.close { z-index: 2; width: 70px; height: 70px; background: url("../images/close.png") 0% 0% / contain no-repeat; padding: 5px; position: absolute; } 
 section.side .main-title { font-family: Kanit, sans-serif; font-size: 290px; position: relative; width: fit-content; letter-spacing: 6px; color: rgb(222 222 222); } 
+section h1{display:none;}
 
 /* profile */
 #profile { left: -100%; transition: all 1s ease 0s; } 
