@@ -90,7 +90,7 @@ section h1{display:none;}
 #profile .txt1 i:last-child { right: -36px; left: auto; } 
 #profile .infoSwiper { position: absolute; width: 830px; top: 55%; left: 26%; height: 210px; } 
 #profile .infoSwiper .txt { font-size: 18px; } 
-#profile .infoSwiper .swiper-slide{-webkit-backface-visibility: hidden;-webkit-transform: translate3d(0, 0, 0);}
+#profile .infoSwiper .swiper-slide{-webkit-backface-visibility: hidden;backface-visibility: hidden;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
 #profile .infoSwiper .txt p { margin-bottom:25px; } 
 #profile .infoSwiper .swiper-button-next,#profile .infoSwiper .swiper-button-prev { bottom: 0; top: auto; right: 20px; left: auto; } 
 #profile .infoSwiper .swiper-button-next::after, #profile .infoSwiper .swiper-button-prev::after { display:none; } 
@@ -148,7 +148,7 @@ section h1{display:none;}
     .pc { display: none !important; } 
     .mo { display: block !important; }
 
-    #wrap { height:auto; overflow:visible; overflow-x: hidden; } 
+    #wrap { height:100%; overflow:visible; overflow-x: hidden; } 
 
     #cursor { display:none; }
     #lamp{width:60px; left:calc(50% - 30px)}
