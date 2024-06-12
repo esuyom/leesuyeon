@@ -24,6 +24,7 @@ $(document).ready(function(){
     // fadeOut
     setTimeout(() => {
         $("#fade").hide();
+        $("#cursor").css("z-index",999);
     }, 2500);
 
     // Profile
