@@ -6,7 +6,7 @@ $(document).ready(function(){
     // });
     
     // 마우스 커서
-    if (w > 1024) {
+    if (w > 1180) {
         $(window).mousemove(function (e) {
             $(".ring").css(
                 "transform",
@@ -104,7 +104,7 @@ $(document).ready(function(){
 
     function moveX(){
         var thisX = $(".webSwiper .swiper-wrapper")
-        if(w > 1024){
+        if(w > 1180){
             thisX.animate({left:-100+'px'});
         }
     }

@@ -77,7 +77,7 @@ section h1{display:none;}
 #profile { left: -100%; transition: all 1s ease 0s; } 
 #profile.active { left: 0%; } 
 #profile>.close { right: 40px; top: 40px; } 
-#profile .main-title { position: absolute; left: -185px; top: -3%; } 
+#profile .main-title { position: absolute; left: -185px; top:-7%; } 
 #profile .content { position: absolute; height: 100%; width: 1200px; left: 11%; } 
 #profile .info {position: absolute;top: 29%;left: 0;} 
 #profile .info .pic {width: 200px;} 
@@ -121,7 +121,7 @@ section h1{display:none;}
 #work.active { right: 0%; } 
 #work .close { left: 40px; top: 40px; } 
 #work .prev { position: absolute; width: 50px; height: 50px; background: red; right: 0px; top: 0px; z-index: 5; } 
-#work .main-title { position: absolute; right: -200px; top: -3%; } 
+#work .main-title { position: absolute; right: -200px; top:-7%; } 
 #work .content { width: 100%; height: 100%; display: flex; align-items: center; } 
 #work .webSwiper { height: 300px; padding-top: 210px; padding-bottom: 290px; } 
 #work .webSwiper .item { position: relative; margin:0 20px; background-color:#Fff; box-shadow: rgb(205, 205, 205) 0px 0px 35px; width: 500px; transition: all .8s ease 0s; cursor: pointer; padding-bottom: 60px; } 
@@ -143,7 +143,7 @@ section h1{display:none;}
 
 /* mo */
 
-@media (max-width: 1024px) { 
+@media (max-width: 1180px) { 
     body { letter-spacing: -0.5px; } 
     .pc { display: none !important; } 
     .mo { display: block !important; }
@@ -199,8 +199,8 @@ section h1{display:none;}
     #profile .mail .form .success .close { height:40px; font-size:15px; border-radius: 5px; } 
 
     #work>.close {left:15px; top:15px;} 
-    #work .main-title {top: 5%; right: -170px;} 
-    #work .webSwiper {height:220px; padding-top: 150px; padding-bottom: 320px;} 
+    #work .main-title {top: 6%;right: -170px;} 
+    #work .webSwiper {height:220px; padding-top: 27vw; padding-bottom: 320px;} 
     #work .webSwiper .item.long.active {padding-bottom:260px;} 
     #work .webSwiper .item .bg {height: 220px;} 
     #work .webSwiper .item {margin:0 10px; width:400px !important; padding-bottom:45px;} 
@@ -218,13 +218,17 @@ section h1{display:none;}
 @media (max-width: 760px){
     #wrap #main .wall .arrow {width: 20px; height: 20px;} 
 
+    #work .main-title{top: 15%;}
+
     #profile .mail .form {height: 385px;} 
     #profile .mail .form form input[type="text"] {height:35px;} 
     #profile .mail .form .txt {font-size:15px;} 
 
-    #work .webSwiper {height:150px; padding-top: 200px;} 
+    #work .webSwiper {height:150px; padding-top: 40vw; padding-bottom: 80vw;} 
     #work .webSwiper .item {margin:0 10px; width:220px !important;} 
     #work .webSwiper .item .bg {height: 150px;} 
+    #work .webSwiper .box p{font-size:13px;}
+    #work .webSwiper .box .link{font-size:13px;}
     #work .webSwiper .item.active {width: 220px !important; padding-bottom: 205px; box-shadow: rgb(132 132 132) 0px 0px 20px;} 
     #work .webSwiper .item.active .txt {padding:7px;} 
     #work .webSwiper .info {font-size:13px; padding:0 7px;} 
