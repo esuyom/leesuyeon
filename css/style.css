@@ -218,7 +218,7 @@ section h1{display:none;}
 @media (max-width: 760px){
     #wrap #main .wall .arrow {width: 20px; height: 20px;} 
 
-    #work .main-title{top: 15%;}
+    #work .main-title{top: 25vw;}
 
     #profile .mail .form {height: 385px;} 
     #profile .mail .form form input[type="text"] {height:35px;} 
