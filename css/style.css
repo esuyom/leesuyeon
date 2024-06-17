@@ -109,6 +109,7 @@ section h1{display:none;}
 #profile .mail .form form textarea { width:100%; border: 1px solid #cccccc; padding: 10px; border-radius: 10px; resize: none; font-size: 14px; } 
 #profile .mail .form form input[type="button"] { cursor:pointer; display: block; border-radius: 10px; height: 45px; margin-top: 10px; width: 100%; background-color: rgb(86 86 86); color: #Fff; font-size: 17px; font-weight: 500; } 
 #profile .mail .form .success { display:none; height: 100%; } 
+#profile .mail .form label{display:none;}
 #profile .mail .form .success .txt { font-weight: 600; font-size: 21px; text-align: center; padding-top: 85px; } 
 #profile .mail .form .success .txt i { display: block; font-size: 40px; padding: 25px 0; color: rgb(11 189 139); } 
 #profile .mail .form .success .close { width: 100%; background-color: rgb(86 86 86); color: #fff; font-size: 17px; border-radius: 10px; height: 45px; font-weight: 500; margin-top: 40px; } 
