@@ -216,7 +216,7 @@ section h1{display:none;}
     #work .webSwiper .box .link::after {top:11px; width:5px; height:5px;} 
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
     #wrap #main .wall .arrow {width: 20px; height: 20px;} 
 
     #work .main-title{top: 25vw;}
