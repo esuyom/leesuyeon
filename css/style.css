@@ -144,7 +144,7 @@ section h1{display:none;}
 
 /* mo */
 
-@media (max-width: 1180px) { 
+@media (max-width: 1024px) { 
     body { letter-spacing: -0.5px; } 
     .pc { display: none !important; } 
     .mo { display: block !important; }

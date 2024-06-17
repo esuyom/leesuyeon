@@ -104,7 +104,7 @@ $(document).ready(function(){
 
     function moveX(){
         var thisX = $(".webSwiper .swiper-wrapper")
-        if(w > 1180){
+        if(w > 1024){
             thisX.animate({left:-100+'px'});
         }
     }
