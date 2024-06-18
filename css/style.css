@@ -125,6 +125,7 @@ section h1{display:none;}
 #work .main-title { position: absolute; right: -200px; top:-3%; } 
 #work .content { width: 100%; height: 100%; display: flex; align-items: center; } 
 #work .webSwiper { height: 300px; padding-top: 210px; padding-bottom: 290px; } 
+#work .webSwiper .swiper-wrapper{}
 #work .webSwiper .item { position: relative; margin:0 20px; background-color:#Fff; box-shadow: rgb(205, 205, 205) 0px 0px 35px; width: 500px; transition: all .8s ease 0s; cursor: pointer; padding-bottom: 60px; } 
 #work .webSwiper .item:hover { will-change: transform; } 
 #work .webSwiper .bg { overflow: hidden; width:100%; height: 300px; transition: all 1s ease 0s; } 

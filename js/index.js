@@ -1,9 +1,9 @@
 $(document).ready(function(){
     var w = $(window).outerWidth();  
 
-    // $(window).on('resize', function(){
-    //     location.reload();
-    // });
+    $(window).on('resize', function(){
+        location.reload();
+    });
     
     // 마우스 커서
     if (w > 1180) {
@@ -98,7 +98,7 @@ $(document).ready(function(){
             }, function(){
                 mySwiper.mousewheel.enable();
             });	
-        }, 50);
+        }, 40);
         
     }
 
