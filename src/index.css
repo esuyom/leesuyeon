@@ -1,31 +1,31 @@
 /* ===== Softened theme: split layout, gentle borders & rounded edges ===== */
 :root,
 [data-theme='dark'] {
-  --bg: #0f1115;
-  --panel: #161922;
-  --ink: #f5f6f8;
-  --ink-soft: #d3d6dd;
-  --ink-dim: #9197a4;
-  --line: rgba(255, 255, 255, 0.1);
-  --line-strong: rgba(255, 255, 255, 0.2);
-  --accent: #2dd4a7; /* 선명한 에메랄드/틸. 한 줄만 바꾸면 전체 변경 */
-  --accent-soft: rgba(45, 212, 167, 0.18);
-  --hover: rgba(255, 255, 255, 0.06);
+  --bg: #0b0f16;
+  --panel: #131923;
+  --ink: #f8f7f2;
+  --ink-soft: #d4d8e2;
+  --ink-dim: #9198a8;
+  --line: rgba(248, 247, 242, 0.12);
+  --line-strong: rgba(248, 247, 242, 0.23);
+  --accent: #8fa2ff;
+  --accent-soft: rgba(143, 162, 255, 0.18);
+  --hover: rgba(143, 162, 255, 0.08);
   --radius: 14px;
   --radius-sm: 9px;
 }
 
 [data-theme='light'] {
-  --bg: #f4f3ef;
+  --bg: #f7f8fb;
   --panel: #ffffff;
-  --ink: #14171d;
-  --ink-soft: #383c45;
-  --ink-dim: #6b7180;
-  --line: rgba(20, 22, 28, 0.1);
-  --line-strong: rgba(20, 22, 28, 0.18);
-  --accent: #0d9b76;
-  --accent-soft: rgba(13, 155, 118, 0.15);
-  --hover: rgba(20, 22, 28, 0.05);
+  --ink: #1a2230;
+  --ink-soft: #3f4a5d;
+  --ink-dim: #727b8b;
+  --line: rgba(26, 34, 48, 0.1);
+  --line-strong: rgba(26, 34, 48, 0.18);
+  --accent: #315fd6;
+  --accent-soft: rgba(49, 95, 214, 0.12);
+  --hover: rgba(49, 95, 214, 0.07);
   --radius: 14px;
   --radius-sm: 9px;
 }
