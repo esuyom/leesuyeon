@@ -1,7 +1,7 @@
 // 포트폴리오 데이터 — 본인 정보에 맞게 수정하세요.
 export const profile = {
   name: '이수연',
-  title: 'Frontend Developer · Web Publisher',
+  title: 'Frontend UI Developer · Web Publisher',
   email: 'worksuyeon@gmail.com',
   about: [
     `웹 퍼블리싱에서 출발해 프론트엔드 UI 개발까지, 약 6년간 다양한 업종의 웹 화면을 구현해왔습니다. 현재는 교육 그룹 디자인플랫폼팀에서 Figma 시안 기반 반응형 퍼블리싱과 React 기반 UI 개발을 담당하고 있습니다.`,
@@ -30,7 +30,7 @@ export const experience = [
   },
   {
     period: '2021.05 — 2024.01',
-    role: 'Web Publisher / Frontend Developer',
+    role: 'Web Publisher / Interactive Developer',
     org: 'THL',
     orgHref: 'https://www.htmlgame.co.kr/',
     summary:
