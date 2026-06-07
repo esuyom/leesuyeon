@@ -541,7 +541,7 @@ a {
 .proj-row:hover .proj-arrow,
 .proj-row:focus-visible .proj-arrow {
   opacity: 1;
-  transform: translate(2px, -2px);
+  transform: translate(2px, 0px);
 }
 
 .proj-star {
