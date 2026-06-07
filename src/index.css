@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 /* ===== Softened theme: split layout, gentle borders & rounded edges ===== */
 :root,
 [data-theme='dark'] {
@@ -43,8 +45,7 @@ html {
 body {
   background: var(--bg);
   color: var(--ink-soft);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo',
-    'Malgun Gothic', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s ease, color 0.3s ease;
@@ -345,7 +346,8 @@ a {
 }
 
 .about-body {
-  max-width: 640px;
+  max-width: 670px;
+  word-break: keep-all;
 }
 
 .prose {
@@ -417,14 +419,63 @@ a {
 }
 
 .exp-summary {
-  margin: 9px 0 14px;
+  margin: 9px 0 12px;
   font-size: 0.94rem;
   color: var(--ink-dim);
   line-height: 1.65;
 }
 
+.exp-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 16px;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.exp-details li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.exp-details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 /* ===== Projects ===== */
 .proj-list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.proj-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-year-heading {
+  color: var(--ink-dim);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.proj-group-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -432,7 +483,7 @@ a {
 
 .proj-row {
   display: grid;
-  grid-template-columns: 36px 1fr 22px;
+  grid-template-columns: 36px 1fr;
   gap: 16px;
   padding: 24px 22px;
   margin: 0 -22px;
@@ -442,13 +493,11 @@ a {
   transition: background 0.22s ease, border-color 0.22s ease;
 }
 
-.proj-row:hover {
+.proj-row:hover,
+.proj-row:focus-visible {
   background: var(--hover);
   border-color: var(--line);
-}
-
-.proj-row.featured {
-  background: var(--accent-soft);
+  outline: none;
 }
 
 .proj-index {
@@ -474,13 +523,39 @@ a {
   transition: color 0.2s ease;
 }
 
-.proj-row:hover .proj-title {
+.proj-row:hover .proj-title,
+.proj-row:focus-visible .proj-title {
   color: var(--accent);
 }
 
-.star {
+.proj-arrow {
+  margin-left: 6px;
+  display: inline-block;
+  opacity: 0;
   color: var(--accent);
-  font-size: 0.85rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.proj-row:hover .proj-arrow,
+.proj-row:focus-visible .proj-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.proj-star {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.95rem;
+  line-height: 1;
+  vertical-align: 0.01em;
+}
+
+.proj-badge {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1rem;
+  line-height: 1;
+  vertical-align: 0.02em;
 }
 
 .proj-year {
@@ -495,20 +570,6 @@ a {
   color: var(--ink-dim);
   line-height: 1.65;
   max-width: 560px;
-}
-
-.proj-arrow {
-  font-size: 1rem;
-  color: var(--ink-dim);
-  padding-top: 6px;
-  opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
-}
-
-.proj-row:hover .proj-arrow {
-  opacity: 1;
-  color: var(--accent);
-  transform: translate(2px, -2px);
 }
 
 /* ===== Tags ===== */
@@ -527,6 +588,14 @@ a {
   border: 1px solid var(--accent-soft);
   border-radius: 999px;
   padding: 4px 11px;
+}
+
+.empty {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
 }
 
 /* ===== Footer ===== */
