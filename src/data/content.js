@@ -17,7 +17,7 @@ export const profile = {
 
 export const skills = [
   { group: 'Frontend', items: ['React.js', 'Component', 'JavaScript (ES6+)', 'HTML5', 'CSS3'] },
-  { group: 'UI / Interaction', items: ['Responsive UI', 'GSAP', 'jQuery', 'Phaser3'] },
+  { group: 'UI / Interaction', items: ['Responsive UI', 'GSAP', 'jQuery'] },
   { group: 'Design / Collab', items: ['Figma', 'Description', 'Git'] },
 ]
 
@@ -75,11 +75,11 @@ export const projects = [
   {
     year: '2025',
     title: '코리아교육그룹 공식 홈페이지 리뉴얼',
-    desc: '공식 홈페이지 전면 리뉴얼. 전체 페이지 반응형 UI를 구현했고, 특히 디지털 전시관 구현으로 시각적 몰입도를 높임.',
+    desc: '공식 홈페이지 전면 리뉴얼. 전체 페이지 반응형 UI를 구현했고, 특히 three.js를 활용한 디지털 전시관 구현으로 시각적 몰입도를 높임.',
     href: 'https://www.koreaedugroup.com/',
     featured: true,
     contribution: 70,
-    tags: ['Renewal', 'Responsive', 'JavaScript'],
+    tags: ['Renewal', 'Responsive', 'three.js', 'JavaScript'],
   },
   {
     year: '2026',
