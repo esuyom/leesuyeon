@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { profile, experience, projects } from './data/content'
+import { profile, skills, experience, projects } from './data/content'
 
 const SECTIONS = [
   { id: 'about', label: 'About', num: '01' },
-  { id: 'experience', label: 'Experience', num: '02' },
-  { id: 'projects', label: 'Projects', num: '03' },
+  { id: 'skills', label: 'Skills', num: '02' },
+  { id: 'experience', label: 'Experience', num: '03' },
+  { id: 'projects', label: 'Projects', num: '04' },
 ]
 
 function useTheme() {
@@ -42,22 +43,6 @@ function useActiveSection() {
   return active
 }
 
-function getYearRank(year) {
-  const years = String(year).match(/\d{4}/g)?.map(Number) ?? []
-  return years.length ? Math.max(...years) : 0
-}
-
-const projectGroups = Object.entries(
-  projects.reduce((groups, project) => {
-    if (!groups[project.year]) groups[project.year] = []
-    groups[project.year].push(project)
-    return groups
-  }, {})
-)
-  .map(([year, items]) => ({ year, items }))
-  .sort((a, b) => getYearRank(b.year) - getYearRank(a.year))
-
-/* Mobile-only sticky header — shown < 900px */
 function MobileHeader({ active, theme, toggleTheme }) {
   return (
     <header className="mheader">
@@ -87,6 +72,7 @@ function LeftPanel({ active, theme, toggleTheme }) {
         <p className="eyebrow">/ PORTFOLIO</p>
         <h1 className="name">{profile.name}</h1>
         <p className="role">{profile.title}</p>
+        <p className="tagline">{profile.tagline}</p>
       </div>
 
       <nav className="nav" aria-label="Section navigation">
@@ -134,121 +120,129 @@ function About() {
   )
 }
 
-function Experience() {
+function Skills() {
   return (
-    <section id="experience" className="block">
+    <section id="skills" className="block">
       <div className="block-head">
         <span className="block-num">02</span>
-        <h2 className="block-title">Experience</h2>
+        <h2 className="block-title">Skills</h2>
       </div>
-      <div className="exp-list">
-        {experience.map((job, i) => {
-          const RowTag = job.orgHref ? 'a' : 'article'
-          const rowProps = job.orgHref
-            ? { href: job.orgHref, target: '_blank', rel: 'noreferrer' }
-            : {}
-
-          return (
-            <RowTag key={i} className="exp-row" {...rowProps}>
-              <div className="exp-period">{job.period}</div>
-              <div className="exp-main">
-                <h3 className="exp-role">
-                  {job.role} <span className="exp-at">@ {job.org}</span>
-                  {job.orgHref && <span className="exp-arrow">↗</span>}
-                </h3>
-                <p className="exp-summary">{job.summary}</p>
-                {job.details?.length > 0 && (
-                  <ul className="exp-details">
-                    {job.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
-                )}
-                <ul className="tags">
-                  {job.tags.map((t) => (
-                    <li key={t} className="tag">{t}</li>
-                  ))}
-                </ul>
-              </div>
-            </RowTag>
-          )
-        })}
+      <div className="skills-grid">
+        {skills.map((s) => (
+          <div key={s.group} className="skill-group">
+            <h3 className="skill-group-title">{s.group}</h3>
+            <ul className="tags">
+              {s.items.map((it) => (
+                <li key={it} className="tag">{it}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   )
 }
 
+function Experience() {
+  return (
+    <section id="experience" className="block">
+      <div className="block-head">
+        <span className="block-num">03</span>
+        <h2 className="block-title">Experience</h2>
+      </div>
+      <div className="exp-list">
+        {experience.map((job, i) => (
+          <a key={i} href={job.orgHref} target="_blank" rel="noreferrer" className="exp-row">
+            <div className="exp-period">{job.period}</div>
+            <div className="exp-main">
+              <h3 className="exp-role">
+                {job.role} <span className="exp-at">@ {job.org}</span>
+                <span className="exp-arrow">↗</span>
+              </h3>
+              <p className="exp-summary">{job.summary}</p>
+              {job.details && (
+                <ul className="exp-details">
+                  {job.details.map((d, di) => (
+                    <li key={di}>{d}</li>
+                  ))}
+                </ul>
+              )}
+              <ul className="tags">
+                {job.tags.map((t) => (
+                  <li key={t} className="tag">{t}</li>
+                ))}
+              </ul>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function ProjectRow({ p, index }) {
+  return (
+    <a
+      href={p.href}
+      target="_blank"
+      rel="noreferrer"
+      className={p.featured ? 'proj-row featured' : 'proj-row'}
+    >
+      <div className="proj-index">{String(index).padStart(2, '0')}</div>
+      <div className="proj-main">
+        <div className="proj-titleline">
+          <h3 className="proj-title">{p.title}</h3>
+          {p.badge && <span className="game-badge">{p.badge} {p.badgeLabel}</span>}
+          <span className="proj-year">{p.year}</span>
+          {typeof p.contribution === 'number' && (
+            <span className="proj-contrib">기여도 {p.contribution}%</span>
+          )}
+        </div>
+        <p className="proj-desc">{p.desc}</p>
+        <ul className="tags">
+          {p.tags.map((t) => (
+            <li key={t} className="tag">{t}</li>
+          ))}
+        </ul>
+      </div>
+      <span className="proj-arrow">↗</span>
+    </a>
+  )
+}
+
 function Projects() {
-  let projectIndex = 0
+  const [showAll, setShowAll] = useState(false)
+  const featured = projects.filter((p) => p.featured)
+  const archive = projects.filter((p) => !p.featured)
 
   return (
     <section id="projects" className="block">
       <div className="block-head">
-        <span className="block-num">03</span>
+        <span className="block-num">04</span>
         <h2 className="block-title">Projects</h2>
       </div>
-      {projectGroups.length ? (
-        <div className="proj-list">
-          {projectGroups.map((group) => (
-            <div key={group.year} className="proj-group">
-              <h3 className="proj-year-heading">{group.year}</h3>
-              <div className="proj-group-list">
-                {group.items.map((p) => {
-                  projectIndex += 1
 
-                  return (
-                    <a
-                      key={`${group.year}-${p.title}`}
-                      href={p.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="proj-row"
-                    >
-                      <div className="proj-index">
-                        {String(projectIndex).padStart(2, '0')}
-                      </div>
-                      <div className="proj-main">
-                        <div className="proj-titleline">
-                          <h4 className="proj-title">
-                            {p.title}
-                            {p.featured && (
-                              <span
-                                className="proj-star"
-                                title="주요 작업"
-                                aria-label="주요 작업"
-                              >
-                                ⭐
-                              </span>
-                            )}
-                            {p.badge && (
-                              <span
-                                className="proj-badge"
-                                title={p.badgeLabel}
-                                aria-label={p.badgeLabel}
-                              >
-                                {p.badge}
-                              </span>
-                            )}
-                            <span className="proj-arrow">↗</span>
-                          </h4>
-                        </div>
-                        <p className="proj-desc">{p.desc}</p>
-                        <ul className="tags">
-                          {p.tags.map((t) => (
-                            <li key={t} className="tag">{t}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </a>
-                  )
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p className="empty">공개 가능한 작업물을 정리 중입니다.</p>
+      <p className="proj-label">대표 프로젝트</p>
+      <div className="proj-list">
+        {featured.map((p, i) => (
+          <ProjectRow key={p.title} p={p} index={i + 1} />
+        ))}
+      </div>
+
+      {showAll && (
+        <>
+          <p className="proj-label proj-label-archive">전체 작업 아카이브</p>
+          <div className="proj-list">
+            {archive.map((p, i) => (
+              <ProjectRow key={p.title} p={p} index={featured.length + i + 1} />
+            ))}
+          </div>
+        </>
       )}
+
+      <button className="more-btn" onClick={() => setShowAll((v) => !v)}>
+        {showAll ? '접기' : `전체 작업 ${archive.length}개 더보기`}
+      </button>
     </section>
   )
 }
@@ -263,6 +257,7 @@ export default function App() {
       <LeftPanel active={active} theme={theme} toggleTheme={toggleTheme} />
       <main className="right">
         <About />
+        <Skills />
         <Experience />
         <Projects />
         <footer className="foot">
