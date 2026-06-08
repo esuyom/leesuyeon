@@ -64,7 +64,7 @@ a {
 @media (min-width: 900px) {
   .shell {
     display: grid;
-    grid-template-columns: 38% 62%;
+    grid-template-columns: 32% 66%;
   }
 }
 
