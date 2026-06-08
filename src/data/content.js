@@ -34,7 +34,7 @@ export const experience = [
       '계열사 CMS 관리자 화면 UI, 파인드미 채용 플랫폼, 스마트러닝앱 React 컴포넌트 전환',
       '수강생앱 리뉴얼 화면설계서·와이어프레임 작성에 참여하며 사용자 화면 구조와 운영 흐름 설계',
     ],
-    tags: ['React', 'JavaScript', 'Figma', 'Design System', 'Responsive UI', 'CMS'],
+    tags: ['React', 'JavaScript', 'Design System', 'Responsive UI', 'CMS'],
   },
   {
     period: '2021.05 — 2024.01',
