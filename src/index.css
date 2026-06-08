@@ -400,15 +400,22 @@ a {
   padding-top: 4px;
 }
 
+.exp-main {
+  min-width: 0;
+}
+
 .exp-role {
   font-size: 1.12rem;
   font-weight: 600;
   color: var(--ink);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .exp-at {
   color: var(--ink-dim);
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 .exp-arrow {
