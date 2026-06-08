@@ -16,9 +16,9 @@ export const profile = {
 }
 
 export const skills = [
-  { group: 'Frontend', items: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3 / SCSS'] },
+  { group: 'Frontend', items: ['React.js', 'Component', 'JavaScript (ES6+)', 'HTML5', 'CSS3'] },
   { group: 'UI / Interaction', items: ['Responsive UI', 'GSAP', 'jQuery', 'Phaser3'] },
-  { group: 'Design / Collab', items: ['Figma', 'Design System', 'Wireframe', 'Git'] },
+  { group: 'Design / Collab', items: ['Figma', 'Description', 'Git'] },
 ]
 
 export const experience = [
