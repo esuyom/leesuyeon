@@ -585,6 +585,7 @@ a {
   font-size: 0.93rem;
   color: var(--ink-dim);
   line-height: 1.65;
+ word-break: keep-all;
   max-width: 560px;
 }
 
