@@ -57,7 +57,7 @@ export const projects = [
   {
     year: '2026',
     title: '파인드미 (Find Me)',
-    desc: '채용 플랫폼 React 단일 페이지 웹앱. 컴포넌트 단위 설계와 상태 관리를 직접 구성하고 화면 전반을 단독 개발.',
+    desc: '채용 플랫폼 React SPA페이지 작업. 컴포넌트 단위 설계와 상태 관리를 직접 구성하고 화면 전반을 단독 개발.',
     href: 'https://findme-lovat.vercel.app/',
     featured: true,
     contribution: 100,
@@ -73,12 +73,12 @@ export const projects = [
     tags: ['React', 'Component Library', 'Figma'],
   },
   {
-    year: '2025',
+    year: '2026',
     title: '코리아교육그룹 공식 홈페이지 리뉴얼',
     desc: '공식 홈페이지 전면 리뉴얼. 전체 페이지 반응형 UI를 구현했고, 특히 three.js를 활용한 디지털 전시관 구현으로 시각적 몰입도를 높임.',
     href: 'https://www.koreaedugroup.com/',
     featured: true,
-    contribution: 70,
+    contribution: 80,
     tags: ['Renewal', 'Responsive', 'three.js', 'JavaScript'],
   },
   {
