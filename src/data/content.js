@@ -3,7 +3,6 @@ export const profile = {
   name: '이수연',
   title: 'Frontend UI Developer · Web Publisher',
   email: 'worksuyeon@gmail.com',
-  tagline: '사용성과 흐름을 우선하는 프론트엔드 UI 개발자',
   about: [
     `6년차 프론트엔드 UI 개발자입니다. 웹 퍼블리싱에서 출발해 React 기반 UI 개발과 컴포넌트 설계까지, 화면을 만드는 일과 구조를 설계하는 일을 함께 다룹니다.`,
     `현재 교육 그룹 디자인플랫폼팀에서 Figma 시안 기반 반응형 퍼블리싱, React 페이지·공통 컴포넌트 개발, 앱 화면의 React 전환을 담당합니다. 화면설계서·와이어프레임 작성에도 참여하며 구현을 넘어 화면 구조 설계까지 영역을 넓히고 있습니다.`,

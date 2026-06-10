@@ -70,7 +70,6 @@ function LeftPanel({ active, theme, toggleTheme }) {
         <p className="eyebrow">/ PORTFOLIO</p>
         <h1 className="name">{profile.name}</h1>
         <p className="role">{profile.title}</p>
-        <p className="tagline">{profile.tagline}</p>
       </div>
 
       <nav className="nav" aria-label="Section navigation">
