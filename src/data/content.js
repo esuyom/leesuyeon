@@ -10,7 +10,7 @@ export const profile = {
   ],
   socials: [
     { label: 'GitHub', href: 'https://github.com/esuyom' },
-    { label: 'Email', href: 'mailto:worksuyeon@gmail.com' },
+    { label: 'Email', href: 'mailto:sylee0560@gmail.com' },
     { label: 'Phone', href: 'tel:01056940560' },
   ],
 }
