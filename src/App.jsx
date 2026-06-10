@@ -189,7 +189,7 @@ function ProjectRow({ p, index }) {
       <div className="proj-main">
         <div className="proj-titleline">
           <h3 className="proj-title">{p.title}</h3>
-          {p.badge && <span className="game-badge">{p.badge} {p.badgeLabel}</span>}
+          {p.badge && <span className="game-badge">{p.badgeLabel}</span>}
           <span className="proj-year">{p.year}</span>
           {typeof p.contribution === 'number' && (
             <span className="proj-contrib">기여도 {p.contribution}%</span>
