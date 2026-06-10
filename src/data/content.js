@@ -100,16 +100,7 @@ export const projects = [
     badgeLabel: '게임 프로젝트',
     tags: ['Game', 'JavaScript', 'GSAP'],
   },
-  {
-    year: '2024',
-    title: 'Drop Cookie',
-    desc: 'Phaser3 게임 프레임워크로 제작한 개인 게임 프로젝트. 게임 로직과 인터랙션을 직접 설계·구현.',
-    href: 'https://esuyom.github.io/drop-cookie/',
-    contribution: 100,
-    badge: '🎮',
-    badgeLabel: '게임 프로젝트',
-    tags: ['Phaser3', 'Game', 'Personal'],
-  },
+  
 
   // ===== Archive (더보기) =====
   {
@@ -144,6 +135,16 @@ export const projects = [
     href: 'https://korea-coffeebaking.com/coffeeBaking/',
     contribution: 100,
     tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    year: '2024',
+    title: 'Drop Cookie',
+    desc: 'Phaser3 게임 프레임워크로 제작한 개인 게임 프로젝트. 게임 로직과 인터랙션을 직접 설계·구현.',
+    href: 'https://esuyom.github.io/drop-cookie/',
+    contribution: 100,
+    badge: '🎮',
+    badgeLabel: '게임 프로젝트',
+    tags: ['Phaser3', 'Game', 'Personal'],
   },
   {
     year: '2023',
