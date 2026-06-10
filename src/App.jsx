@@ -12,7 +12,10 @@ function useTheme() {
   const [theme, setTheme] = useState(() => {
     const saved = window.localStorage?.getItem('theme')
     if (saved) return saved
-    return 'dark'
+    // 시스템이 다크 선호일 때만 다크, 그 외(설정 없음 포함)는 라이트 기본
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
   })
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
