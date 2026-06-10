@@ -512,12 +512,6 @@ a {
   .proj-row:focus-visible .proj-title {
     color: var(--accent);
   }
-  .proj-arrow{opacity:0;}
-  .proj-row:hover .proj-arrow,
-  .proj-row:focus-visible .proj-arrow {
-    opacity: 1;
-    transform: translate(2px, 0px);
-  }
 }
 
 
@@ -547,11 +541,15 @@ a {
 }
 
 
-
+.proj-row:hover .proj-arrow,
+  .proj-row:focus-visible .proj-arrow {
+    opacity: 1;
+    transform: translate(2px, 0px);
+  }
 .proj-arrow {
   margin-left: 6px;
   display: inline-block;
-  opacity: 1;
+  opacity: 0;
   color: var(--accent);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
