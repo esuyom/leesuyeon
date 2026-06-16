@@ -44,6 +44,48 @@ function useActiveSection() {
   return active
 }
 
+function useRevealOnScroll() {
+  useEffect(() => {
+    document.documentElement.classList.add('reveal-ready')
+
+    const reveal = () => {
+      const items = document.querySelectorAll('[data-reveal]:not(.is-visible)')
+      if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+        items.forEach((item) => item.classList.add('is-visible'))
+        return null
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          })
+        },
+        { rootMargin: '0px 0px -12% 0px', threshold: 0.12 }
+      )
+
+      items.forEach((item) => observer.observe(item))
+      return observer
+    }
+
+    let observer = reveal()
+    const mutationObserver = new MutationObserver(() => {
+      observer?.disconnect()
+      observer = reveal()
+    })
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      observer?.disconnect()
+      mutationObserver.disconnect()
+      document.documentElement.classList.remove('reveal-ready')
+    }
+  }, [])
+}
+
 function MobileHeader({ active, theme, toggleTheme }) {
   return (
     <header className="mheader">
@@ -106,7 +148,7 @@ function LeftPanel({ active, theme, toggleTheme }) {
 
 function About() {
   return (
-    <section id="about" className="block">
+    <section id="about" className="block" data-reveal>
       <div className="block-head">
         <span className="block-num">01</span>
         <h2 className="block-title">About</h2>
@@ -122,14 +164,14 @@ function About() {
 
 function Skills() {
   return (
-    <section id="skills" className="block">
+    <section id="skills" className="block" data-reveal>
       <div className="block-head">
         <span className="block-num">02</span>
         <h2 className="block-title">Skills</h2>
       </div>
       <div className="skills-grid">
         {skills.map((s) => (
-          <div key={s.group} className="skill-group">
+          <div key={s.group} className="skill-group" data-reveal>
             <h3 className="skill-group-title">{s.group}</h3>
             <ul className="tags">
               {s.items.map((it) => (
@@ -145,14 +187,14 @@ function Skills() {
 
 function Experience() {
   return (
-    <section id="experience" className="block">
+    <section id="experience" className="block" data-reveal>
       <div className="block-head">
         <span className="block-num">03</span>
         <h2 className="block-title">Experience</h2>
       </div>
       <div className="exp-list">
         {experience.map((job, i) => (
-          <a key={i} href={job.orgHref} target="_blank" rel="noreferrer" className="exp-row">
+          <a key={i} href={job.orgHref} target="_blank" rel="noreferrer" className="exp-row" data-reveal>
             <div className="exp-period">{job.period}</div>
             <div className="exp-main">
               <h3 className="exp-role">
@@ -187,6 +229,7 @@ function ProjectRow({ p, index }) {
       target="_blank"
       rel="noreferrer"
       className={p.featured ? 'proj-row featured' : 'proj-row'}
+      data-reveal
     >
       <div className="proj-index">{String(index).padStart(2, '0')}</div>
       <div className="proj-main">
@@ -216,7 +259,7 @@ function Projects() {
   const archive = projects.filter((p) => !p.featured)
 
   return (
-    <section id="projects" className="block">
+    <section id="projects" className="block" data-reveal>
       <div className="block-head">
         <span className="block-num">04</span>
         <h2 className="block-title">Projects</h2>
@@ -250,6 +293,7 @@ function Projects() {
 export default function App() {
   const [theme, toggleTheme] = useTheme()
   const active = useActiveSection()
+  useRevealOnScroll()
 
   return (
     <div className="shell" id="top">
