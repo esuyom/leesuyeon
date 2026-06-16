@@ -24,7 +24,7 @@ export const experience = [
   {
     period: '2024.07 — 현재',
     role: 'Frontend UI Developer / Web Publisher',
-    org: 'Korea Edu Group',
+    org: '코리아교육그룹',
     orgHref: 'https://www.koreaedugroup.com/',
     summary:
       '교육 브랜드 웹사이트와 운영 서비스 UI를 구축·개선합니다. Figma 시안을 반응형 화면으로 구현하고, React 페이지와 공통 컴포넌트로 확장합니다. 화면설계서·와이어프레임 작성과 디자인 시스템 기반 공통 UI 구조화까지 맡아, 서비스 흐름이 실제 코드에서 일관되게 유지되도록 작업합니다.',
