@@ -141,6 +141,11 @@ h1, h2, h3, p { margin: 0; }
 .skill-name { font-weight: 500; }
 .dash-list li { padding-left: 15px; position: relative; color: var(--text-2); }
 .dash-list li::before { content: ''; position: absolute; left: 0; top: 0.68em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.how-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px; }
+.how-list li { padding-left: 15px; position: relative; display: flex; flex-direction: column; gap: 3px; }
+.how-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.how-list strong { font-size: 15px; }
+.how-list p { color: var(--text-2); font-size: 14px; line-height: 1.65; }
 .timeline { display: flex; flex-direction: column; gap: 22px; border-left: 2px solid var(--line); padding-left: 20px; }
 .timeline > li { display: flex; flex-direction: column; gap: 2px; position: relative; }
 .timeline > li::before { content: ''; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 6px; background: var(--accent); }
@@ -198,11 +203,9 @@ h1, h2, h3, p { margin: 0; }
 .os-grid { flex: 1; padding: 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-content: start; overflow-y: auto; }
 .os-card { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: 10px; background: #fff; border: 2px solid transparent; text-align: left; color: #1e2236; font-size: 14px; }
 .os-card:hover { border-color: #1e2236; }
-.os-card.big { grid-column: span 2; }
-.os-card.big .os-thumb { height: 116px; }
+.os-star { color: #e2764e; margin-right: 4px; }
 /* 요약은 카드마다 길이가 달라서 줄 수로 잘라야 높이가 안 들쭉날쭉함 */
 .os-card-sum { color: #555a72; font-size: 12.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.os-card.big .os-card-sum { -webkit-line-clamp: 3; }
 .os-more { grid-column: 1 / -1; padding: 13px; border-radius: 10px; border: 1px dashed #c4bca8; background: none; color: #555a72; font-size: 13px; }
 .os-more:hover { border-color: #1e2236; color: #1e2236; }
 .os-thumb { height: 84px; border-radius: 6px; background: #e6dfd0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: #6b6f85; overflow: hidden; }

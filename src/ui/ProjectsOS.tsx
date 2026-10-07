@@ -4,15 +4,18 @@ import { profile, projects, type Project } from '../data/content'
 // content.ts의 Category 유니언이랑 한 글자도 안 틀려야 필터가 먹음
 const CATEGORIES = ['전체', '웹서비스', '홈페이지', '스낵게임', '사이드프로젝트'] as const
 
-// big은 2칸을 차지하고 요약을 세 줄까지 보여줌
-function Card({ p, big, onOpen }: { p: Project; big?: boolean; onOpen: () => void }) {
+// 대표는 크기를 키우지 않고 제목 옆 별표로만 구분. 목록 순서는 앞
+function Card({ p, onOpen }: { p: Project; onOpen: () => void }) {
   return (
-    <button type="button" className={big ? 'os-card big' : 'os-card'} onClick={onOpen}>
+    <button type="button" className="os-card" onClick={onOpen}>
       <div className="os-thumb">{p.image ? <img src={p.image} alt="" /> : <span>[스크린샷]</span>}</div>
-      <strong>{p.title}</strong>
+      <strong>
+        {p.featured && <span className="os-star" aria-label="대표 프로젝트">★</span>}
+        {p.title}
+      </strong>
       <span className="os-card-sum">{p.summary}</span>
       <span className="tags">
-        {p.stack.slice(0, big ? 5 : 3).map((s) => (
+        {p.stack.slice(0, 3).map((s) => (
           <span key={s} className="tag">
             {s}
           </span>
@@ -122,7 +125,7 @@ export function ProjectsOS() {
             {/* 탭 바꾸면 통째로 새로 마운트 — 스크롤 맨 위로 */}
             <div className="os-grid" key={cat}>
               {featured.map((p) => (
-                <Card key={p.id} p={p} big onOpen={() => setOpen(p)} />
+                <Card key={p.id} p={p} onOpen={() => setOpen(p)} />
               ))}
               {rest.map((p) => (
                 <Card key={p.id} p={p} onOpen={() => setOpen(p)} />
