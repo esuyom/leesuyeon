@@ -38,7 +38,8 @@ export function ProjectsOS() {
         </div>
         {/* 목록 ↔ 상세를 한 창 안에서 교체 */}
         {open ? (
-          <div className="os-detail">
+          // key 없으면 아래 os-body와 DOM이 재사용돼 스크롤 위치가 남음
+          <div className="os-detail" key={open.id}>
             <button type="button" className="os-back" onClick={() => setOpen(null)}>
               ← 목록
             </button>
@@ -75,7 +76,7 @@ export function ProjectsOS() {
             </div>
           </div>
         ) : (
-          <div className="os-body">
+          <div className="os-body" key="list">
             <nav className="os-side" aria-label="프로젝트 분류">
               {CATEGORIES.map((c) => (
                 <button key={c} type="button" className={c === cat ? 'active' : ''} onClick={() => setCat(c)}>
@@ -84,7 +85,8 @@ export function ProjectsOS() {
                 </button>
               ))}
             </nav>
-            <div className="os-grid">
+            {/* 탭 바꾸면 통째로 새로 마운트 — 스크롤 맨 위로 */}
+            <div className="os-grid" key={cat}>
               {list.map((p) => (
                 <button key={p.id} type="button" className="os-card" onClick={() => setOpen(p)}>
                   <div className="os-thumb">{p.image ? <img src={p.image} alt="" /> : <span>[스크린샷]</span>}</div>
@@ -107,10 +109,10 @@ export function ProjectsOS() {
       <section className="os-terminal" aria-label="터미널">
         <div className="os-terminal-bar mono">terminal</div>
         <pre className="mono">
-          <span className="mint">$</span> whoami{'\n'}
+          <span className="accent-2">$</span> whoami{'\n'}
           {profile.name} — {profile.tagline}
           {'\n'}
-          <span className="mint">$</span> <span className="cursor">_</span>
+          <span className="accent-2">$</span> <span className="cursor">_</span>
         </pre>
       </section>
     </div>
