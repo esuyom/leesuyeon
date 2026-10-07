@@ -183,7 +183,10 @@ h1, h2, h3, p { margin: 0; }
 .sheet-2d { align-self: center; margin-top: 6px; padding: 8px; }
 
 /* ── monitor OS (1048 × 592) ── */
-.screen-root { width: 1048px; height: 592px; }
+.screen-root { width: 2096px; height: 1184px; }
+/* zoom은 transform과 달리 레이아웃 단계에서 먹어서 글자가 2배 크기로 진짜 그려진다.
+   그래서 안쪽 px 값은 하나도 안 건드려도 된다 */
+.os { zoom: 2; }
 .os { position: relative; width: 1048px; height: 592px; background: #232a47; color: #f3efe6; font-family: var(--font); overflow: hidden; border-radius: 4px; }
 .os-menubar { height: 28px; background: #1a1f36; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 13px; color: #c3c7db; }
 .os-menubar-left { display: flex; gap: 18px; }

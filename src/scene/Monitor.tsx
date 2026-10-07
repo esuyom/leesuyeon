@@ -7,8 +7,8 @@ import { profile } from '../data/content'
 import { ProjectsOS } from '../ui/ProjectsOS'
 import { useIsMobile } from '../ui/useMedia'
 
-// 화면 2.62×1.48 world = 1048×592 px (drei Html 기준 1px = distanceFactor/400)
-// 둘 중 하나만 바꾸면 OS 화면이 베젤 밖으로 삐져나감
+// 화면 2.62×1.48 world = 2096×1184 px (drei Html 기준 1px = distanceFactor/400)
+// DOM을 2배로 그리고 여기서 절반으로 줄여 넣는다. 셋 중 하나만 바꾸면 베젤 밖으로 삐져나감
 export const SCREEN = { center: [0.748, 3.97, 4.4] as [number, number, number], w: 2.62, h: 1.48 }
 
 // Html(transform) 안쪽은 3D 레이어라 휠이 안 내려옴. 직접 굴림
@@ -65,7 +65,7 @@ export function Monitor() {
       {live && !mobile && (
         <Html
           transform
-          distanceFactor={1}
+          distanceFactor={0.5}
           position={[SCREEN.center[0] + 0.004, SCREEN.center[1], SCREEN.center[2]]}
           rotation={[0, Math.PI / 2, 0]}
           zIndexRange={[8, 0]}
