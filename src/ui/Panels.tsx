@@ -139,7 +139,7 @@ export function ProjectsContent() {
     <div className="project-list">
       {projects.map((p) => (
         <article key={p.id} className="project-card">
-          <div className="os-thumb">{p.image ? <img src={p.image} alt="" /> : <span>[스크린샷]</span>}</div>
+          <div className="os-thumb">{p.image ? <img src={p.image} alt="" loading="lazy" /> : <span>[스크린샷]</span>}</div>
           <div className="stack-sm">
             <span className="mono accent small">
               {p.category} · {p.period}

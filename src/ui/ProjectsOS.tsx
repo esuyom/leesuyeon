@@ -8,7 +8,7 @@ const CATEGORIES = ['전체', '웹서비스', '홈페이지', '스낵게임', '�
 function Card({ p, onOpen }: { p: Project; onOpen: () => void }) {
   return (
     <button type="button" className="os-card" onClick={onOpen}>
-      <div className="os-thumb">{p.image ? <img src={p.image} alt="" /> : <span>[스크린샷]</span>}</div>
+      <div className="os-thumb">{p.image ? <img src={p.image} alt="" loading="lazy" /> : <span>[스크린샷]</span>}</div>
       <strong>
         {p.featured && <span className="os-star" aria-label="대표 프로젝트">★</span>}
         {p.title}
@@ -73,7 +73,7 @@ export function ProjectsOS() {
               ← 목록
             </button>
             <div className="os-detail-body">
-              <div className="os-thumb large">{open.image ? <img src={open.image} alt="" /> : <span>[스크린샷]</span>}</div>
+              <div className="os-thumb large">{open.image ? <img src={open.image} alt="" loading="lazy" /> : <span>[스크린샷]</span>}</div>
               <div className="os-detail-text">
                 <h3>{open.title}</h3>
                 <p className="muted-dark">

@@ -106,6 +106,7 @@ export const projects: Project[] = [
     role: '단독 개발 — 기여도 100%',
     description: ['Figma 디자인을 재사용 가능한 React 컴포넌트로 변환', '컴포넌트 라이브러리로 구조화해 앱 화면 전환의 기반을 마련'],
     stack: ['React', 'Component Library', 'Figma'],
+    image: '/projects/keg-ui.jpg',
     links: [{ label: 'Demo', href: 'https://keg-ui-components.vercel.app/' }],
   },
   {
@@ -135,6 +136,7 @@ export const projects: Project[] = [
     role: '퍼블리싱과 프론트 — 기여도 80%',
     description: ['공식 홈페이지 전면 리뉴얼의 전체 페이지 반응형 UI 구현', 'three.js를 활용한 디지털 전시관 구현'],
     stack: ['three.js', 'JavaScript', 'Responsive', 'Renewal'],
+    image: '/projects/keg-official.jpg',
     links: [{ label: 'Site', href: 'https://www.koreaedugroup.com/' }],
   },
   {
@@ -146,6 +148,7 @@ export const projects: Project[] = [
     role: '퍼블리싱 — 기여도 80%',
     description: ['반려동물 교육 브랜드 사이트의 반응형 UI 구현과 전체 페이지 퍼블리싱'],
     stack: ['Renewal', 'Responsive', 'CSS'],
+    image: '/projects/kpet.jpg',
     links: [{ label: 'Site', href: 'https://kpetacademy.com/' }],
   },
   {
@@ -157,6 +160,7 @@ export const projects: Project[] = [
     role: '퍼블리싱 — 기여도 70%',
     description: ['Figma 시안을 기준으로 반응형 퍼블리싱 진행', '기존 UI 개선 작업 병행'],
     stack: ['Renewal', 'CSS', 'JavaScript'],
+    image: '/projects/crew-academy.jpg',
     links: [{ label: 'Site', href: 'https://www.koreacrewacademy.com/' }],
   },
   {
@@ -168,6 +172,7 @@ export const projects: Project[] = [
     role: '퍼블리싱 — 기여도 50%',
     description: ['학과 소개 흐름에 맞춘 반응형 페이지 구현', '운영 단계에서 쌓인 UI 정리'],
     stack: ['Renewal', 'Responsive', 'CSS'],
+    image: '/projects/air-academy.jpg',
     links: [{ label: 'Site', href: 'https://www.koreaairacademy.com/' }],
   },
   {
@@ -179,6 +184,7 @@ export const projects: Project[] = [
     role: '단독 구축 — 기여도 100%',
     description: ['커피베이킹 과정 홈페이지를 기존 사이트에서 분리해 신규 구축', '사이트 구조를 짜고 퍼블리싱까지 혼자 진행'],
     stack: ['HTML', 'CSS', 'JavaScript'],
+    image: '/projects/coffee-baking.jpg',
     links: [{ label: 'Site', href: 'https://korea-coffeebaking.com/coffeeBaking/' }],
   },
   {
@@ -193,6 +199,7 @@ export const projects: Project[] = [
       '운영 요청 대응, 금칙어 처리, 애니메이션 및 JavaScript 기능 구현',
     ],
     stack: ['Maintenance', 'Renewal', 'JavaScript'],
+    image: '/projects/db-insure.jpg',
     links: [{ label: 'Site', href: 'https://dbinsure.co.kr/driver' }],
   },
   {
@@ -204,6 +211,7 @@ export const projects: Project[] = [
     role: '퍼블리싱 — 기여도 100%',
     description: ['반응형 홈페이지 전체 퍼블리싱', '슬라이드와 스크롤 애니메이션 구현'],
     stack: ['Responsive', 'Animation', 'JavaScript'],
+    image: '/projects/dearchiis.jpg',
     links: [{ label: 'Site', href: 'https://www.dearchiis.co.kr/' }],
   },
 
@@ -217,6 +225,7 @@ export const projects: Project[] = [
     role: '게임 개발 단독 — 기여도 100%',
     description: ['게임방 콘셉트 사이트의 적립 게임과 당첨 게임 전체를 단독 개발', 'JavaScript와 GSAP으로 게임 로직과 연출을 구현'],
     stack: ['JavaScript', 'GSAP', 'Game'],
+    image: '/projects/jjansun.jpg',
     links: [{ label: 'Site', href: 'https://www.jjansun.com/' }],
   },
   {
@@ -228,6 +237,7 @@ export const projects: Project[] = [
     role: '게임 개발 단독 — 기여도 100%',
     description: ['임직원 대상 모바일 최적화 게임 3종 제작', 'JavaScript와 GSAP, 사운드 연출 활용'],
     stack: ['JavaScript', 'GSAP', 'Mobile', 'Game'],
+    image: '/projects/shinhan-sol.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2022shinhansol/game1/' }],
   },
   {
@@ -239,6 +249,7 @@ export const projects: Project[] = [
     role: '게임 개발과 퍼블리싱 — 기여도 100%',
     description: ['창립 기념 프로모션 사이트 내 카드게임 개발', '사이트 전체 퍼블리싱 병행'],
     stack: ['JavaScript', 'Game', 'Promotion'],
+    image: '/projects/db-33rd.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2204db/index.html' }],
   },
   {
@@ -250,6 +261,7 @@ export const projects: Project[] = [
     role: '콘텐츠 개발과 퍼블리싱 — 기여도 100%',
     description: ['디지털 팝업스토어의 체험 콘텐츠를 JavaScript로 개발', '사이트 전체 퍼블리싱 담당'],
     stack: ['JavaScript', 'Interactive', 'Game'],
+    image: '/projects/halotop.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2208halotop/index.html' }],
   },
   {
@@ -261,6 +273,7 @@ export const projects: Project[] = [
     role: '게임 개발과 퍼블리싱 — 기여도 100%',
     description: ['보이스피싱 예방 메시지를 전달하는 게임형 프로모션 사이트 개발', '게임 로직과 전체 퍼블리싱을 담당'],
     stack: ['JavaScript', 'Game', 'Promotion'],
+    image: '/projects/fss-voice-promo.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2306voice/' }],
   },
   {
@@ -272,6 +285,7 @@ export const projects: Project[] = [
     role: '콘텐츠 개발과 퍼블리싱 — 기여도 100%',
     description: ['체험형 테스트 콘텐츠를 JavaScript로 개발', '사이트 전체 퍼블리싱 담당'],
     stack: ['JavaScript', 'Interactive'],
+    image: '/projects/fss-voice-v2.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2309voice/index.html' }],
   },
   {
@@ -283,6 +297,7 @@ export const projects: Project[] = [
     role: '콘텐츠 개발과 퍼블리싱 — 기여도 100%',
     description: ['체험형 테스트와 인터랙션을 JavaScript로 구현', '사이트 전체 퍼블리싱 진행'],
     stack: ['JavaScript', 'Interactive'],
+    image: '/projects/fss-voice-v1.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2210financial' }],
   },
   {
@@ -294,6 +309,7 @@ export const projects: Project[] = [
     role: '퍼블리싱 — 기여도 100%',
     description: ['스크롤 애니메이션 중심의 프로모션 사이트 전체 퍼블리싱', '애니메이션 라이브러리로 스크롤 연출 구현'],
     stack: ['Promotion', 'Animation', 'JavaScript'],
+    image: '/projects/kia-colors.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2304kia/' }],
   },
   {
@@ -305,6 +321,7 @@ export const projects: Project[] = [
     role: '게임 개발과 퍼블리싱 — 기여도 100%',
     description: ['터치 입력으로 점수가 쌓이는 게임 로직과 피버 연출 구현', '최고 점수 저장, 랭킹 확인, 친구 초대 기능 개발'],
     stack: ['JavaScript', 'GSAP', 'Game', 'Promotion'],
+    image: '/projects/oreo-dunk.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2111oreodunk/' }],
   },
   {
@@ -316,6 +333,7 @@ export const projects: Project[] = [
     role: '게임 개발과 퍼블리싱 — 기여도 100%',
     description: ['글자를 맞춰 이름을 완성하는 낱말 퍼즐 구현. 성공과 실패에 따라 결과 화면 분기', '네이밍 공모전 응모 폼과 SNS 공유 기능 개발'],
     stack: ['JavaScript', 'GSAP', 'Game', 'Promotion'],
+    image: '/projects/kcci-event.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2110KCCI/' }],
   },
   {
@@ -327,6 +345,7 @@ export const projects: Project[] = [
     role: '게임 개발 단독 — 기여도 100%',
     description: ['장애인 인식 개선을 목적으로 한 틀린그림찾기 게임 개발', 'JavaScript 기반 게임 로직 구현'],
     stack: ['JavaScript', 'Game', 'Accessibility'],
+    image: '/projects/hbcil-find.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2108hbcil/' }],
   },
   {
@@ -338,6 +357,7 @@ export const projects: Project[] = [
     role: '게임 개발과 퍼블리싱 — 기여도 100%',
     description: ['아이템을 주워 담는 미니게임 구현. 성공과 실패에 따라 결과 화면 분기', '응모 폼과 당첨자 발표 화면 퍼블리싱'],
     stack: ['JavaScript', 'GSAP', 'Game', 'Promotion'],
+    image: '/projects/hy-kids.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2104hykid/' }],
   },
   {
@@ -349,6 +369,7 @@ export const projects: Project[] = [
     role: '퍼블리싱 — 기여도 100%',
     description: ['액자 꾸미기 등 참여형 콘텐츠 구현', '프로모션 사이트 전체 퍼블리싱 진행'],
     stack: ['JavaScript', 'HTML', 'Promotion'],
+    image: '/projects/db-family.jpg',
     links: [{ label: 'Demo', href: 'https://dbins2.speedgabia.com/thl/work/2107db/' }],
   },
 
@@ -370,6 +391,7 @@ export const projects: Project[] = [
       '저사양 기기나 WebGL이 막힌 환경을 위해 같은 데이터로 그리는 2D 페이지를 따로 둠. 모바일에서는 카메라를 고정하고 하단 시트로 섹션을 고르게 분기',
     ],
     stack: ['React', 'Three.js', 'React Three Fiber', 'TypeScript', 'Zustand', 'Vite'],
+    image: '/projects/suyeon-studio.jpg',
   },
   {
     id: 'drop-cookie',
@@ -380,6 +402,7 @@ export const projects: Project[] = [
     role: '개인 프로젝트 — 기여도 100%',
     description: ['Phaser3 게임 프레임워크로 제작한 개인 게임', '게임 로직과 인터랙션을 직접 설계하고 구현'],
     stack: ['Phaser3', 'JavaScript', 'Game'],
+    image: '/projects/drop-cookie.jpg',
     links: [{ label: 'Play', href: 'https://esuyom.github.io/drop-cookie/' }],
   },
 ]
