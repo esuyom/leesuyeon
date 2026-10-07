@@ -11,7 +11,7 @@ const Experience = lazy(() => import('./scene/Experience').then((m) => ({ defaul
 function SceneLoading() {
   return (
     <div className="scene-loading" role="status">
-      준비중
+      Loading
     </div>
   )
 }
