@@ -399,8 +399,8 @@ export const skills: { group: string; items: { name: string; note?: string }[] }
   {
     group: 'Frontend',
     items: [
-      { name: 'React', note: '파인드미 채용 플랫폼, 수강생 앱 컴포넌트 라이브러리' },
       { name: 'Vue 3 / Nuxt 4', note: 'O4O 학습 플랫폼, MOU 관리 플랫폼, AI 캠퍼스' },
+      { name: 'React', note: '파인드미 채용 플랫폼, 수강생 앱 컴포넌트 라이브러리' },
       { name: 'TypeScript' },
       { name: 'JavaScript (ES6+)', note: '퍼블리싱 하던 시절부터 쓴 주력' },
       { name: 'HTML5 / CSS3 / SCSS' },
@@ -413,14 +413,6 @@ export const skills: { group: string; items: { name: string; note?: string }[] }
       { name: 'Three.js / R3F', note: '코리아교육그룹 디지털 전시관' },
       { name: 'GSAP', note: '프로모션 사이트 연출' },
       { name: 'Pinia / Zustand' },
-    ],
-  },
-  {
-    group: 'Backend / Infra',
-    items: [
-      { name: 'Spring Boot / Java 21', note: 'MOU 플랫폼을 혼자 만들면서' },
-      { name: 'MySQL / MyBatis / Flyway' },
-      { name: 'GitHub Actions / nginx' },
     ],
   },
   {
