@@ -141,11 +141,6 @@ h1, h2, h3, p { margin: 0; }
 .skill-name { font-weight: 500; }
 .dash-list li { padding-left: 15px; position: relative; color: var(--text-2); }
 .dash-list li::before { content: ''; position: absolute; left: 0; top: 0.68em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.how-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px; }
-.how-list li { padding-left: 15px; position: relative; display: flex; flex-direction: column; gap: 3px; }
-.how-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.how-list strong { font-size: 15px; }
-.how-list p { color: var(--text-2); font-size: 14px; line-height: 1.65; }
 .timeline { display: flex; flex-direction: column; gap: 22px; border-left: 2px solid var(--line); padding-left: 20px; }
 .timeline > li { display: flex; flex-direction: column; gap: 2px; position: relative; }
 .timeline > li::before { content: ''; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 6px; background: var(--accent); }
