@@ -41,11 +41,13 @@ export function Experience() {
   return (
     <Canvas
       className="scene"
-      shadows
+      shadows="percentage" // 기본값(soft)은 three에서 제거돼 경고가 뜬다
       dpr={[1, 2]} // 레티나에서 2배까지만. 그 이상은 버벅임
       camera={{ fov: 30, near: 0.1, far: 200, position: [20, 15, 20] }}
       gl={{ antialias: true, alpha: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.05 }}
       onPointerMissed={() => setHovered(null)} // 빈 곳 클릭하면 hover 해제
+      // 캔버스만 숨긴다. 래퍼에 걸면 안에 포털로 들어간 OS 화면까지 같이 가려짐
+      onCreated={({ gl }) => gl.domElement.setAttribute('aria-hidden', 'true')}
     >
       <Lights />
       <Room />

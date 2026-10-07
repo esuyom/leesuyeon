@@ -6,19 +6,6 @@ import { useIsMobile } from './useMedia'
 
 // 아이콘 라이브러리 쓸 만큼 많지 않아서 그냥 인라인 SVG
 const Icon = {
-  sound: (on: boolean) => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M11 5 6 9H3v6h3l5 4z" />
-      {on ? (
-        <>
-          <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-          <path d="M18.5 5.5a9 9 0 0 1 0 13" />
-        </>
-      ) : (
-        <path d="m16 9 5 6M21 9l-5 6" />
-      )}
-    </svg>
-  ),
   bulb: (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M9 18h6" />
@@ -44,9 +31,6 @@ const Icon = {
 function Header() {
   const night = useStore((s) => s.night)
   const toggleNight = useStore((s) => s.toggleNight)
-  const soundOn = useStore((s) => s.soundOn)
-  const soundAvailable = useStore((s) => s.soundAvailable)
-  const setSound = useStore((s) => s.setSound)
   const setFocus = useStore((s) => s.setFocus)
   return (
     <header className="header">
@@ -56,12 +40,6 @@ function Header() {
         <span className="accent">.studio</span>
       </button>
       <nav className="header-actions" aria-label="보조 메뉴">
-        {/* bgm.mp3 없으면 버튼 자체를 안 띄움 */}
-        {soundAvailable && (
-          <button type="button" className="icon-btn" aria-label={soundOn ? '음악 끄기' : '음악 켜기'} aria-pressed={soundOn} onClick={() => setSound(!soundOn)}>
-            {Icon.sound(soundOn)}
-          </button>
-        )}
         <button type="button" className="icon-btn" aria-label={night ? '불 켜기 (낮 모드)' : '불 끄기 (밤 모드)'} aria-pressed={!night} onClick={toggleNight}>
           {Icon.bulb}
         </button>

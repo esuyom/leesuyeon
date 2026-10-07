@@ -28,7 +28,7 @@ export function Room() {
       <Chair />
 
       {/* labelPosition은 물건마다 눈으로 맞춘 값 */}
-      <Hotspot id="projects" no={meta('projects').no} label={meta('projects').title} labelPosition={[0.75, 4.9, 4.4]} labelSide="left" onSelect={go('projects')}>
+      <Hotspot id="projects" no={meta('projects').no} label={meta('projects').title} labelPosition={[0.75, 4.9, 5.4]} onSelect={go('projects')}>
         <Monitor />
       </Hotspot>
       <Hotspot id="skills" no={meta('skills').no} label={meta('skills').title} labelPosition={[2.5, 5.45, 0.9]} onSelect={go('skills')}>

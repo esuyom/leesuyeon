@@ -1,6 +1,30 @@
 import { create } from 'zustand'
 import type { SectionId } from './data/content'
 
+// ?view=2d 가 우선, 없으면 지난번 선택. 새로고침해도 3D 로딩을 다시 안 기다리게
+const VIEW_KEY = 'suyeon.view2d'
+function readView2d() {
+  try {
+    const q = new URLSearchParams(location.search).get('view')
+    if (q === '2d') return true
+    if (q === '3d') return false
+    return localStorage.getItem(VIEW_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+function writeView2d(v: boolean) {
+  try {
+    localStorage.setItem(VIEW_KEY, v ? '1' : '0')
+    const u = new URL(location.href) // 해시(#projects)는 그대로 둔다
+    if (v) u.searchParams.set('view', '2d')
+    else u.searchParams.delete('view')
+    history.replaceState(null, '', u)
+  } catch {
+    // 시크릿 모드 등에서 저장이 막히면 그냥 넘어간다
+  }
+}
+
 // lamp는 섹션이 아닌데 hover는 똑같이 먹어야 해서 끼워 넣음
 type Hover = SectionId | 'lamp' | null
 
@@ -10,15 +34,11 @@ type State = {
   arrived: boolean // 카메라 이동 끝남. 패널 등장 타이밍
   hovered: Hover
   night: boolean
-  soundOn: boolean
-  soundAvailable: boolean // bgm.mp3 있을 때만 true
   view2d: boolean
   setFocus: (f: SectionId | null) => void
   setArrived: (v: boolean) => void
   setHovered: (h: Hover) => void
   toggleNight: () => void
-  setSound: (v: boolean) => void
-  setSoundAvailable: (v: boolean) => void
   setView2d: (v: boolean) => void
 }
 
@@ -29,14 +49,13 @@ export const useStore = create<State>((set) => ({
   arrived: false,
   hovered: null,
   night: true, // 기본 밤
-  soundOn: false,
-  soundAvailable: false,
-  view2d: false,
+  view2d: readView2d(),
   setFocus: (focus) => set({ focus, entered: true, arrived: false, hovered: null }), // 섹션 바꾸면 arrived·hover 리셋
   setArrived: (arrived) => set({ arrived }),
   setHovered: (hovered) => set({ hovered }),
   toggleNight: () => set((s) => ({ night: !s.night })),
-  setSound: (soundOn) => set({ soundOn }),
-  setSoundAvailable: (soundAvailable) => set({ soundAvailable }),
-  setView2d: (view2d) => set({ view2d, focus: null }), // 2D 가면 포커스 풀기
+  setView2d: (view2d) => {
+    writeView2d(view2d)
+    set({ view2d, focus: null }) // 2D 가면 포커스 풀기
+  },
 }))

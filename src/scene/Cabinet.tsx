@@ -9,7 +9,7 @@ const RECORD_COLORS = ['#7fe3c4', '#e07a6b', '#f3efe6', '#5c6fa8', '#ffb547', '#
 // 창문 아래 수납장 + 턴테이블 + 스피커 — About 섹션
 export function Cabinet() {
   const platter = useRef<THREE.Group>(null)
-  const spinning = useStore((s) => s.focus === 'about' || s.soundOn) // 음악 켜져 있거나 About 보는 중
+  const spinning = useStore((s) => s.focus === 'about') // About 볼 때만 돈다
   const speed = useRef(0)
 
   useFrame((_, dt) => {

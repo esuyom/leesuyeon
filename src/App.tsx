@@ -1,10 +1,20 @@
-import { useEffect, useMemo } from 'react'
-import { Experience } from './scene/Experience'
+import { Suspense, lazy, useEffect, useMemo } from 'react'
 import { Overlay } from './ui/Overlay'
 import { Page2D } from './ui/Page2D'
-import { Sound } from './ui/Sound'
 import { hasWebGL } from './ui/useMedia'
 import { useStore } from './store'
+
+// three.js와 R3F, drei가 번들의 대부분이다. 따로 떼어내면 2D로 보는 사람은 아예 안 받는다
+const Experience = lazy(() => import('./scene/Experience').then((m) => ({ default: m.Experience })))
+
+// 씬 청크를 받는 동안 빈 화면이 뜨면 깨진 걸로 보인다
+function SceneLoading() {
+  return (
+    <div className="scene-loading" role="status">
+      작업실을 그리는 중
+    </div>
+  )
+}
 
 // 최상위 분기 — WebGL 안 되거나 2D 모드면 Page2D, 아니면 3D 방
 export default function App() {
@@ -22,13 +32,13 @@ export default function App() {
 
   return (
     <>
-      {/* 렌더는 없고 audio 엘리먼트만 들고 있음 */}
-      <Sound />
       {view2d ? (
         <Page2D />
       ) : (
         <div className="app">
-          <Experience />
+          <Suspense fallback={<SceneLoading />}>
+            <Experience />
+          </Suspense>
           <Overlay />
         </div>
       )}
