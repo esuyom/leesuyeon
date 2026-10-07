@@ -4,16 +4,42 @@ import { profile, projects, type Project } from '../data/content'
 // content.ts의 Category 유니언이랑 한 글자도 안 틀려야 필터가 먹음
 const CATEGORIES = ['전체', '웹서비스', '홈페이지', '스낵게임', '사이드프로젝트'] as const
 
+// big은 2칸을 차지하고 요약을 세 줄까지 보여줌
+function Card({ p, big, onOpen }: { p: Project; big?: boolean; onOpen: () => void }) {
+  return (
+    <button type="button" className={big ? 'os-card big' : 'os-card'} onClick={onOpen}>
+      <div className="os-thumb">{p.image ? <img src={p.image} alt="" /> : <span>[스크린샷]</span>}</div>
+      <strong>{p.title}</strong>
+      <span className="os-card-sum">{p.summary}</span>
+      <span className="tags">
+        {p.stack.slice(0, big ? 5 : 3).map((s) => (
+          <span key={s} className="tag">
+            {s}
+          </span>
+        ))}
+      </span>
+    </button>
+  )
+}
+
 // 모니터 안에 뜨는 가짜 OS 화면 (1048×592 px 고정 — Monitor.tsx SCREEN이랑 세트)
 export function ProjectsOS() {
   const [cat, setCat] = useState<(typeof CATEGORIES)[number]>('전체')
   const [open, setOpen] = useState<Project | null>(null)
+  const [showFolded, setShowFolded] = useState(false)
   const [time, setTime] = useState(() => new Date())
   useEffect(() => {
     const t = setInterval(() => setTime(new Date()), 15000) // 분 단위 표시라 15초면 충분
     return () => clearInterval(t)
   }, [])
-  const list = cat === '전체' ? projects : projects.filter((p) => p.category === cat)
+
+  // 전체 탭에서만 대표를 앞으로 빼고 프로모션 묶음을 접는다. 분류 탭은 그냥 다 보여줌
+  const all = cat === '전체'
+  const list = all ? projects : projects.filter((p) => p.category === cat)
+  const featured = all ? list.filter((p) => p.featured) : []
+  const folded = all ? list.filter((p) => !p.featured && p.category === '스낵게임') : []
+  const rest = all ? list.filter((p) => !p.featured && p.category !== '스낵게임') : list
+
   // 분류별 건수. 어디가 두꺼운지 안 보이면 답답함
   const countOf = (c: (typeof CATEGORIES)[number]) => (c === '전체' ? projects.length : projects.filter((p) => p.category === c).length)
   const hhmm = time.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false })
@@ -79,7 +105,15 @@ export function ProjectsOS() {
           <div className="os-body" key="list">
             <nav className="os-side" aria-label="프로젝트 분류">
               {CATEGORIES.map((c) => (
-                <button key={c} type="button" className={c === cat ? 'active' : ''} onClick={() => setCat(c)}>
+                <button
+                  key={c}
+                  type="button"
+                  className={c === cat ? 'active' : ''}
+                  onClick={() => {
+                    setCat(c)
+                    setShowFolded(false) // 탭 바꾸면 다시 접음
+                  }}
+                >
                   {c}
                   <span className="mono os-count"> {countOf(c)}</span>
                 </button>
@@ -87,19 +121,18 @@ export function ProjectsOS() {
             </nav>
             {/* 탭 바꾸면 통째로 새로 마운트 — 스크롤 맨 위로 */}
             <div className="os-grid" key={cat}>
-              {list.map((p) => (
-                <button key={p.id} type="button" className="os-card" onClick={() => setOpen(p)}>
-                  <div className="os-thumb">{p.image ? <img src={p.image} alt="" /> : <span>[스크린샷]</span>}</div>
-                  <strong>{p.title}</strong>
-                  <span className="tags">
-                    {p.stack.slice(0, 3).map((s) => (
-                      <span key={s} className="tag">
-                        {s}
-                      </span>
-                    ))}
-                  </span>
-                </button>
+              {featured.map((p) => (
+                <Card key={p.id} p={p} big onOpen={() => setOpen(p)} />
               ))}
+              {rest.map((p) => (
+                <Card key={p.id} p={p} onOpen={() => setOpen(p)} />
+              ))}
+              {folded.length > 0 && !showFolded && (
+                <button type="button" className="os-more" onClick={() => setShowFolded(true)}>
+                  그 외 프로모션 및 미니게임 {folded.length}건 보기
+                </button>
+              )}
+              {showFolded && folded.map((p) => <Card key={p.id} p={p} onOpen={() => setOpen(p)} />)}
             </div>
           </div>
         )}
