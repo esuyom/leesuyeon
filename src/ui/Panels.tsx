@@ -76,6 +76,16 @@ export function AboutContent() {
           </p>
         ))}
       </div>
+      <div className="stack-sm">
+        <h3 className="eyebrow">좋아하는 것</h3>
+        <div className="tags">
+          {about.likes.map((l) => (
+            <span key={l} className="tag">
+              {l}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
