@@ -98,17 +98,6 @@ export const projects: Project[] = [
     links: [{ label: '내부 기록', href: 'https://app.notion.com/p/3f287353d9298186a0f2e77ce1f07232' }],
   },
   {
-    id: 'findme',
-    title: '파인드미 (Find Me)',
-    summary: '채용 플랫폼 React SPA. 컴포넌트 단위 설계와 상태 관리를 직접 구성하고 화면 전반을 단독 개발',
-    category: '웹서비스',
-    period: '2026',
-    role: '프론트엔드 단독 — 기여도 100%',
-    description: ['채용 플랫폼의 React SPA 화면 전반을 단독 개발', '컴포넌트 단위 설계와 상태 관리를 직접 구성'],
-    stack: ['React', 'Vite', 'Vercel'],
-    links: [{ label: 'Demo', href: 'https://findme-lovat.vercel.app/' }],
-  },
-  {
     id: 'keg-ui',
     title: '수강생 앱 컴포넌트 라이브러리',
     summary: 'Figma 디자인을 재사용 가능한 React 컴포넌트로 옮기고 라이브러리로 구조화. 앱 화면 전환의 기반을 단독 구축',
@@ -401,7 +390,7 @@ export const skills: { group: string; items: { name: string; note: string }[] }[
     group: 'Frontend',
     items: [
       { name: 'Vue 3 / Nuxt 4', note: 'O4O 학습 플랫폼, MOU 관리 플랫폼, AI 캠퍼스' },
-      { name: 'React', note: '파인드미 채용 플랫폼, 수강생 앱 컴포넌트 라이브러리' },
+      { name: 'React', note: '수강생 앱 컴포넌트 라이브러리, 사내 관리자 화면' },
       { name: 'TypeScript', note: '2026년 프로젝트 전부' },
       { name: 'JavaScript (ES6+)', note: '퍼블리싱 하던 시절부터 쓴 주력' },
       { name: 'HTML5 / CSS3 / SCSS', note: '반응형 퍼블리싱 6년' },
@@ -450,7 +439,7 @@ export const experience: {
       '교육 브랜드 웹사이트와 사내 서비스 화면을 만듭니다. Figma 시안을 반응형으로 옮기는 일에서 시작해, 지금은 React 공통 컴포넌트 설계와 화면설계서 작성도 맡고 있습니다.',
     details: [
       '코리아승무원아카데미와 항공운항과, 펫아카데미, 커피베이킹, 공식 홈페이지 리뉴얼 및 신규 구축',
-      '계열사 CMS 관리자 화면 UI, 파인드미 채용 플랫폼, 스마트러닝앱 React 컴포넌트 전환',
+      '계열사 CMS 관리자 화면 UI, 스마트러닝앱 React 컴포넌트 전환',
       '산학협력(MOU) 관리 플랫폼을 혼자 개발. 요구사항 해석과 DB 설계, 백엔드, 프론트, 배포를 전부 담당',
       '수강생앱 리뉴얼 화면설계서와 와이어프레임 작성에 참여',
     ],
