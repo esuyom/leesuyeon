@@ -19,12 +19,6 @@ const Icon = {
       <path d="m11 18-6-6 6-6" />
     </svg>
   ),
-  mouse: (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <rect x="6" y="3" width="12" height="18" rx="6" />
-      <path d="M12 7v4" />
-    </svg>
-  ),
 }
 
 // 상단 로고 + 음악/조명 버튼
@@ -123,9 +117,7 @@ export function Overlay() {
 
       {entered && !focus && !mobile && (
         <footer className="hint">
-          <span className="row-gap small">
-            {Icon.mouse} 드래그해서 회전 · 스크롤로 줌 · 물건을 클릭하면 다가가요 · 스탠드를 누르면 불이 꺼져요
-          </span>
+          <span className="small">스크롤해서 둘러보고, 궁금한 물건은 눌러보세요</span>
           <button type="button" className="link-btn small" onClick={() => setView2d(true)}>
             2D로 보기
           </button>
