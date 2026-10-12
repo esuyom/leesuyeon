@@ -10,10 +10,7 @@ export function SkillsContent() {
           <h3 className="eyebrow">{g.group}</h3>
           <ul className="skill-list">
             {g.items.map((s) => (
-              <li key={s.name}>
-                <span className="skill-name">{s.name}</span>
-                {s.note && <span className="muted">{s.note}</span>}
-              </li>
+              <li key={s.name}>{s.name}</li>
             ))}
           </ul>
         </div>

@@ -393,38 +393,38 @@ export const projects: Project[] = [
   },
 ]
 
-// note는 전부 "어디서 썼는지". 하나라도 비면 들쭉날쭉해 보여서 다 채운다
-export const skills: { group: string; items: { name: string; note: string }[] }[] = [
+// 이름만. 화면에선 칩으로 이어 붙여 흘린다
+export const skills: { group: string; items: { name: string }[] }[] = [
   {
     group: 'Frontend',
     items: [
-      { name: 'Vue 3 / Nuxt 4', note: 'O4O 학습 플랫폼, MOU 관리 플랫폼' },
-      { name: 'React', note: '수강생 앱 컴포넌트 라이브러리, 사내 관리자 화면' },
-      { name: 'TypeScript', note: '2026년 프로젝트 전부' },
-      { name: 'JavaScript (ES6+)', note: '퍼블리싱 하던 시절부터 쓴 주력' },
-      { name: 'HTML5 / CSS3 / SCSS', note: '반응형 퍼블리싱 6년' },
+      { name: 'Vue 3 / Nuxt 4' },
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'JavaScript (ES6+)' },
+      { name: 'HTML5 / CSS3 / SCSS' },
     ],
   },
   {
     group: 'UI / Interaction',
     items: [
-      { name: 'Responsive UI', note: 'Figma 시안을 반응형으로' },
-      { name: 'Three.js / R3F', note: '코리아교육그룹 디지털 전시관' },
-      { name: 'GSAP', note: '프로모션 사이트 연출' },
-      { name: 'Pinia / Zustand', note: 'O4O 학습 플랫폼과 이 사이트' },
+      { name: 'Responsive UI' },
+      { name: 'Three.js / R3F' },
+      { name: 'GSAP' },
+      { name: 'Pinia / Zustand' },
     ],
   },
   {
     group: 'Backend / Infra',
     items: [
-      { name: 'Spring Boot / Java 21, MySQL / MyBatis, GitHub Actions / nginx', note: 'MOU 플랫폼에서 혼자 써봄. 주력은 아님' },
+      { name: 'Spring Boot / Java 21, MySQL / MyBatis, GitHub Actions / nginx' },
     ],
   },
   {
     group: 'Design / Collab',
     items: [
-      { name: 'Figma', note: '시안을 읽는 쪽과 화면설계서를 쓰는 쪽 모두' },
-      { name: '화면설계서 / 와이어프레임', note: '수강생 앱 리뉴얼' },
+      { name: 'Figma' },
+      { name: '화면설계서 / 와이어프레임' },
     ],
   },
 ]
