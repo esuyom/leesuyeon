@@ -5,7 +5,7 @@
   --line: #4a5680;
   --text: #f3efe6;
   --text-2: #c3c7db;
-  --muted: #a9aec8;
+  --muted: #bcc0d6;
   --accent: #e2764e;
   --accent-ink: #1e2236;
   --accent-2: #c9dd8a;
@@ -18,13 +18,13 @@
   color-scheme: dark;
 }
 :root[data-theme='day'] {
-  --bg: #cdd7ef;
-  --surface: #f3efe6;
-  --surface-2: #e7e1d3;
-  --line: #a7b0cf;
+  --bg: #d6cbb6;
+  --surface: #fbf8f2;
+  --surface-2: #ece5d6;
+  --line: #cfc5b0;
   --text: #1e2236;
   --text-2: #3a3f58;
-  --muted: #555a72;
+  --muted: #4a4f68;
   --accent: #b4552f;
   --accent-ink: #ffffff;
   color-scheme: light;
@@ -126,8 +126,8 @@ h1, h2, h3, p { margin: 0; }
   animation: fade-up 0.4s ease both;
 }
 .panel {
-  position: absolute; top: 96px; right: 40px; bottom: 40px; width: min(460px, 38vw);
-  background: color-mix(in srgb, var(--surface) 94%, transparent); border: 1px solid var(--line); border-radius: 20px;
+  position: absolute; top: 96px; right: 40px; bottom: 40px; width: min(520px, 38vw);
+  background: color-mix(in srgb, var(--surface) 98%, transparent); border: 1px solid var(--line); border-radius: 20px;
   backdrop-filter: blur(10px); display: flex; flex-direction: column; overflow: hidden;
   opacity: 0; transform: translateX(24px); transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -209,7 +209,7 @@ h1, h2, h3, p { margin: 0; }
 .os-card:hover { border-color: #1e2236; }
 .os-star { color: #e2764e; margin-right: 4px; }
 /* 요약은 카드마다 길이가 달라서 줄 수로 잘라야 높이가 안 들쭉날쭉함 */
-.os-card-sum { color: #555a72; font-size: 12.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.os-card-sum { color: #4a4f68; font-size: 12.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .os-more { grid-column: 1 / -1; padding: 13px; border-radius: 10px; border: 1px dashed #c4bca8; background: none; color: #555a72; font-size: 13px; }
 .os-more:hover { border-color: #1e2236; color: #1e2236; }
 .os-thumb { height: 84px; border-radius: 6px; background: #e6dfd0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: #6b6f85; overflow: hidden; }
@@ -217,8 +217,8 @@ h1, h2, h3, p { margin: 0; }
 /* 칸을 캡처 비율(1.6)에 맞춰 뒀다. 새 이미지도 1.6으로 맞춰 넣어야
    cover가 좌우를 잘라 먹지 않는다 */
 .os-thumb.large { height: 212px; }
-.muted-dark { color: #555a72; font-size: 13px; }
-.os-summary { font-size: 14.5px; line-height: 1.6; color: #2b3048; }
+.muted-dark { color: #4a4f68; font-size: 13px; }
+.os-summary { font-size: 16px; line-height: 1.6; color: #1e2236; font-weight: 500; }
 .os .tag { background: var(--ink); color: var(--accent-2); }
 .os-detail { flex: 1; overflow-y: auto; padding: 14px 20px 20px; }
 .os-back { border: 0; background: none; color: #555a72; padding: 4px 0; margin-bottom: 8px; font-size: 13px; }

@@ -8,7 +8,7 @@ import { useIsMobile, useReducedMotion } from '../ui/useMedia'
 
 const BASE_AZIMUTH = Math.PI / 4 // 방 전체 기준 가로 각도. 45° = 방 모서리에서 대각선으로 봄
 const BASE_POLAR = Math.acos(0.5) // 기준 세로 각도. 60° = 눈높이보다 조금 위에서 내려다봄
-const PANEL_MAX = 460 // .panel 최대폭
+const PANEL_MAX = 520 // .panel 최대폭. styles.css의 width: min(520px, 38vw)과 같이 고쳐야 함
 const PANEL_GAP = 40 // 패널이랑 가구 사이 숨통
 
 // 카메라 포커스 이동 + 화면 오프셋
@@ -51,7 +51,7 @@ export function CameraRig() {
       oy = 0.29
     } else if (focus !== 'projects') {
       // projects는 패널 없이 모니터 화면을 꽉 보여주니까 제외
-      const panel = Math.min(PANEL_MAX, W * 0.38) + PANEL_GAP // 패널은 화면의 38%, 단 460px 상한
+      const panel = Math.min(PANEL_MAX, W * 0.38) + PANEL_GAP // 패널은 화면의 38%, 단 520px 상한
       usableW = W - panel
       ox = panel / 2 / W // 가려진 폭의 절반만큼 반대로 밀기
     }
