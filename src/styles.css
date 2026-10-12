@@ -215,10 +215,9 @@ h1, h2, h3, p { margin: 0; }
 .os-more:hover { border-color: #1e2236; color: #1e2236; }
 .os-thumb { height: 84px; border-radius: 6px; background: #e6dfd0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: #6b6f85; overflow: hidden; }
 .os-thumb img { width: 100%; height: 100%; object-fit: cover; }
-/* 캡처는 가로로 긴데 칸이 세로로 뭉툭하면 cover가 좌우를 잘라 먹는다.
-   칸을 이미지 비율(1.6)에 맞추고, 비율이 다른 건 잘라내지 말고 전체를 넣는다 */
+/* 칸을 캡처 비율(1.6)에 맞춰 뒀다. 새 이미지도 1.6으로 맞춰 넣어야
+   cover가 좌우를 잘라 먹지 않는다 */
 .os-thumb.large { height: 212px; }
-.os-thumb.large img { object-fit: contain; }
 .muted-dark { color: #555a72; font-size: 13px; }
 .os-summary { font-size: 14.5px; line-height: 1.6; color: #2b3048; }
 .os .tag { background: var(--ink); color: var(--accent-2); }
