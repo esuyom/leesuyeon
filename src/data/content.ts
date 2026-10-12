@@ -81,23 +81,6 @@ export const projects: Project[] = [
     links: [{ label: '내부 기록', href: 'https://app.notion.com/p/3f187353d9298114b685d912415cf596' }],
   },
   {
-    id: 'korea-ai-campus',
-    title: '코리아 AI 캠퍼스 홈페이지',
-    summary: 'AI 교육기관 수강생 모집 홈페이지 초기 2주. 클래스 목록과 상세를 CMS 블록 데이터로 렌더링하고, 넘기기 전 코드리뷰를 문서로 정리',
-    category: '웹서비스',
-    period: '2026.07',
-    role: '프론트엔드 — 기본 스타일 세팅과 공통 UI, 클래스 목록/상세',
-    description: [
-      'SCSS 변수와 믹스인, 리셋과 폼 컴포넌트를 만들고 스타일 가이드 페이지로 모음',
-      '클래스 상세를 하드코딩 300줄에서 섹션 렌더러 구조로 전환. CMS 블록 데이터를 타입 유니언으로 받아 그리게 만들어, 이후 팀에서 멀티테넌시 템플릿과 편집 모드를 그 위에 얹음',
-      '클래스 목록에 SSR 첫 페이지 + IntersectionObserver 무한 스크롤을 적용해, 11번째부터 보이지 않던 문제를 해결',
-      '모양 단위로 늘어난 폼 그룹 컴포넌트 4개를 Checkbox와 ChipSelect 2개로 통합 (+654 / −712)',
-      '인수인계 이틀 전 전체 코드리뷰 14건을 우선순위와 파일 위치, 수정 방향까지 문서로 정리',
-    ],
-    stack: ['Nuxt 4', 'Vue 3', 'TypeScript', 'SCSS', 'Swiper'],
-    links: [{ label: '내부 기록', href: 'https://app.notion.com/p/3f287353d9298186a0f2e77ce1f07232' }],
-  },
-  {
     id: 'keg-ui',
     title: '수강생 앱 컴포넌트 라이브러리',
     summary: 'Figma 디자인을 재사용 가능한 React 컴포넌트로 옮기고 라이브러리로 구조화. 앱 화면 전환의 기반을 단독 구축',
@@ -412,7 +395,7 @@ export const skills: { group: string; items: { name: string; note: string }[] }[
   {
     group: 'Frontend',
     items: [
-      { name: 'Vue 3 / Nuxt 4', note: 'O4O 학습 플랫폼, MOU 관리 플랫폼, AI 캠퍼스' },
+      { name: 'Vue 3 / Nuxt 4', note: 'O4O 학습 플랫폼, MOU 관리 플랫폼' },
       { name: 'React', note: '수강생 앱 컴포넌트 라이브러리, 사내 관리자 화면' },
       { name: 'TypeScript', note: '2026년 프로젝트 전부' },
       { name: 'JavaScript (ES6+)', note: '퍼블리싱 하던 시절부터 쓴 주력' },
@@ -464,7 +447,6 @@ export const experience: {
     details: [
       '산학협력(MOU) 관리 플랫폼 — 요구사항 해석, DB 설계, Spring Boot 백엔드, Vue 프론트, 배포까지 혼자 맡아 3주 만에 개발서버 오픈',
       'O4O 학습 플랫폼 프론트 — Core 컴포넌트와 가이드 페이지를 먼저 만들고 수업노트 에디터, 웹과 앱 푸시, 모바일 대응을 포함해 프론트 전체 담당. 개발서버 56회 배포',
-      '코리아 AI 캠퍼스 홈페이지 — 초기 2주간 기본 스타일 세팅과 폼 컴포넌트, 클래스 목록과 상세 구현. 인수인계 전 전체 코드리뷰 문서화',
       '수강생 앱 React 컴포넌트 라이브러리, 수강생 앱 리뉴얼 화면설계서',
       '승무원아카데미와 항공운항과, 펫아카데미, 커피베이킹, 공식 홈페이지 리뉴얼 및 신규 구축. 계열사 CMS 관리자 UI',
     ],
