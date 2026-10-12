@@ -57,6 +57,7 @@ export const projects: Project[] = [
       '기존 엑셀 605건을 이관하며 주소 문자열에서 시·도/시·군·구를 자동 매핑해 98% 자동 분류',
     ],
     stack: ['Vue 3', 'TypeScript', 'Spring Boot', 'Java 21', 'MyBatis', 'MySQL', 'Flyway', 'nginx', 'GitHub Actions'],
+    image: '/projects/keg-mou.jpg',
     links: [{ label: '내부 기록', href: 'https://app.notion.com/p/3f187353d9298160bd5ec380ba5a5280' }],
   },
   {
@@ -78,6 +79,7 @@ export const projects: Project[] = [
       '상태 관리를 Pinia로 이전 — 130개 파일에서 3,900줄을 걷어내고 1,000줄로 다시 씀',
     ],
     stack: ['Nuxt 4', 'Vue 3', 'TypeScript', 'Pinia', 'Firebase FCM', 'DOMPurify', 'GitHub Actions'],
+    image: '/projects/o4o.jpg',
     links: [{ label: '내부 기록', href: 'https://app.notion.com/p/3f187353d9298114b685d912415cf596' }],
   },
   {
@@ -101,6 +103,7 @@ export const projects: Project[] = [
     role: 'UX 설계 참여 — 기여도 50%',
     description: ['수강생 앱 전면 리뉴얼의 화면설계서와 와이어프레임 작성에 참여', '사용자 화면 구조와 운영 흐름을 설계하고 Figma로 정리'],
     stack: ['UX', 'Wireframe', 'Figma'],
+    image: '/projects/keg-app-ux.jpg',
     links: [
       {
         label: 'Figma',
