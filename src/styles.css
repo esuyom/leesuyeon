@@ -4,8 +4,10 @@
   --surface-2: #2f3557;
   --line: #4a5680;
   --text: #f3efe6;
-  --text-2: #c3c7db;
-  --muted: #bcc0d6;
+  /* 보조 텍스트는 본문(--text)과 같은 따뜻한 계열로 둔다. 푸른 회색이면 남색 배경과
+     같은 색 가족이라 대비 수치가 높아도 배경에 가라앉아 보인다 */
+  --text-2: #e6e0d3;
+  --muted: #cfc8b8;
   --accent: #e2764e;
   --accent-ink: #1e2236;
   --accent-2: #c9dd8a;
@@ -187,7 +189,7 @@ h1, h2, h3, p { margin: 0; }
    그래서 안쪽 px 값은 하나도 안 건드려도 된다 */
 .os { zoom: 2; }
 .os { position: relative; width: 1048px; height: 592px; background: #232a47; color: #f3efe6; font-family: var(--font); overflow: hidden; border-radius: 4px; }
-.os-menubar { height: 28px; background: #1a1f36; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 13px; color: #c3c7db; }
+.os-menubar { height: 28px; background: #1a1f36; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 13px; color: #cfc8b8; }
 .os-menubar-left { display: flex; gap: 18px; }
 .os .accent { color: #e2764e; }
 .os-window {
