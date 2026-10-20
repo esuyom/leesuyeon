@@ -361,25 +361,6 @@ export const projects: Project[] = [
 
   // ───────────── 사이드프로젝트 ─────────────
   {
-    id: 'suyeon-studio',
-    title: '수연의 작업실',
-    summary: '지금 보고 계신 이 사이트. React Three Fiber로 3D 작업실을 만들고 방 안 물건을 눌러 섹션을 여는 포트폴리오',
-    category: '사이드프로젝트',
-    featured: true,
-    period: '2026',
-    role: '개인 프로젝트 — 기여도 100%',
-    description: [
-      '외부 3D 모델을 쓰면 용량이 늘고 고칠 때마다 모델링 툴을 열어야 해서, 가구를 전부 코드로 만들기로 함',
-      'Box와 Cylinder, Sphere를 조합하고 두 점을 이으면 각도를 맞춰주는 Rod 헬퍼를 따로 만들어 조립. 바닥 마루와 창밖 하늘, 코르크 질감도 canvas로 런타임에 그림',
-      '가구와 질감에 쓰는 이미지 파일이 0개. 외부 파일은 사진 2장뿐이고 긴 변 512px로 줄여 합쳐서 255KB',
-      '방 안 물건(모니터와 책장, 코르크보드, 턴테이블, 휴대폰)을 클릭하면 카메라가 다가가며 섹션이 열리는 구조',
-      '모니터에 줌인하면 3D 화면 텍스처가 실제 HTML OS 화면으로 교체되고, 그 안에서 프로젝트를 탐색',
-      '저사양 기기나 WebGL이 막힌 환경을 위해 같은 데이터로 그리는 2D 페이지를 따로 둠. 모바일에서는 카메라를 고정하고 하단 시트로 섹션을 고르게 분기',
-    ],
-    stack: ['React', 'Three.js', 'React Three Fiber', 'TypeScript', 'Zustand', 'Vite'],
-    image: '/projects/suyeon-studio.jpg',
-  },
-  {
     id: 'drop-cookie',
     title: 'Drop Cookie',
     summary: 'Phaser3 게임 프레임워크로 제작한 개인 게임 프로젝트. 게임 로직과 인터랙션을 직접 설계하고 구현',
