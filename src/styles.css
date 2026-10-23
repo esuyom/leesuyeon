@@ -1,33 +1,43 @@
 :root {
-  --bg: #1e2236;
-  --surface: #262b45;
-  --surface-2: #2f3557;
-  --line: #4a5680;
-  --text: #f3efe6;
-  /* 보조 텍스트는 본문(--text)과 같은 따뜻한 계열로 둔다. 푸른 회색이면 남색 배경과
-     같은 색 가족이라 대비 수치가 높아도 배경에 가라앉아 보인다 */
-  --text-2: #e6e0d3;
-  --muted: #cfc8b8;
-  --accent: #e2764e;
-  --accent-ink: #1e2236;
-  --accent-2: #c9dd8a;
-  --paper: #f3efe6;
-  --ink: #1e2236;
-  /* Montserrat엔 한글이 없다. 브라우저가 글자 단위로 고르므로 영문만 Montserrat, 한글은 Pretendard */
-  --font: 'Montserrat', 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+  /* ── 숲 먹색 + 황동 ──────────────────────────────────────────────
+     남색↔주황은 색상환에서 정확히 반대인 교과서 보색쌍이다. 대비는 확실하지만
+     누가 골라도 같은 답이라 성격이 없다. 그래서 바탕은 초록 쪽으로 눕힌 먹색,
+     포인트는 주황에서 채도를 덜어낸 황동빛으로 바꿨다. 둘은 노랑-초록 이웃이라
+     보색쌍이 아니고, 방 안의 원목 가구·크림색 소품과도 같은 온도다 */
+  --bg: #151c19;
+  --surface: #1d2724;
+  --surface-2: #273330;
+  --line: #3b4a45;
+  --text: #edeae1;
+  /* 보조 텍스트는 본문(--text)과 같은 따뜻한 계열로 둔다. 배경과 같은 색
+     가족(차가운 회색)이면 대비 수치가 높아도 배경에 가라앉아 보인다 */
+  --text-2: #d3d8d0;
+  --muted: #a3aca4;
+  --accent: #d9a94a;
+  --accent-ink: #151c19;
+  --accent-2: #a8c98f;
+  --paper: #edeae1;
+  --ink: #151c19;
+  /* 본문은 Pretendard 하나로 간다. 라틴 자소가 Inter 계열이라 x-height가 높고
+     13~16px에서 형태가 안 뭉개지며, 무엇보다 한글과 같은 패밀리라 두 문자가
+     섞여도 기준선·자폭·굵기가 흔들리지 않는다 (예전 Montserrat 혼용의 문제) */
+  --font: 'Pretendard Variable', Pretendard, system-ui, -apple-system, sans-serif;
+  /* 제목·로고 전용. Montserrat은 기하학적 산세리프라 본문 크기에선 가독성이
+     떨어지지만, 40px 넘는 큰 글자에선 성격이 살아나므로 거기만 남긴다 */
+  --display: 'Montserrat', 'Pretendard Variable', Pretendard, system-ui, sans-serif;
   /* 이름만 mono. 고정폭은 걷어냈고 자간·대문자 같은 스타일 구분용으로만 남음 */
-  --mono: 'Montserrat', 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+  --mono: var(--display);
   color-scheme: dark;
 }
 :root[data-theme='day'] {
-  --bg: #d6cbb6;
-  --surface: #fbf8f2;
-  --surface-2: #ece5d6;
-  --line: #cfc5b0;
-  --text: #1e2236;
-  --text-2: #3a3f58;
-  --muted: #4a4f68;
-  --accent: #b4552f;
+  --bg: #e7e5da;
+  --surface: #faf9f3;
+  --surface-2: #efece0;
+  --line: #cfcbbb;
+  --text: #1a221e;
+  --text-2: #3d463f;
+  --muted: #59625a;
+  --accent: #8a6516;
   --accent-ink: #ffffff;
   color-scheme: light;
 }
@@ -38,12 +48,20 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
+  /* 한글은 영문과 달리 단어 사이가 아니라 글자 사이에서도 줄이 끊긴다.
+     keep-all이 어절을 통째로 묶어주고, 혼자서 한 줄을 넘기는 긴 URL 같은
+     예외만 break-word가 풀어준다 — 둘을 같이 써야 안전하다 */
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.6s ease;
 }
 button { font: inherit; color: inherit; cursor: pointer; }
 a { color: var(--accent); }
 h1, h2, h3, p { margin: 0; }
+/* 제목만 Montserrat. 한글 자소가 없어 글자 단위로 Pretendard가 받쳐준다 */
+h1, h2, h3 { font-family: var(--display); }
 :focus-visible { outline: none; }
 
 .mono { font-family: var(--mono); }
@@ -51,14 +69,20 @@ h1, h2, h3, p { margin: 0; }
 .accent-2 { color: var(--accent-2); }
 .muted { color: var(--muted); }
 .bold { font-weight: 600; }
-.small { font-size: 13px; }
-.lead { font-size: 17px; line-height: 1.75; color: var(--text-2); }
-.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.small { font-size: 14px; line-height: 1.6; }
+.lead { font-size: 17px; line-height: 1.8; color: var(--text-2); }
+/* 작고 넓게 벌린 대문자는 굵기를 올려야 획이 안 사라진다. 400 → 600 */
+.eyebrow { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .row-gap { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+/* 간격은 안쪽일수록 좁고 바깥일수록 넓어야 묶음이 눈에 보인다.
+   4px(한 덩어리) → 10px(라벨↔내용) → 20px(문단↔문단) → 36px(그룹↔그룹) */
 .stack-sm { display: flex; flex-direction: column; gap: 10px; }
 .about-id { gap: 4px; }
 .about-id h3 { font-size: 26px; letter-spacing: -0.01em; line-height: 1.2; }
-.stack-lg { display: flex; flex-direction: column; gap: 28px; }
+/* .lead는 line-height 1.8이라 문단 안 줄 사이가 이미 13.6px 벌어진다.
+   문단 사이를 그보다 좁게 두면 문단 구분이 사라져서 한 덩어리로 읽힌다 */
+.about-intro { gap: 20px; }
+.stack-lg { display: flex; flex-direction: column; gap: 36px; }
 
 /* ── layout ── */
 .app { position: fixed; inset: 0; overflow: hidden; }
@@ -74,7 +98,7 @@ h1, h2, h3, p { margin: 0; }
   pointer-events: none;
 }
 .header > * { pointer-events: auto; }
-.logo { background: none; border: 0; padding: 8px 0; font-size: 18px; font-weight: 600; color: var(--text); text-decoration: none; }
+.logo { background: none; border: 0; padding: 8px 0; font-family: var(--display); font-size: 18px; font-weight: 600; color: var(--text); text-decoration: none; }
 .header-actions { display: flex; gap: 12px; }
 .icon-btn {
   width: 44px; height: 44px; border-radius: 22px; border: 1px solid var(--line);
@@ -99,10 +123,10 @@ h1, h2, h3, p { margin: 0; }
 }
 .intro h1 { font-size: clamp(44px, 4.6vw, 64px); line-height: 1.1; letter-spacing: -0.02em; }
 .intro.mobile { left: 20px; right: 20px; top: 76px; transform: none; width: auto; gap: 6px; }
-.intro.mobile h1 { font-size: 28px; }
-.intro.mobile .lead { font-size: 14px; }
+.intro.mobile h1 { font-size: 30px; }
+.intro.mobile .lead { font-size: 15px; line-height: 1.7; }
 .section-index { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
-.section-index button { background: none; border: 0; padding: 6px 0; display: flex; gap: 14px; font-size: 15px; color: var(--text-2); text-align: left; }
+.section-index button { background: none; border: 0; padding: 6px 0; display: flex; gap: 14px; font-size: 15.5px; font-weight: 500; color: var(--text-2); text-align: left; }
 .section-index button:hover { color: var(--text); }
 
 /* ── hotspots ── */
@@ -114,7 +138,7 @@ h1, h2, h3, p { margin: 0; }
 .hotspot-pill {
   pointer-events: auto; position: absolute; top: -18px; height: 36px; padding: 0 14px; border-radius: 18px;
   border: 1px solid var(--line); background: var(--surface); color: var(--text);
-  font-size: 14px; white-space: nowrap; display: flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 500; white-space: nowrap; display: flex; align-items: center; gap: 6px;
   transition: transform 0.15s ease, border-color 0.15s ease;
 }
 .hotspot.right .hotspot-pill { left: 18px; }
@@ -136,19 +160,14 @@ h1, h2, h3, p { margin: 0; }
 .panel.is-in { opacity: 1; transform: none; }
 .panel-head { display: flex; align-items: baseline; gap: 14px; padding: 28px 32px 8px; }
 .panel-head h2 { font-size: 30px; letter-spacing: -0.01em; }
-.panel-body { padding: 20px 32px 32px; overflow-y: auto; line-height: 1.7; }
+.panel-body { padding: 20px 32px 32px; overflow-y: auto; line-height: 1.75; font-size: 15.5px; }
 
 .skill-list, .dash-list, .contact-list, .timeline, .tags { list-style: none; margin: 0; padding: 0; }
 /* 이름만 칩으로. 가로로 이어 붙이고 폭이 모자라면 다음 줄로 흐른다 */
 .skill-list { display: flex; flex-wrap: wrap; gap: 6px; }
-.skill-list li { padding: 7px 12px; border-radius: 10px; background: var(--surface-2); font-size: 14px; font-weight: 500; }
+.skill-list li { padding: 7px 12px; border-radius: 10px; background: var(--surface-2); font-size: 14.5px; font-weight: 500; }
 .dash-list li { padding-left: 15px; position: relative; color: var(--text-2); }
 .dash-list li::before { content: ''; position: absolute; left: 0; top: 0.68em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.how-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px; }
-.how-list li { padding-left: 15px; position: relative; display: flex; flex-direction: column; gap: 3px; }
-.how-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.how-list strong { font-size: 15px; }
-.how-list p { color: var(--text-2); font-size: 14px; line-height: 1.65; }
 .timeline { display: flex; flex-direction: column; gap: 22px; border-left: 2px solid var(--line); padding-left: 20px; }
 .timeline > li { display: flex; flex-direction: column; gap: 2px; position: relative; }
 .timeline > li::before { content: ''; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 6px; background: var(--accent); }
@@ -159,7 +178,7 @@ h1, h2, h3, p { margin: 0; }
 .contact-list a { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: 12px; background: var(--surface-2); color: var(--text); text-decoration: none; border: 1px solid transparent; }
 .contact-list a:hover { border-color: var(--accent); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { font-family: var(--mono); font-size: 12px; padding: 3px 9px; border-radius: 10px; background: var(--ink); color: var(--accent-2); }
+.tag { font-family: var(--mono); font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em; padding: 4px 9px; border-radius: 10px; background: var(--ink); color: var(--accent-2); }
 ::marker{display:none;}
 
 .project-list { display: flex; flex-direction: column; gap: 16px; }
@@ -188,52 +207,53 @@ h1, h2, h3, p { margin: 0; }
 /* zoom은 transform과 달리 레이아웃 단계에서 먹어서 글자가 2배 크기로 진짜 그려진다.
    그래서 안쪽 px 값은 하나도 안 건드려도 된다 */
 .os { zoom: 2; }
-.os { position: relative; width: 1048px; height: 592px; background: #232a47; color: #f3efe6; font-family: var(--font); overflow: hidden; border-radius: 4px; }
-.os-menubar { height: 28px; background: #1a1f36; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 13px; color: #cfc8b8; }
+.os { position: relative; width: 1048px; height: 592px; background: #212c28; color: #edeae1; font-family: var(--font); overflow: hidden; border-radius: 4px; }
+.os-menubar { height: 28px; background: #18211e; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 13px; color: #a3aca4; }
 .os-menubar-left { display: flex; gap: 18px; }
-.os .accent { color: #e2764e; }
+.os .accent { color: #d9a94a; }
 .os-window {
-  position: absolute; left: 36px; top: 44px; width: 976px; height: 404px; background: #f3efe6; color: #1e2236;
+  position: absolute; left: 36px; top: 44px; width: 976px; height: 404px; background: #edeae1; color: #151c19;
   border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
-.os-titlebar { height: 40px; flex: none; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-bottom: 1px solid #ddd6c6; }
+.os-titlebar { height: 40px; flex: none; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-bottom: 1px solid #ddd9ca; }
 .dot { width: 12px; height: 12px; border-radius: 6px; }
-.dot.red { background: #e07a6b; } .dot.yellow { background: #ffb547; } .dot.green { background: #7fe3c4; }
+.dot.red { background: #d4705c; } .dot.yellow { background: #ffb547; } .dot.green { background: #7fb58a; }
 .os-title { margin-left: 12px; font-weight: 700; font-size: 14px; }
 .os-body { flex: 1; display: flex; min-height: 0; }
-.os-side { width: 150px; flex: none; padding: 16px 10px; display: flex; flex-direction: column; gap: 4px; border-right: 1px solid #ddd6c6; }
-.os-side button { display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; padding: 9px 12px; border-radius: 8px; border: 0; background: none; color: #3a3f58; font-size: 14px; }
-.os-count { color: #9b9fb4; font-size: 12px; }
-.os-side button.active .os-count { color: #a9aec8; }
-.os-side button.active { background: #1e2236; color: #f3efe6; }
+.os-side { width: 150px; flex: none; padding: 16px 10px; display: flex; flex-direction: column; gap: 4px; border-right: 1px solid #ddd9ca; }
+.os-side button { display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; padding: 9px 12px; border-radius: 8px; border: 0; background: none; color: #3d463f; font-size: 14px; }
+.os-count { color: #8e968c; font-size: 12px; }
+.os-side button.active .os-count { color: #a9b3a7; }
+.os-side button.active { background: #151c19; color: #edeae1; }
 .os-grid { flex: 1; padding: 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-content: start; overflow-y: auto; }
-.os-card { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: 10px; background: #fff; border: 2px solid transparent; text-align: left; color: #1e2236; font-size: 14px; }
-.os-card:hover { border-color: #1e2236; }
-.os-star { color: #e2764e; margin-right: 4px; }
+.os-card { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: 10px; background: #fff; border: 2px solid transparent; text-align: left; color: #151c19; font-size: 14px; }
+.os-card:hover { border-color: #151c19; }
+/* 별은 흰 카드 위에 얹힌다. 어두운 바탕용 황동(#d9a94a)을 그대로 쓰면 대비 2.2:1로 묻혀서, 밝은 바탕용 짙은 황동을 쓴다 */
+.os-star { color: #8a6516; margin-right: 4px; }
 /* 요약은 카드마다 길이가 달라서 줄 수로 잘라야 높이가 안 들쭉날쭉함 */
-.os-card-sum { color: #4a4f68; font-size: 12.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.os-more { grid-column: 1 / -1; padding: 13px; border-radius: 10px; border: 1px dashed #c4bca8; background: none; color: #555a72; font-size: 13px; }
-.os-more:hover { border-color: #1e2236; color: #1e2236; }
-.os-thumb { height: 84px; border-radius: 6px; background: #e6dfd0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: #6b6f85; overflow: hidden; }
+.os-card-sum { color: #4e564e; font-size: 13px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.os-more { grid-column: 1 / -1; padding: 13px; border-radius: 10px; border: 1px dashed #c6c1ae; background: none; color: #5a6159; font-size: 13px; }
+.os-more:hover { border-color: #151c19; color: #151c19; }
+.os-thumb { height: 84px; border-radius: 6px; background: #e6e2d4; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: #6b7268; overflow: hidden; }
 .os-thumb img { width: 100%; height: 100%; object-fit: cover; }
 /* 칸을 캡처 비율(1.6)에 맞춰 뒀다. 새 이미지도 1.6으로 맞춰 넣어야
    cover가 좌우를 잘라 먹지 않는다 */
 .os-thumb.large { height: 212px; }
-.muted-dark { color: #4a4f68; font-size: 13px; }
-.os-summary { font-size: 16px; line-height: 1.6; color: #1e2236; font-weight: 500; }
+.muted-dark { color: #4e564e; font-size: 13.5px; }
+.os-summary { font-size: 16px; line-height: 1.6; color: #151c19; font-weight: 500; }
 .os .tag { background: var(--ink); color: var(--accent-2); }
 .os-detail { flex: 1; overflow-y: auto; padding: 14px 20px 20px; }
-.os-back { border: 0; background: none; color: #555a72; padding: 4px 0; margin-bottom: 8px; font-size: 13px; }
+.os-back { border: 0; background: none; color: #5a6159; padding: 4px 0; margin-bottom: 8px; font-size: 13px; }
 .os-detail-body { display: grid; grid-template-columns: 340px 1fr; gap: 20px; }
 .os-detail-text { display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.6; }
 .os-detail-text h3 { font-size: 20px; }
 .os-detail-text ul { margin: 0; padding-left: 18px; }
 .os-links { display: flex; gap: 12px; }
-.os-links a { color: #c76a00; font-weight: 500; }
-.os-terminal { position: absolute; left: 36px; top: 456px; width: 976px; height: 122px; background: #12152a; border: 1px solid #353c5e; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
-.os-terminal-bar { height: 30px; padding: 0 12px; display: flex; align-items: center; font-size: 12px; color: #a9aec8; border-bottom: 1px solid #262b45; }
-.os-terminal pre { margin: 0; padding: 12px; font-size: 12.5px; line-height: 1.75; color: #e6e8f2; white-space: pre-wrap; }
-.cursor { background: #ffb547; color: #12152a; animation: blink 1s steps(1) infinite; }
+.os-links a { color: #8a6516; font-weight: 500; }
+.os-terminal { position: absolute; left: 36px; top: 456px; width: 976px; height: 122px; background: #121715; border: 1px solid #35423d; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+.os-terminal-bar { height: 30px; padding: 0 12px; display: flex; align-items: center; font-size: 12px; color: #a9b3a7; border-bottom: 1px solid #273330; }
+.os-terminal pre { margin: 0; padding: 12px; font-size: 12.5px; line-height: 1.75; color: #e4e8e2; white-space: pre-wrap; }
+.cursor { background: #ffb547; color: #121715; animation: blink 1s steps(1) infinite; }
 
 /* ── 2D page ── */
 .page2d { min-height: 100%; }
@@ -249,7 +269,7 @@ h1, h2, h3, p { margin: 0; }
 .page2d-section .panel-head { padding: 0 0 20px; }
 .page2d-section { scroll-margin-top: 90px; line-height: 1.7; }
 
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 181, 71, 0.55); } 70% { box-shadow: 0 0 0 14px rgba(255, 181, 71, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 181, 71, 0); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(217, 169, 74, 0.55); } 70% { box-shadow: 0 0 0 14px rgba(217, 169, 74, 0); } 100% { box-shadow: 0 0 0 0 rgba(217, 169, 74, 0); } }
 @keyframes fade-up { from { opacity: 0; transform: translateY(12px); } }
 @keyframes sheet-up { from { transform: translateY(100%); } }
 @keyframes blink { 50% { opacity: 0; } }
@@ -269,6 +289,10 @@ h1, h2, h3, p { margin: 0; }
   .panel-head { padding: 22px 20px 4px; }
   .panel-head h2 { font-size: 24px; }
   .panel-body { padding: 14px 20px 28px; }
+  /* 모바일 패널은 높이가 58vh로 묶여 있다. 간격을 데스크탑만큼 벌리면
+     그만큼 스크롤이 길어지므로 한 단계씩 좁힌다 (단계 순서는 그대로) */
+  .stack-lg { gap: 28px; }
+  .about-intro { gap: 16px; }
   .project-card { grid-template-columns: 1fr; }
   .project-card .os-thumb { height: 140px; }
 }

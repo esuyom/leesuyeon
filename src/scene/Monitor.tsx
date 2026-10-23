@@ -59,7 +59,7 @@ export function Monitor() {
       {/* 베젤 포스트잇 */}
       <Box size={[0.01, 0.2, 0.2]} position={[0.752, 4.68, 5.62]} rotation={[0.15, 0, 0]} color="#ffe27a" />
       <Box size={[0.01, 0.2, 0.2]} position={[0.752, 4.66, 5.38]} rotation={[-0.1, 0, 0]} color="#ff9fb4" />
-      <Box size={[0.01, 0.2, 0.2]} position={[0.752, 3.25, 3.2]} rotation={[0.2, 0, 0]} color="#7fe3c4" />
+      <Box size={[0.01, 0.2, 0.2]} position={[0.752, 3.25, 3.2]} rotation={[0.2, 0, 0]} color="#7fb58a" />
 
       {/* 모바일은 OS 화면 대신 패널로 */}
       {live && !mobile && (

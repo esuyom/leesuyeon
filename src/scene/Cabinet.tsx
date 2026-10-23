@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber'
 import { Box, Cyl, Rod, Sph, chrome } from './primitives'
 import { useStore } from '../store'
 
-const RECORD_COLORS = ['#7fe3c4', '#e07a6b', '#f3efe6', '#5c6fa8', '#ffb547', '#3e8c6e', '#c59bff']
+const RECORD_COLORS = ['#7fb58a', '#d4705c', '#edeae1', '#5c6fa8', '#ffb547', '#3e8c6e', '#c59bff']
 
 // 창문 아래 수납장 + 턴테이블 + 스피커 — About 섹션
 export function Cabinet() {
@@ -39,10 +39,10 @@ export function Cabinet() {
       {/* 턴테이블 */}
       <Box size={[1.5, 0.14, 1.0]} position={[6.55, 1.57, 0.65]} radius={0.04} color="#2c2c36" roughness={0.4} />
       <group ref={platter} position={[6.4, 1.66, 0.65]}>
-        <Cyl rt={0.43} rb={0.43} h={0.04} {...chrome} color="#9ea2b3" />
+        <Cyl rt={0.43} rb={0.43} h={0.04} {...chrome} color="#8e968c" />
         <Cyl rt={0.41} rb={0.41} h={0.015} position={[0, 0.03, 0]} color="#111116" roughness={0.25} />
-        <Cyl rt={0.13} rb={0.13} h={0.017} position={[0, 0.035, 0]} color="#e07a6b" />
-        <Box size={[0.04, 0.02, 0.1]} position={[0.07, 0.045, 0]} color="#f3efe6" shadow={false} />
+        <Cyl rt={0.13} rb={0.13} h={0.017} position={[0, 0.035, 0]} color="#d4705c" />
+        <Box size={[0.04, 0.02, 0.1]} position={[0.07, 0.045, 0]} color="#edeae1" shadow={false} />
       </group>
       <Cyl rt={0.06} rb={0.07} h={0.1} position={[7.1, 1.69, 0.3]} {...chrome} />
       <Rod from={[7.1, 1.75, 0.3]} to={[6.6, 1.76, 0.9]} r={0.012} {...chrome} />
@@ -58,7 +58,7 @@ export function Cabinet() {
       ))}
       {/* 기대 세운 앨범 */}
       <Box size={[0.7, 0.7, 0.03]} position={[7.25, 1.85, 0.12]} rotation={[0.12, 0, 0]} color="#ffb547" />
-      <Sph r={0.18} scale={[1, 1, 0.1]} position={[7.25, 1.9, 0.16]} color="#e07a6b" />
+      <Sph r={0.18} scale={[1, 1, 0.1]} position={[7.25, 1.9, 0.16]} color="#d4705c" />
 
       {/* 바닥 LP 상자 */}
       <Box size={[0.8, 0.6, 0.8]} position={[4.8, 0.3, 0.6]} radius={0.02} color="#9a6a45" />

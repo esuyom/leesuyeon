@@ -4,7 +4,7 @@ import { Box, Cyl, Sph } from './primitives'
 import { fitPhoto, rng } from './textures'
 import framePhotoUrl from '../assets/cabnet_img.jpg'
 
-const BOOK_COLORS = ['#7fe3c4', '#ffb547', '#e07a6b', '#9fb4ff', '#f3efe6', '#c59bff', '#5c6fa8', '#d9af7f', '#3e8c6e']
+const BOOK_COLORS = ['#7fb58a', '#ffb547', '#d4705c', '#9fb4ff', '#edeae1', '#c59bff', '#5c6fa8', '#d9af7f', '#3e8c6e']
 const SHELF_Y = [0.2, 1.45, 2.7, 3.95] // 선반 4칸 높이
 
 type Book = { w: number; h: number; x: number; y: number; c: string; tilt?: number }
@@ -61,7 +61,7 @@ export function Bookshelf() {
       {books.map((b, i) => (
         <group key={i} position={[b.x, b.y, 0.55]} rotation={[0, 0, b.tilt ?? 0]}>
           <Box size={[b.w, b.h, 0.78]} color={b.c} roughness={0.85} />
-          <Box size={[b.w + 0.004, 0.04, 0.782]} position={[0, b.h * 0.3, 0]} color="#f3efe6" shadow={false} />
+          <Box size={[b.w + 0.004, 0.04, 0.782]} position={[0, b.h * 0.3, 0]} color="#edeae1" shadow={false} />
         </group>
       ))}
       {/* 액자. 테두리 크기가 사진에 딸려서 통째로 Suspense 안 */}
@@ -69,7 +69,7 @@ export function Bookshelf() {
         <FramedPhoto />
       </Suspense>
       {/* 맨 윗칸 작은 화분 */}
-      <Cyl rt={0.13} rb={0.1} h={0.22} position={[3.4, 4.11, 0.6]} color="#f3efe6" />
+      <Cyl rt={0.13} rb={0.1} h={0.22} position={[3.4, 4.11, 0.6]} color="#edeae1" />
       {Array.from({ length: 7 }, (_, k) => {
         const a = (k / 7) * Math.PI * 2
         return (

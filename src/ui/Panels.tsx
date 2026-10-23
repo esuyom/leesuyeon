@@ -66,23 +66,12 @@ export function AboutContent() {
         <h3>{profile.name}</h3>
         <p className="muted">{profile.tagline}</p>
       </div>
-      <div className="stack-sm">
+      <div className="stack-sm about-intro">
         {about.intro.map((p, i) => (
           <p key={i} className="lead">
             {p}
           </p>
         ))}
-      </div>
-      <div className="stack-sm">
-        <h3 className="eyebrow">일하는 방식</h3>
-        <ul className="how-list">
-          {about.howIWork.map((w) => (
-            <li key={w.title}>
-              <strong>{w.title}</strong>
-              <p>{w.body}</p>
-            </li>
-          ))}
-        </ul>
       </div>
       <div className="stack-sm">
         <h3 className="eyebrow">좋아하는 것</h3>

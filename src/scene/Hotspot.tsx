@@ -15,7 +15,7 @@ type Props = {
   children: ReactNode
 }
 
-const HIGHLIGHT = new THREE.Color('#e2764e')
+const HIGHLIGHT = new THREE.Color('#d9a94a')
 
 // 클릭 가능한 물건 래퍼 — hover 시 발광 + 라벨 띄움
 export function Hotspot({ id, label, no, labelPosition, labelSide = 'right', onSelect, children }: Props) {

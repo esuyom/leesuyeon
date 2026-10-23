@@ -14,10 +14,10 @@ export function Shell() {
   return (
     <group>
       <Box size={[10, 0.2, 10]} position={[5, -0.1, 5]} map={floor} color="#ffffff" roughness={0.6} />
-      <Box size={[0.3, 7, 10.3]} position={[-0.15, 3.5, 4.85]} color={night ? '#34406a' : '#8796c9'} />
-      <Box size={[10, 7, 0.3]} position={[5, 3.5, -0.15]} color={night ? '#3b4876' : '#94a3d4'} />
-      <Box size={[0.3, 0.06, 10.3]} position={[-0.15, 7.03, 4.85]} color="#56638f" />
-      <Box size={[10.3, 0.06, 0.3]} position={[4.85, 7.03, -0.15]} color="#56638f" />
+      <Box size={[0.3, 7, 10.3]} position={[-0.15, 3.5, 4.85]} color={night ? '#2c3a36' : '#93a89c'} />
+      <Box size={[10, 7, 0.3]} position={[5, 3.5, -0.15]} color={night ? '#33433e' : '#9fb4a7'} />
+      <Box size={[0.3, 0.06, 10.3]} position={[-0.15, 7.03, 4.85]} color="#4d5e58" />
+      <Box size={[10.3, 0.06, 0.3]} position={[4.85, 7.03, -0.15]} color="#4d5e58" />
       <Box size={[0.06, 0.28, 10]} position={[0.03, 0.14, 5]} color="#e9e3d6" />
       <Box size={[10, 0.28, 0.06]} position={[5, 0.14, 0.03]} color="#e9e3d6" />
     </group>
@@ -42,9 +42,9 @@ export function Window() {
       <Box size={[0.12, 3, 0.16]} position={[8.46, 4.4, 0.08]} color={frame} />
       <Box size={[0.06, 2.8, 0.1]} position={[6.9, 4.4, 0.06]} color={frame} />
       <Box size={[3, 0.06, 0.1]} position={[6.9, 4.4, 0.06]} color={frame} />
-      <Box size={[3.5, 0.08, 0.38]} position={[6.9, 2.86, 0.19]} radius={0.02} color="#f3efe6" />
+      <Box size={[3.5, 0.08, 0.38]} position={[6.9, 2.86, 0.19]} radius={0.02} color="#edeae1" />
       {/* 창틀 위 작은 화분 */}
-      <Cyl rt={0.14} rb={0.11} h={0.24} position={[7.9, 3.02, 0.2]} color="#e07a6b" />
+      <Cyl rt={0.14} rb={0.11} h={0.24} position={[7.9, 3.02, 0.2]} color="#d4705c" />
       <Sph r={0.15} scale={[1, 1.2, 1]} position={[7.9, 3.25, 0.2]} color="#5fc097" />
       <Sph r={0.11} position={[7.82, 3.38, 0.24]} color="#4fa884" />
       {/* 커튼 */}
@@ -96,15 +96,15 @@ export function WallClock() {
   return (
     <group position={[0, 5.75, 3.0]}>
       <Cyl rt={0.44} rb={0.44} h={0.05} position={[0.04, 0, 0]} rotation={[0, 0, Math.PI / 2]} color="#2a2a33" />
-      <Cyl rt={0.42} rb={0.42} h={0.07} position={[0.06, 0, 0]} rotation={[0, 0, Math.PI / 2]} color="#f3efe6" />
+      <Cyl rt={0.42} rb={0.42} h={0.07} position={[0.06, 0, 0]} rotation={[0, 0, Math.PI / 2]} color="#edeae1" />
       {/* 바늘은 X축 기준 회전 (벽이 +X를 바라봄) */}
       <group ref={hour} position={[0.11, 0, 0]}>
-        <Box size={[0.02, 0.2, 0.035]} position={[0, 0.09, 0]} color="#1e2236" shadow={false} />
+        <Box size={[0.02, 0.2, 0.035]} position={[0, 0.09, 0]} color="#151c19" shadow={false} />
       </group>
       <group ref={minute} position={[0.12, 0, 0]}>
-        <Box size={[0.02, 0.3, 0.025]} position={[0, 0.13, 0]} color="#1e2236" shadow={false} />
+        <Box size={[0.02, 0.3, 0.025]} position={[0, 0.13, 0]} color="#151c19" shadow={false} />
       </group>
-      <Sph r={0.025} position={[0.13, 0, 0]} color="#e07a6b" shadow={false} />
+      <Sph r={0.025} position={[0.13, 0, 0]} color="#d4705c" shadow={false} />
     </group>
   )
 }
@@ -135,10 +135,10 @@ export function Corkboard() {
   const cork = useMemo(() => corkTexture(), [])
   // [z, y, 색, 기울기]
   const notes: [number, number, string, number][] = [
-    [7.75, 5.05, '#f3efe6', 0.1],
+    [7.75, 5.05, '#edeae1', 0.1],
     [8.55, 5.15, '#ffe27a', -0.12],
     [9.2, 4.9, '#9fb4ff', 0.08],
-    [7.8, 3.95, '#7fe3c4', -0.06],
+    [7.8, 3.95, '#7fb58a', -0.06],
     [8.9, 3.75, '#ff9fb4', 0.14],
   ]
   return (
@@ -151,7 +151,7 @@ export function Corkboard() {
       {notes.map(([z, y, c, r], i) => (
         <group key={i}>
           <Box size={[0.012, 0.5, 0.5]} position={[0.075, y, z]} rotation={[r, 0, 0]} color={c} />
-          <Sph r={0.035} position={[0.1, y + 0.2, z]} color="#e07a6b" />
+          <Sph r={0.035} position={[0.1, y + 0.2, z]} color="#d4705c" />
           {[0, 1, 2].map((l) => (
             <Box key={l} size={[0.004, 0.025, 0.32 - l * 0.06]} position={[0.083, y + 0.05 - l * 0.09, z - 0.02 * l]} rotation={[r, 0, 0]} color="#55586a" shadow={false} />
           ))}

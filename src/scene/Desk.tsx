@@ -52,7 +52,7 @@ export function DeskItems() {
       <Box size={[0.55, 0.05, 1.8]} position={[1.7, 2.485, 4.4]} radius={0.02} color="#e9e3d6" />
       <Instances limit={64} castShadow receiveShadow>
         <boxGeometry args={[0.085, 0.035, 0.09]} />
-        <meshStandardMaterial color="#f7f4ec" roughness={0.7} />
+        <meshStandardMaterial color="#f6f3ea" roughness={0.7} />
         {keys.map((p, i) => (
           <Instance key={i} position={p} />
         ))}
@@ -60,7 +60,7 @@ export function DeskItems() {
 
       {/* 마우스 (앉은 사람 기준 오른쪽) */}
       <Box size={[0.85, 0.012, 0.8]} position={[1.85, 2.466, 2.95]} radius={0.004} color="#5c6fa8" />
-      <Sph r={0.15} scale={[1.1, 0.42, 0.72]} position={[1.85, 2.49, 3.0]} color="#f7f4ec" roughness={0.35} />
+      <Sph r={0.15} scale={[1.1, 0.42, 0.72]} position={[1.85, 2.49, 3.0]} color="#f6f3ea" roughness={0.35} />
       <Cyl rt={0.018} rb={0.018} h={0.03} position={[1.74, 2.545, 3.0]} rotation={[Math.PI / 2, 0, 0]} color="#2a2a33" />
 
       {/* 아이스 아메리카노 */}
@@ -81,14 +81,14 @@ export function DeskItems() {
       {/* 컵 바깥면 — depthWrite 끄면 안쪽 얼음이 제대로 비침 */}
       <Cyl rt={0.16} rb={0.13} h={0.62} open position={[icx, 2.77, icz]} color="#ffffff" transparent opacity={0.28} roughness={0.1} depthWrite={false} shadow={false} />
       <Cyl rt={0.165} rb={0.165} h={0.025} position={[icx, 3.09, icz]} color="#ffffff" transparent opacity={0.45} roughness={0.1} shadow={false} />
-      <Rod from={[icx + 0.03, 2.6, icz - 0.02]} to={[icx + 0.12, 3.35, icz - 0.08]} r={0.018} color="#1e2236" />
+      <Rod from={[icx + 0.03, 2.6, icz - 0.02]} to={[icx + 0.12, 3.35, icz - 0.08]} r={0.018} color="#151c19" />
 
       {/* 노트 + 펜 */}
       <group position={[2.25, 0, 5.75]} rotation={[0, -0.2, 0]}>
         <Box size={[0.6, 0.05, 0.8]} position={[0, 2.485, 0]} radius={0.015} color="#ffb547" />
-        <Box size={[0.56, 0.012, 0.74]} position={[0, 2.517, 0]} color="#f7f4ec" shadow={false} />
+        <Box size={[0.56, 0.012, 0.74]} position={[0, 2.517, 0]} color="#f6f3ea" shadow={false} />
       </group>
-      <Rod from={[2.05, 2.535, 5.5]} to={[2.45, 2.535, 6.0]} r={0.015} color="#1e2236" />
+      <Rod from={[2.05, 2.535, 5.5]} to={[2.45, 2.535, 6.0]} r={0.015} color="#151c19" />
 
       {/* 에어팟 케이스 + 한 쪽 */}
       <group position={[1.55, 2.54, 6.45]} rotation={[0, 0.3, 0]}>
@@ -127,7 +127,7 @@ export function Phone() {
   return (
     <group ref={ref} position={[2.2, 2.475, 6.45]}>
       <group rotation={[0, -0.2, 0]}>
-        <Box size={[0.3, 0.03, 0.56]} radius={0.012} color="#1e2236" />
+        <Box size={[0.3, 0.03, 0.56]} radius={0.012} color="#151c19" />
         <mesh position={[0, 0.017, 0]} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
           <planeGeometry args={[0.5, 0.26]} />
           <meshBasicMaterial map={screen} toneMapped={false} />
@@ -190,22 +190,22 @@ export function Lamp() {
 // 폰 화면 그림 — 연락처 카드
 function phoneTexture(name: string) {
   return canvasTexture(512, 266, (g, w, h) => {
-    g.fillStyle = '#1e2236'
+    g.fillStyle = '#151c19'
     g.fillRect(0, 0, w, h)
     g.fillStyle = '#ffb547'
     g.beginPath()
     g.arc(96, h / 2 - 14, 52, 0, 7)
     g.fill()
-    g.fillStyle = '#1e2236'
+    g.fillStyle = '#151c19'
     g.font = 'bold 44px sans-serif'
     g.textAlign = 'center'
     g.fillText(name.slice(0, 1), 96, h / 2 + 2)
-    g.fillStyle = '#f3efe6'
+    g.fillStyle = '#edeae1'
     g.font = 'bold 22px sans-serif'
     g.fillText(name, 96, h / 2 + 76)
-    ;['#9fb4ff', '#7fe3c4', '#e07a6b'].forEach((c, i) => {
+    ;['#9fb4ff', '#7fb58a', '#d4705c'].forEach((c, i) => {
       const y = 34 + i * 70
-      g.fillStyle = '#2f3557'
+      g.fillStyle = '#273330'
       g.beginPath()
       g.roundRect(196, y, w - 220, 54, 12)
       g.fill()
@@ -213,7 +213,7 @@ function phoneTexture(name: string) {
       g.beginPath()
       g.arc(226, y + 27, 13, 0, 7)
       g.fill()
-      g.fillStyle = '#a9aec8'
+      g.fillStyle = '#a9b3a7'
       g.fillRect(254, y + 22, 170 - i * 30, 10)
     })
   })

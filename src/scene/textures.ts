@@ -141,53 +141,53 @@ export function fitPhoto(tex: THREE.Texture, height: number, portrait = false) {
 // 멀리서 보이는 모니터 화면. 줌인하면 진짜 HTML로 교체됨
 export function screenTexture(name: string) {
   return canvasTexture(1024, 600, (g, w, h) => {
-    g.fillStyle = '#232a47'
+    g.fillStyle = '#212c28'
     g.fillRect(0, 0, w, h)
-    g.fillStyle = '#1a1f36'
+    g.fillStyle = '#18211e'
     g.fillRect(0, 0, w, 26)
     g.fillStyle = '#ffb547'
     g.font = 'bold 15px monospace'
     g.fillText(`${name} OS`, 14, 18)
-    g.fillStyle = '#f3efe6'
+    g.fillStyle = '#edeae1'
     g.beginPath()
     g.roundRect(60, 70, 620, 400, 14)
     g.fill()
-    ;['#e07a6b', '#ffb547', '#7fe3c4'].forEach((c, i) => {
+    ;['#d4705c', '#ffb547', '#7fb58a'].forEach((c, i) => {
       g.fillStyle = c
       g.beginPath()
       g.arc(84 + i * 22, 92, 7, 0, 7)
       g.fill()
     })
     for (let i = 0; i < 3; i++) {
-      g.fillStyle = '#e6dfd0'
+      g.fillStyle = '#e6e2d4'
       g.fillRect(200 + i * 160, 140, 140, 110)
-      g.fillStyle = '#1e2236'
+      g.fillStyle = '#151c19'
       g.fillRect(200 + i * 160, 265, 100, 12)
-      g.fillStyle = '#9ea2b3'
+      g.fillStyle = '#8e968c'
       g.fillRect(200 + i * 160, 285, 120, 8)
     }
-    g.fillStyle = '#1e2236'
+    g.fillStyle = '#151c19'
     g.fillRect(80, 130, 100, 28)
-    g.fillStyle = '#c9c3b5'
+    g.fillStyle = '#c6c1ae'
     for (let i = 0; i < 3; i++) g.fillRect(80, 175 + i * 30, 90, 10)
-    g.fillStyle = '#12152a'
+    g.fillStyle = '#121715'
     g.beginPath()
     g.roundRect(640, 300, 340, 220, 12)
     g.fill()
     g.font = '18px monospace'
-    g.fillStyle = '#7fe3c4'
+    g.fillStyle = '#a8c98f'
     g.fillText('$ whoami', 660, 345)
-    g.fillStyle = '#e6e8f2'
+    g.fillStyle = '#e4e8e2'
     g.fillText(name, 660, 375)
-    g.fillStyle = '#7fe3c4'
+    g.fillStyle = '#a8c98f'
     g.fillText('$ npm run dev', 660, 405)
     g.fillStyle = '#ffb547'
     g.fillRect(660, 420, 12, 20)
-    g.fillStyle = 'rgba(26,31,54,.9)'
+    g.fillStyle = 'rgba(24,33,30,.9)'
     g.beginPath()
     g.roundRect(w / 2 - 130, h - 64, 260, 52, 12)
     g.fill()
-    ;['#ffb547', '#12152a', '#f3efe6', '#9fb4ff'].forEach((c, i) => {
+    ;['#ffb547', '#121715', '#edeae1', '#9fb4ff'].forEach((c, i) => {
       g.fillStyle = c
       g.beginPath()
       g.roundRect(w / 2 - 118 + i * 62, h - 56, 40, 36, 8)
@@ -200,12 +200,12 @@ export function screenTexture(name: string) {
 export function deskCalendarTexture(date = new Date()) {
   const months = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
   return canvasTexture(320, 256, (g) => {
-    g.fillStyle = '#f7f4ec'
+    g.fillStyle = '#f6f3ea'
     g.fillRect(0, 0, 320, 256)
-    g.fillStyle = '#1e2236'
+    g.fillStyle = '#151c19'
     g.font = 'bold 30px sans-serif'
     g.fillText(String(date.getMonth() + 1).padStart(2, '0'), 18, 42)
-    g.fillStyle = '#9ea2b3'
+    g.fillStyle = '#8e968c'
     g.font = '15px sans-serif'
     g.fillText(`${months[date.getMonth()]} ${date.getFullYear()}`, 70, 40)
     const first = new Date(date.getFullYear(), date.getMonth(), 1).getDay()
@@ -217,10 +217,10 @@ export function deskCalendarTexture(date = new Date()) {
       const r = Math.floor(idx / 7)
       const x = 20 + c * 41
       const y = 80 + r * 32
-      g.fillStyle = c === 0 ? '#e07a6b' : '#55586a'
+      g.fillStyle = c === 0 ? '#d4705c' : '#55586a'
       g.fillText(String(d), x, y)
       if (d === date.getDate()) {
-        g.strokeStyle = '#e07a6b'
+        g.strokeStyle = '#d4705c'
         g.lineWidth = 3
         g.beginPath()
         g.arc(x + 7, y - 5, 14, 0, 7)
