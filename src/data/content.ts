@@ -458,5 +458,7 @@ export const about = {
 
 export const contactLinks: { label: string; value: string; href: string }[] = [
   { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { label: 'GitHub', value: 'github.com/esuyom', href: 'https://github.com/esuyom' },
+  // 보이는 값은 읽기 쉬운 하이픈 표기, href는 국가번호 붙인 +82 형식.
+  // 모바일 다이얼러가 0을 지역번호로 오해하지 않게 앞 0을 떼고 +82-10으로 건다
+  { label: 'Phone', value: '010-5694-0560', href: 'tel:+821056940560' },
 ]
